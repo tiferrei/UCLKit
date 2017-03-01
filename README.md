@@ -28,7 +28,7 @@ UCLKit is a Swift wrapper for the [UCL API](uclapi.com). I have developed UCLKit
 ### Authentication
 Just create a config instance with the token as initialization value:
 ```swift
-let config = Authentication("12345")
+let config = TokenConfiguration("12345")
 ```
 
 After that, well, use it! :)

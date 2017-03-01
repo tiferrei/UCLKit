@@ -7,9 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		76C783A11E66E58F0087093E /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit.framework */; };
+		76C783A11E66E58F0087093E /* UCLKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit_iOS.framework */; };
 		76C783A61E66E58F0087093E /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783A51E66E58F0087093E /* UCLKitTests.swift */; };
 		76C783A81E66E58F0087093E /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C7839A1E66E58F0087093E /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76C783B21E66FE2C0087093E /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B11E66FE2C0087093E /* UCLKit.swift */; };
+		76C783B41E6709CD0087093E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B31E6709CD0087093E /* Configuration.swift */; };
+		76C783B71E670D1F0087093E /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783B61E670D1F0087093E /* RequestKit.framework */; };
+		76C783B91E6764170087093E /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B81E6764170087093E /* RoomBookings.swift */; };
+		76C783BC1E677DF10087093E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B31E6709CD0087093E /* Configuration.swift */; };
+		76C783BD1E677DF10087093E /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B11E66FE2C0087093E /* UCLKit.swift */; };
+		76C783BE1E677DF10087093E /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B81E6764170087093E /* RoomBookings.swift */; };
+		76C783C01E677DF10087093E /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783B61E670D1F0087093E /* RequestKit.framework */; };
+		76C783C21E677DF10087093E /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C7839A1E66E58F0087093E /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76C783CB1E677E6B0087093E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B31E6709CD0087093E /* Configuration.swift */; };
+		76C783CC1E677E6B0087093E /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B11E66FE2C0087093E /* UCLKit.swift */; };
+		76C783CD1E677E6B0087093E /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B81E6764170087093E /* RoomBookings.swift */; };
+		76C783CF1E677E6B0087093E /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783B61E670D1F0087093E /* RequestKit.framework */; };
+		76C783D11E677E6B0087093E /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C7839A1E66E58F0087093E /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76C783DA1E677EA40087093E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B31E6709CD0087093E /* Configuration.swift */; };
+		76C783DB1E677EA40087093E /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B11E66FE2C0087093E /* UCLKit.swift */; };
+		76C783DC1E677EA40087093E /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B81E6764170087093E /* RoomBookings.swift */; };
+		76C783DE1E677EA40087093E /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783B61E670D1F0087093E /* RequestKit.framework */; };
+		76C783E01E677EA40087093E /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C7839A1E66E58F0087093E /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76C783EB1E677ED40087093E /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783A51E66E58F0087093E /* UCLKitTests.swift */; };
+		76C783ED1E677ED40087093E /* UCLKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit_iOS.framework */; };
+		76C783F81E677F400087093E /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783A51E66E58F0087093E /* UCLKitTests.swift */; };
+		76C783FA1E677F400087093E /* UCLKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,15 +43,38 @@
 			remoteGlobalIDString = 76C783961E66E58F0087093E;
 			remoteInfo = UCLKit;
 		};
+		76C783E91E677ED40087093E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76C7838E1E66E58F0087093E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76C783961E66E58F0087093E;
+			remoteInfo = UCLKit;
+		};
+		76C783F61E677F400087093E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76C7838E1E66E58F0087093E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76C783961E66E58F0087093E;
+			remoteInfo = UCLKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		76C783971E66E58F0087093E /* UCLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C783971E66E58F0087093E /* UCLKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C7839A1E66E58F0087093E /* UCLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCLKit.h; sourceTree = "<group>"; };
 		76C7839B1E66E58F0087093E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76C783A01E66E58F0087093E /* UCLKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UCLKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C783A01E66E58F0087093E /* UCLKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UCLKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C783A51E66E58F0087093E /* UCLKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCLKitTests.swift; sourceTree = "<group>"; };
 		76C783A71E66E58F0087093E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76C783B11E66FE2C0087093E /* UCLKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UCLKit.swift; sourceTree = "<group>"; };
+		76C783B31E6709CD0087093E /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		76C783B61E670D1F0087093E /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RequestKit.framework; path = Carthage/Build/iOS/RequestKit.framework; sourceTree = "<group>"; };
+		76C783B81E6764170087093E /* RoomBookings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomBookings.swift; sourceTree = "<group>"; };
+		76C783C71E677DF10087093E /* UCLKit_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C783D61E677E6B0087093E /* UCLKit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C783E51E677EA40087093E /* UCLKit_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C783F21E677ED40087093E /* UCLKit_macOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UCLKit_macOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C783FF1E677F400087093E /* UCLKit_tvOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UCLKit_tvOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C783B71E670D1F0087093E /* RequestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +90,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C783A11E66E58F0087093E /* UCLKit.framework in Frameworks */,
+				76C783A11E66E58F0087093E /* UCLKit_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783BF1E677DF10087093E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C783C01E677DF10087093E /* RequestKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783CE1E677E6B0087093E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C783CF1E677E6B0087093E /* RequestKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783DD1E677EA40087093E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C783DE1E677EA40087093E /* RequestKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783EC1E677ED40087093E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C783ED1E677ED40087093E /* UCLKit_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783F91E677F400087093E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C783FA1E677F400087093E /* UCLKit_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +142,7 @@
 			children = (
 				76C783991E66E58F0087093E /* UCLKit */,
 				76C783A41E66E58F0087093E /* UCLKitTests */,
+				76C783B51E670D1F0087093E /* Frameworks */,
 				76C783981E66E58F0087093E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,8 +150,13 @@
 		76C783981E66E58F0087093E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				76C783971E66E58F0087093E /* UCLKit.framework */,
-				76C783A01E66E58F0087093E /* UCLKitTests.xctest */,
+				76C783971E66E58F0087093E /* UCLKit_iOS.framework */,
+				76C783A01E66E58F0087093E /* UCLKit_Tests.xctest */,
+				76C783C71E677DF10087093E /* UCLKit_watchOS.framework */,
+				76C783D61E677E6B0087093E /* UCLKit_tvOS.framework */,
+				76C783E51E677EA40087093E /* UCLKit_macOS.framework */,
+				76C783F21E677ED40087093E /* UCLKit_macOS_Tests.xctest */,
+				76C783FF1E677F400087093E /* UCLKit_tvOS_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				76C7839A1E66E58F0087093E /* UCLKit.h */,
+				76C783B11E66FE2C0087093E /* UCLKit.swift */,
+				76C783B31E6709CD0087093E /* Configuration.swift */,
+				76C783B81E6764170087093E /* RoomBookings.swift */,
 				76C7839B1E66E58F0087093E /* Info.plist */,
 			);
 			path = UCLKit;
@@ -86,6 +182,14 @@
 			path = UCLKitTests;
 			sourceTree = "<group>";
 		};
+		76C783B51E670D1F0087093E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76C783B61E670D1F0087093E /* RequestKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -97,12 +201,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		76C783C11E677DF10087093E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C783C21E677DF10087093E /* UCLKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783D01E677E6B0087093E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C783D11E677E6B0087093E /* UCLKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783DF1E677EA40087093E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C783E01E677EA40087093E /* UCLKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		76C783961E66E58F0087093E /* UCLKit */ = {
+		76C783961E66E58F0087093E /* UCLKit iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76C783AB1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKit" */;
+			buildConfigurationList = 76C783AB1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKit iOS" */;
 			buildPhases = (
 				76C783921E66E58F0087093E /* Sources */,
 				76C783931E66E58F0087093E /* Frameworks */,
@@ -113,14 +241,14 @@
 			);
 			dependencies = (
 			);
-			name = UCLKit;
+			name = "UCLKit iOS";
 			productName = UCLKit;
-			productReference = 76C783971E66E58F0087093E /* UCLKit.framework */;
+			productReference = 76C783971E66E58F0087093E /* UCLKit_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		76C7839F1E66E58F0087093E /* UCLKitTests */ = {
+		76C7839F1E66E58F0087093E /* UCLKit Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76C783AE1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKitTests" */;
+			buildConfigurationList = 76C783AE1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKit Tests" */;
 			buildPhases = (
 				76C7839C1E66E58F0087093E /* Sources */,
 				76C7839D1E66E58F0087093E /* Frameworks */,
@@ -131,9 +259,99 @@
 			dependencies = (
 				76C783A31E66E58F0087093E /* PBXTargetDependency */,
 			);
-			name = UCLKitTests;
+			name = "UCLKit Tests";
 			productName = UCLKitTests;
-			productReference = 76C783A01E66E58F0087093E /* UCLKitTests.xctest */;
+			productReference = 76C783A01E66E58F0087093E /* UCLKit_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		76C783BA1E677DF10087093E /* UCLKit watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76C783C41E677DF10087093E /* Build configuration list for PBXNativeTarget "UCLKit watchOS" */;
+			buildPhases = (
+				76C783BB1E677DF10087093E /* Sources */,
+				76C783BF1E677DF10087093E /* Frameworks */,
+				76C783C11E677DF10087093E /* Headers */,
+				76C783C31E677DF10087093E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UCLKit watchOS";
+			productName = UCLKit;
+			productReference = 76C783C71E677DF10087093E /* UCLKit_watchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		76C783C91E677E6B0087093E /* UCLKit tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76C783D31E677E6B0087093E /* Build configuration list for PBXNativeTarget "UCLKit tvOS" */;
+			buildPhases = (
+				76C783CA1E677E6B0087093E /* Sources */,
+				76C783CE1E677E6B0087093E /* Frameworks */,
+				76C783D01E677E6B0087093E /* Headers */,
+				76C783D21E677E6B0087093E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UCLKit tvOS";
+			productName = UCLKit;
+			productReference = 76C783D61E677E6B0087093E /* UCLKit_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		76C783D81E677EA40087093E /* UCLKit macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76C783E21E677EA40087093E /* Build configuration list for PBXNativeTarget "UCLKit macOS" */;
+			buildPhases = (
+				76C783D91E677EA40087093E /* Sources */,
+				76C783DD1E677EA40087093E /* Frameworks */,
+				76C783DF1E677EA40087093E /* Headers */,
+				76C783E11E677EA40087093E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UCLKit macOS";
+			productName = UCLKit;
+			productReference = 76C783E51E677EA40087093E /* UCLKit_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		76C783E71E677ED40087093E /* UCLKit macOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76C783EF1E677ED40087093E /* Build configuration list for PBXNativeTarget "UCLKit macOS Tests" */;
+			buildPhases = (
+				76C783EA1E677ED40087093E /* Sources */,
+				76C783EC1E677ED40087093E /* Frameworks */,
+				76C783EE1E677ED40087093E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76C783E81E677ED40087093E /* PBXTargetDependency */,
+			);
+			name = "UCLKit macOS Tests";
+			productName = UCLKitTests;
+			productReference = 76C783F21E677ED40087093E /* UCLKit_macOS_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		76C783F41E677F400087093E /* UCLKit tvOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76C783FC1E677F400087093E /* Build configuration list for PBXNativeTarget "UCLKit tvOS Tests" */;
+			buildPhases = (
+				76C783F71E677F400087093E /* Sources */,
+				76C783F91E677F400087093E /* Frameworks */,
+				76C783FB1E677F400087093E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76C783F51E677F400087093E /* PBXTargetDependency */,
+			);
+			name = "UCLKit tvOS Tests";
+			productName = UCLKitTests;
+			productReference = 76C783FF1E677F400087093E /* UCLKit_tvOS_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -148,11 +366,11 @@
 				TargetAttributes = {
 					76C783961E66E58F0087093E = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
 					};
 					76C7839F1E66E58F0087093E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = X69WG8TQF9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -169,8 +387,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				76C783961E66E58F0087093E /* UCLKit */,
-				76C7839F1E66E58F0087093E /* UCLKitTests */,
+				76C783961E66E58F0087093E /* UCLKit iOS */,
+				76C783BA1E677DF10087093E /* UCLKit watchOS */,
+				76C7839F1E66E58F0087093E /* UCLKit Tests */,
+				76C783D81E677EA40087093E /* UCLKit macOS */,
+				76C783E71E677ED40087093E /* UCLKit macOS Tests */,
+				76C783C91E677E6B0087093E /* UCLKit tvOS */,
+				76C783F41E677F400087093E /* UCLKit tvOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -190,6 +413,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		76C783C31E677DF10087093E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783D21E677E6B0087093E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783E11E677EA40087093E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783EE1E677ED40087093E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783FB1E677F400087093E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -197,6 +455,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C783B41E6709CD0087093E /* Configuration.swift in Sources */,
+				76C783B21E66FE2C0087093E /* UCLKit.swift in Sources */,
+				76C783B91E6764170087093E /* RoomBookings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,13 +469,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		76C783BB1E677DF10087093E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C783BC1E677DF10087093E /* Configuration.swift in Sources */,
+				76C783BD1E677DF10087093E /* UCLKit.swift in Sources */,
+				76C783BE1E677DF10087093E /* RoomBookings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783CA1E677E6B0087093E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C783CB1E677E6B0087093E /* Configuration.swift in Sources */,
+				76C783CC1E677E6B0087093E /* UCLKit.swift in Sources */,
+				76C783CD1E677E6B0087093E /* RoomBookings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783D91E677EA40087093E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C783DA1E677EA40087093E /* Configuration.swift in Sources */,
+				76C783DB1E677EA40087093E /* UCLKit.swift in Sources */,
+				76C783DC1E677EA40087093E /* RoomBookings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783EA1E677ED40087093E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C783EB1E677ED40087093E /* UCLKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C783F71E677F400087093E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C783F81E677F400087093E /* UCLKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		76C783A31E66E58F0087093E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 76C783961E66E58F0087093E /* UCLKit */;
+			target = 76C783961E66E58F0087093E /* UCLKit iOS */;
 			targetProxy = 76C783A21E66E58F0087093E /* PBXContainerItemProxy */;
+		};
+		76C783E81E677ED40087093E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76C783961E66E58F0087093E /* UCLKit iOS */;
+			targetProxy = 76C783E91E677ED40087093E /* PBXContainerItemProxy */;
+		};
+		76C783F51E677F400087093E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76C783961E66E58F0087093E /* UCLKit iOS */;
+			targetProxy = 76C783F61E677F400087093E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -321,18 +638,25 @@
 		76C783AC1E66E5900087093E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -340,17 +664,23 @@
 		76C783AD1E66E5900087093E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -359,11 +689,13 @@
 		76C783AF1E66E5900087093E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = X69WG8TQF9;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -371,11 +703,244 @@
 		76C783B01E66E5900087093E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = X69WG8TQF9;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		76C783C51E677DF10087093E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = UCLKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		76C783C61E677DF10087093E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = UCLKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		76C783D41E677E6B0087093E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = UCLKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		76C783D51E677E6B0087093E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = UCLKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		76C783E31E677EA40087093E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = UCLKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		76C783E41E677EA40087093E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = UCLKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		76C783F01E677ED40087093E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = UCLKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		76C783F11E677ED40087093E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = UCLKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		76C783FD1E677F400087093E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = UCLKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		76C783FE1E677F400087093E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = UCLKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -392,7 +957,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		76C783AB1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKit" */ = {
+		76C783AB1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKit iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				76C783AC1E66E5900087093E /* Debug */,
@@ -401,11 +966,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		76C783AE1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKitTests" */ = {
+		76C783AE1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKit Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				76C783AF1E66E5900087093E /* Debug */,
 				76C783B01E66E5900087093E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76C783C41E677DF10087093E /* Build configuration list for PBXNativeTarget "UCLKit watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76C783C51E677DF10087093E /* Debug */,
+				76C783C61E677DF10087093E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76C783D31E677E6B0087093E /* Build configuration list for PBXNativeTarget "UCLKit tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76C783D41E677E6B0087093E /* Debug */,
+				76C783D51E677E6B0087093E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76C783E21E677EA40087093E /* Build configuration list for PBXNativeTarget "UCLKit macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76C783E31E677EA40087093E /* Debug */,
+				76C783E41E677EA40087093E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76C783EF1E677ED40087093E /* Build configuration list for PBXNativeTarget "UCLKit macOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76C783F01E677ED40087093E /* Debug */,
+				76C783F11E677ED40087093E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76C783FC1E677F400087093E /* Build configuration list for PBXNativeTarget "UCLKit tvOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76C783FD1E677F400087093E /* Debug */,
+				76C783FE1E677F400087093E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
