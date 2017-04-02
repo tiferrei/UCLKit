@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "76C783961E66E58F0087093E"
-               BuildableName = "UCLKit iOS.framework"
+               BuildableName = "UCLKit.framework"
                BlueprintName = "UCLKit iOS"
                ReferencedContainer = "container:UCLKit.xcodeproj">
             </BuildableReference>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "76C7839F1E66E58F0087093E"
-               BuildableName = "UCLKit Tests.xctest"
-               BlueprintName = "UCLKit Tests"
+               BuildableName = "UCLKitTests.xctest"
+               BlueprintName = "UCLKit iOS Tests"
                ReferencedContainer = "container:UCLKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "76C783961E66E58F0087093E"
-            BuildableName = "UCLKit iOS.framework"
+            BuildableName = "UCLKit.framework"
             BlueprintName = "UCLKit iOS"
             ReferencedContainer = "container:UCLKit.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "76C783961E66E58F0087093E"
-            BuildableName = "UCLKit iOS.framework"
+            BuildableName = "UCLKit.framework"
             BlueprintName = "UCLKit iOS"
             ReferencedContainer = "container:UCLKit.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "76C783961E66E58F0087093E"
-            BuildableName = "UCLKit iOS.framework"
+            BuildableName = "UCLKit.framework"
             BlueprintName = "UCLKit iOS"
             ReferencedContainer = "container:UCLKit.xcodeproj">
          </BuildableReference>

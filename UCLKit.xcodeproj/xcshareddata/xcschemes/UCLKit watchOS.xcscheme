@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "76C783BA1E677DF10087093E"
-               BuildableName = "UCLKit watchOS.framework"
+               BuildableName = "UCLKit.framework"
                BlueprintName = "UCLKit watchOS"
                ReferencedContainer = "container:UCLKit.xcodeproj">
             </BuildableReference>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "76C7839F1E66E58F0087093E"
-               BuildableName = "UCLKit Tests.xctest"
-               BlueprintName = "UCLKit Tests"
+               BlueprintIdentifier = "7680A0251E8FEB6600B965D5"
+               BuildableName = "UCLKit watchOS Tests.xctest"
+               BlueprintName = "UCLKit watchOS Tests"
                ReferencedContainer = "container:UCLKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "76C783BA1E677DF10087093E"
-            BuildableName = "UCLKit watchOS.framework"
+            BuildableName = "UCLKit.framework"
             BlueprintName = "UCLKit watchOS"
             ReferencedContainer = "container:UCLKit.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "76C783BA1E677DF10087093E"
-            BuildableName = "UCLKit watchOS.framework"
+            BuildableName = "UCLKit.framework"
             BlueprintName = "UCLKit watchOS"
             ReferencedContainer = "container:UCLKit.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "76C783BA1E677DF10087093E"
-            BuildableName = "UCLKit watchOS.framework"
+            BuildableName = "UCLKit.framework"
             BlueprintName = "UCLKit watchOS"
             ReferencedContainer = "container:UCLKit.xcodeproj">
          </BuildableReference>

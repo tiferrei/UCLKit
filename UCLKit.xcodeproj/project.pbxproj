@@ -7,7 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		76C783A11E66E58F0087093E /* UCLKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit_iOS.framework */; };
+		7680A0201E8FEB1D00B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7680A0221E8FEB4500B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7680A0241E8FEB5700B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933E41E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7680A0291E8FEB6600B965D5 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */; };
+		7680A02A1E8FEB6600B965D5 /* TestURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933CB1E6B865A005A3D31 /* TestURLSession.swift */; };
+		7680A02B1E8FEB6600B965D5 /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783A51E66E58F0087093E /* UCLKitTests.swift */; };
+		7680A02C1E8FEB6600B965D5 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933CF1E6B8790005A3D31 /* TestHelper.swift */; };
+		7680A02E1E8FEB6600B965D5 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; };
+		7680A02F1E8FEB6600B965D5 /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit.framework */; };
+		7680A0311E8FEB6600B965D5 /* Rooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 76B933D21E6B8947005A3D31 /* Rooms.json */; };
+		7680A0321E8FEB6600B965D5 /* InvalidToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CA60E81E7C14580050B5EF /* InvalidToken.json */; };
+		7680A0331E8FEB6600B965D5 /* NoToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CA60E41E7C142A0050B5EF /* NoToken.json */; };
+		7680A03B1E8FEB7A00B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933E81E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76B933C81E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */; };
+		76B933C91E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */; };
+		76B933CA1E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */; };
+		76B933CC1E6B865A005A3D31 /* TestURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933CB1E6B865A005A3D31 /* TestURLSession.swift */; };
+		76B933CD1E6B865A005A3D31 /* TestURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933CB1E6B865A005A3D31 /* TestURLSession.swift */; };
+		76B933CE1E6B865A005A3D31 /* TestURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933CB1E6B865A005A3D31 /* TestURLSession.swift */; };
+		76B933D31E6B8947005A3D31 /* Rooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 76B933D21E6B8947005A3D31 /* Rooms.json */; };
+		76B933D41E6B8947005A3D31 /* Rooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 76B933D21E6B8947005A3D31 /* Rooms.json */; };
+		76B933D51E6B8947005A3D31 /* Rooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 76B933D21E6B8947005A3D31 /* Rooms.json */; };
+		76B933D61E6B90F3005A3D31 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933CF1E6B8790005A3D31 /* TestHelper.swift */; };
+		76B933D81E6B90F5005A3D31 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933CF1E6B8790005A3D31 /* TestHelper.swift */; };
+		76B933D91E6B90F7005A3D31 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933CF1E6B8790005A3D31 /* TestHelper.swift */; };
+		76B933EA1E6D93A7005A3D31 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; };
+		76B933EB1E6D93B7005A3D31 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; };
+		76B933EC1E6D93C3005A3D31 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933E41E6D938F005A3D31 /* RequestKit.framework */; };
+		76C783A11E66E58F0087093E /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit.framework */; };
 		76C783A61E66E58F0087093E /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783A51E66E58F0087093E /* UCLKitTests.swift */; };
 		76C783A81E66E58F0087093E /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C7839A1E66E58F0087093E /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76C783B21E66FE2C0087093E /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B11E66FE2C0087093E /* UCLKit.swift */; };
@@ -30,12 +58,25 @@
 		76C783DE1E677EA40087093E /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783B61E670D1F0087093E /* RequestKit.framework */; };
 		76C783E01E677EA40087093E /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C7839A1E66E58F0087093E /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76C783EB1E677ED40087093E /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783A51E66E58F0087093E /* UCLKitTests.swift */; };
-		76C783ED1E677ED40087093E /* UCLKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit_iOS.framework */; };
+		76C783ED1E677ED40087093E /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit.framework */; };
 		76C783F81E677F400087093E /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783A51E66E58F0087093E /* UCLKitTests.swift */; };
-		76C783FA1E677F400087093E /* UCLKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit_iOS.framework */; };
+		76C783FA1E677F400087093E /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit.framework */; };
+		76CA60E51E7C142A0050B5EF /* NoToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CA60E41E7C142A0050B5EF /* NoToken.json */; };
+		76CA60E61E7C142A0050B5EF /* NoToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CA60E41E7C142A0050B5EF /* NoToken.json */; };
+		76CA60E71E7C142A0050B5EF /* NoToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CA60E41E7C142A0050B5EF /* NoToken.json */; };
+		76CA60E91E7C14580050B5EF /* InvalidToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CA60E81E7C14580050B5EF /* InvalidToken.json */; };
+		76CA60EA1E7C14580050B5EF /* InvalidToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CA60E81E7C14580050B5EF /* InvalidToken.json */; };
+		76CA60EB1E7C14580050B5EF /* InvalidToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CA60E81E7C14580050B5EF /* InvalidToken.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7680A0271E8FEB6600B965D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76C7838E1E66E58F0087093E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76C783961E66E58F0087093E;
+			remoteInfo = UCLKit;
+		};
 		76C783A21E66E58F0087093E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 76C7838E1E66E58F0087093E /* Project object */;
@@ -59,25 +100,102 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7680A01F1E8FEB0100B965D5 /* Carthage Embed */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7680A0201E8FEB1D00B965D5 /* RequestKit.framework in Carthage Embed */,
+			);
+			name = "Carthage Embed";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7680A0211E8FEB3700B965D5 /* Carthage Embed */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				7680A0221E8FEB4500B965D5 /* RequestKit.framework in Carthage Embed */,
+			);
+			name = "Carthage Embed";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7680A0231E8FEB4900B965D5 /* Carthage Embed */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				7680A0241E8FEB5700B965D5 /* RequestKit.framework in Carthage Embed */,
+			);
+			name = "Carthage Embed";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7680A0341E8FEB6600B965D5 /* Carthage Embed */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7680A03B1E8FEB7A00B965D5 /* RequestKit.framework in Carthage Embed */,
+			);
+			name = "Carthage Embed";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		76C783971E66E58F0087093E /* UCLKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7680A01D1E8FB9B300B965D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7680A0391E8FEB6600B965D5 /* UCLKit watchOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UCLKit watchOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7680A03C1E90182500B965D5 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomBookingTests.swift; sourceTree = "<group>"; };
+		76B933CB1E6B865A005A3D31 /* TestURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestURLSession.swift; sourceTree = "<group>"; };
+		76B933CF1E6B8790005A3D31 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		76B933D21E6B8947005A3D31 /* Rooms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Rooms.json; sourceTree = "<group>"; };
+		76B933DB1E6D938F005A3D31 /* 4F00B540-8C72-3107-812C-9CE64CA71277.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "4F00B540-8C72-3107-812C-9CE64CA71277.bcsymbolmap"; sourceTree = "<group>"; };
+		76B933DC1E6D938F005A3D31 /* D3DF52A6-CCBB-3629-AC94-8F7797D5011B.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "D3DF52A6-CCBB-3629-AC94-8F7797D5011B.bcsymbolmap"; sourceTree = "<group>"; };
+		76B933DD1E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
+		76B933DE1E6D938F005A3D31 /* RequestKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RequestKit.framework.dSYM; sourceTree = "<group>"; };
+		76B933E01E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
+		76B933E11E6D938F005A3D31 /* RequestKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RequestKit.framework.dSYM; sourceTree = "<group>"; };
+		76B933E31E6D938F005A3D31 /* DE35C1AA-6DD2-30A7-B74E-EFF3F6DAC547.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "DE35C1AA-6DD2-30A7-B74E-EFF3F6DAC547.bcsymbolmap"; sourceTree = "<group>"; };
+		76B933E41E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
+		76B933E51E6D938F005A3D31 /* RequestKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RequestKit.framework.dSYM; sourceTree = "<group>"; };
+		76B933E71E6D938F005A3D31 /* 2F8CAFB6-C112-3354-AEB6-618F076013E0.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2F8CAFB6-C112-3354-AEB6-618F076013E0.bcsymbolmap"; sourceTree = "<group>"; };
+		76B933E81E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
+		76B933E91E6D938F005A3D31 /* RequestKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RequestKit.framework.dSYM; sourceTree = "<group>"; };
+		76C783971E66E58F0087093E /* UCLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C7839A1E66E58F0087093E /* UCLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCLKit.h; sourceTree = "<group>"; };
 		76C7839B1E66E58F0087093E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76C783A01E66E58F0087093E /* UCLKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UCLKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C783A01E66E58F0087093E /* UCLKit iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UCLKit iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C783A51E66E58F0087093E /* UCLKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCLKitTests.swift; sourceTree = "<group>"; };
 		76C783A71E66E58F0087093E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76C783B11E66FE2C0087093E /* UCLKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UCLKit.swift; sourceTree = "<group>"; };
 		76C783B31E6709CD0087093E /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		76C783B61E670D1F0087093E /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RequestKit.framework; path = Carthage/Build/iOS/RequestKit.framework; sourceTree = "<group>"; };
 		76C783B81E6764170087093E /* RoomBookings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomBookings.swift; sourceTree = "<group>"; };
-		76C783C71E677DF10087093E /* UCLKit_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		76C783D61E677E6B0087093E /* UCLKit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		76C783E51E677EA40087093E /* UCLKit_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		76C783F21E677ED40087093E /* UCLKit_macOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UCLKit_macOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		76C783FF1E677F400087093E /* UCLKit_tvOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UCLKit_tvOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C783C71E677DF10087093E /* UCLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C783D61E677E6B0087093E /* UCLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C783E51E677EA40087093E /* UCLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C783F21E677ED40087093E /* UCLKit macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UCLKit macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C783FF1E677F400087093E /* UCLKit tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UCLKit tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76CA60E41E7C142A0050B5EF /* NoToken.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NoToken.json; sourceTree = "<group>"; };
+		76CA60E81E7C14580050B5EF /* InvalidToken.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InvalidToken.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7680A02D1E8FEB6600B965D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7680A02E1E8FEB6600B965D5 /* RequestKit.framework in Frameworks */,
+				7680A02F1E8FEB6600B965D5 /* UCLKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76C783931E66E58F0087093E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,7 +208,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C783A11E66E58F0087093E /* UCLKit_iOS.framework in Frameworks */,
+				76B933EA1E6D93A7005A3D31 /* RequestKit.framework in Frameworks */,
+				76C783A11E66E58F0087093E /* UCLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +241,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C783ED1E677ED40087093E /* UCLKit_iOS.framework in Frameworks */,
+				76B933EB1E6D93B7005A3D31 /* RequestKit.framework in Frameworks */,
+				76C783ED1E677ED40087093E /* UCLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,13 +250,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C783FA1E677F400087093E /* UCLKit_iOS.framework in Frameworks */,
+				76B933EC1E6D93C3005A3D31 /* RequestKit.framework in Frameworks */,
+				76C783FA1E677F400087093E /* UCLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76B933D11E6B892A005A3D31 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				76B933D21E6B8947005A3D31 /* Rooms.json */,
+				76CA60E41E7C142A0050B5EF /* NoToken.json */,
+				76CA60E81E7C14580050B5EF /* InvalidToken.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		76B933DA1E6D938F005A3D31 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				76B933DB1E6D938F005A3D31 /* 4F00B540-8C72-3107-812C-9CE64CA71277.bcsymbolmap */,
+				76B933DC1E6D938F005A3D31 /* D3DF52A6-CCBB-3629-AC94-8F7797D5011B.bcsymbolmap */,
+				76B933DD1E6D938F005A3D31 /* RequestKit.framework */,
+				76B933DE1E6D938F005A3D31 /* RequestKit.framework.dSYM */,
+			);
+			name = iOS;
+			path = Carthage/Build/iOS;
+			sourceTree = "<group>";
+		};
+		76B933DF1E6D938F005A3D31 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				76B933E01E6D938F005A3D31 /* RequestKit.framework */,
+				76B933E11E6D938F005A3D31 /* RequestKit.framework.dSYM */,
+			);
+			name = Mac;
+			path = Carthage/Build/Mac;
+			sourceTree = "<group>";
+		};
+		76B933E21E6D938F005A3D31 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				76B933E31E6D938F005A3D31 /* DE35C1AA-6DD2-30A7-B74E-EFF3F6DAC547.bcsymbolmap */,
+				76B933E41E6D938F005A3D31 /* RequestKit.framework */,
+				76B933E51E6D938F005A3D31 /* RequestKit.framework.dSYM */,
+			);
+			name = tvOS;
+			path = Carthage/Build/tvOS;
+			sourceTree = "<group>";
+		};
+		76B933E61E6D938F005A3D31 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				76B933E71E6D938F005A3D31 /* 2F8CAFB6-C112-3354-AEB6-618F076013E0.bcsymbolmap */,
+				76B933E81E6D938F005A3D31 /* RequestKit.framework */,
+				76B933E91E6D938F005A3D31 /* RequestKit.framework.dSYM */,
+			);
+			name = watchOS;
+			path = Carthage/Build/watchOS;
+			sourceTree = "<group>";
+		};
 		76C7838D1E66E58F0087093E = {
 			isa = PBXGroup;
 			children = (
@@ -150,13 +325,14 @@
 		76C783981E66E58F0087093E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				76C783971E66E58F0087093E /* UCLKit_iOS.framework */,
-				76C783A01E66E58F0087093E /* UCLKit_Tests.xctest */,
-				76C783C71E677DF10087093E /* UCLKit_watchOS.framework */,
-				76C783D61E677E6B0087093E /* UCLKit_tvOS.framework */,
-				76C783E51E677EA40087093E /* UCLKit_macOS.framework */,
-				76C783F21E677ED40087093E /* UCLKit_macOS_Tests.xctest */,
-				76C783FF1E677F400087093E /* UCLKit_tvOS_Tests.xctest */,
+				76C783971E66E58F0087093E /* UCLKit.framework */,
+				76C783A01E66E58F0087093E /* UCLKit iOS Tests.xctest */,
+				76C783C71E677DF10087093E /* UCLKit.framework */,
+				76C783D61E677E6B0087093E /* UCLKit.framework */,
+				76C783E51E677EA40087093E /* UCLKit.framework */,
+				76C783F21E677ED40087093E /* UCLKit macOS Tests.xctest */,
+				76C783FF1E677F400087093E /* UCLKit tvOS Tests.xctest */,
+				7680A0391E8FEB6600B965D5 /* UCLKit watchOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,7 +352,11 @@
 		76C783A41E66E58F0087093E /* UCLKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				76B933D11E6B892A005A3D31 /* Fixtures */,
 				76C783A51E66E58F0087093E /* UCLKitTests.swift */,
+				76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */,
+				76B933CF1E6B8790005A3D31 /* TestHelper.swift */,
+				76B933CB1E6B865A005A3D31 /* TestURLSession.swift */,
 				76C783A71E66E58F0087093E /* Info.plist */,
 			);
 			path = UCLKitTests;
@@ -185,6 +365,12 @@
 		76C783B51E670D1F0087093E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7680A03C1E90182500B965D5 /* CoreFoundation.framework */,
+				7680A01D1E8FB9B300B965D5 /* Foundation.framework */,
+				76B933DA1E6D938F005A3D31 /* iOS */,
+				76B933DF1E6D938F005A3D31 /* Mac */,
+				76B933E21E6D938F005A3D31 /* tvOS */,
+				76B933E61E6D938F005A3D31 /* watchOS */,
 				76C783B61E670D1F0087093E /* RequestKit.framework */,
 			);
 			name = Frameworks;
@@ -228,6 +414,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		7680A0251E8FEB6600B965D5 /* UCLKit watchOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7680A0361E8FEB6600B965D5 /* Build configuration list for PBXNativeTarget "UCLKit watchOS Tests" */;
+			buildPhases = (
+				7680A0281E8FEB6600B965D5 /* Sources */,
+				7680A02D1E8FEB6600B965D5 /* Frameworks */,
+				7680A0301E8FEB6600B965D5 /* Resources */,
+				7680A0341E8FEB6600B965D5 /* Carthage Embed */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7680A0261E8FEB6600B965D5 /* PBXTargetDependency */,
+			);
+			name = "UCLKit watchOS Tests";
+			productName = UCLKitTests;
+			productReference = 7680A0391E8FEB6600B965D5 /* UCLKit watchOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		76C783961E66E58F0087093E /* UCLKit iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76C783AB1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKit iOS" */;
@@ -243,15 +448,16 @@
 			);
 			name = "UCLKit iOS";
 			productName = UCLKit;
-			productReference = 76C783971E66E58F0087093E /* UCLKit_iOS.framework */;
+			productReference = 76C783971E66E58F0087093E /* UCLKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		76C7839F1E66E58F0087093E /* UCLKit Tests */ = {
+		76C7839F1E66E58F0087093E /* UCLKit iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76C783AE1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKit Tests" */;
+			buildConfigurationList = 76C783AE1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKit iOS Tests" */;
 			buildPhases = (
-				76C7839C1E66E58F0087093E /* Sources */,
+				7680A01F1E8FEB0100B965D5 /* Carthage Embed */,
 				76C7839D1E66E58F0087093E /* Frameworks */,
+				76C7839C1E66E58F0087093E /* Sources */,
 				76C7839E1E66E58F0087093E /* Resources */,
 			);
 			buildRules = (
@@ -259,9 +465,9 @@
 			dependencies = (
 				76C783A31E66E58F0087093E /* PBXTargetDependency */,
 			);
-			name = "UCLKit Tests";
+			name = "UCLKit iOS Tests";
 			productName = UCLKitTests;
-			productReference = 76C783A01E66E58F0087093E /* UCLKit_Tests.xctest */;
+			productReference = 76C783A01E66E58F0087093E /* UCLKit iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		76C783BA1E677DF10087093E /* UCLKit watchOS */ = {
@@ -279,7 +485,7 @@
 			);
 			name = "UCLKit watchOS";
 			productName = UCLKit;
-			productReference = 76C783C71E677DF10087093E /* UCLKit_watchOS.framework */;
+			productReference = 76C783C71E677DF10087093E /* UCLKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		76C783C91E677E6B0087093E /* UCLKit tvOS */ = {
@@ -297,7 +503,7 @@
 			);
 			name = "UCLKit tvOS";
 			productName = UCLKit;
-			productReference = 76C783D61E677E6B0087093E /* UCLKit_tvOS.framework */;
+			productReference = 76C783D61E677E6B0087093E /* UCLKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		76C783D81E677EA40087093E /* UCLKit macOS */ = {
@@ -315,7 +521,7 @@
 			);
 			name = "UCLKit macOS";
 			productName = UCLKit;
-			productReference = 76C783E51E677EA40087093E /* UCLKit_macOS.framework */;
+			productReference = 76C783E51E677EA40087093E /* UCLKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		76C783E71E677ED40087093E /* UCLKit macOS Tests */ = {
@@ -325,6 +531,7 @@
 				76C783EA1E677ED40087093E /* Sources */,
 				76C783EC1E677ED40087093E /* Frameworks */,
 				76C783EE1E677ED40087093E /* Resources */,
+				7680A0211E8FEB3700B965D5 /* Carthage Embed */,
 			);
 			buildRules = (
 			);
@@ -333,7 +540,7 @@
 			);
 			name = "UCLKit macOS Tests";
 			productName = UCLKitTests;
-			productReference = 76C783F21E677ED40087093E /* UCLKit_macOS_Tests.xctest */;
+			productReference = 76C783F21E677ED40087093E /* UCLKit macOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		76C783F41E677F400087093E /* UCLKit tvOS Tests */ = {
@@ -343,6 +550,7 @@
 				76C783F71E677F400087093E /* Sources */,
 				76C783F91E677F400087093E /* Frameworks */,
 				76C783FB1E677F400087093E /* Resources */,
+				7680A0231E8FEB4900B965D5 /* Carthage Embed */,
 			);
 			buildRules = (
 			);
@@ -351,7 +559,7 @@
 			);
 			name = "UCLKit tvOS Tests";
 			productName = UCLKitTests;
-			productReference = 76C783FF1E677F400087093E /* UCLKit_tvOS_Tests.xctest */;
+			productReference = 76C783FF1E677F400087093E /* UCLKit tvOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -388,8 +596,9 @@
 			projectRoot = "";
 			targets = (
 				76C783961E66E58F0087093E /* UCLKit iOS */,
+				76C7839F1E66E58F0087093E /* UCLKit iOS Tests */,
 				76C783BA1E677DF10087093E /* UCLKit watchOS */,
-				76C7839F1E66E58F0087093E /* UCLKit Tests */,
+				7680A0251E8FEB6600B965D5 /* UCLKit watchOS Tests */,
 				76C783D81E677EA40087093E /* UCLKit macOS */,
 				76C783E71E677ED40087093E /* UCLKit macOS Tests */,
 				76C783C91E677E6B0087093E /* UCLKit tvOS */,
@@ -399,6 +608,16 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7680A0301E8FEB6600B965D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7680A0311E8FEB6600B965D5 /* Rooms.json in Resources */,
+				7680A0321E8FEB6600B965D5 /* InvalidToken.json in Resources */,
+				7680A0331E8FEB6600B965D5 /* NoToken.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76C783951E66E58F0087093E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,6 +629,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B933D31E6B8947005A3D31 /* Rooms.json in Resources */,
+				76CA60E91E7C14580050B5EF /* InvalidToken.json in Resources */,
+				76CA60E51E7C142A0050B5EF /* NoToken.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +660,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B933D41E6B8947005A3D31 /* Rooms.json in Resources */,
+				76CA60EA1E7C14580050B5EF /* InvalidToken.json in Resources */,
+				76CA60E61E7C142A0050B5EF /* NoToken.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,12 +670,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B933D51E6B8947005A3D31 /* Rooms.json in Resources */,
+				76CA60EB1E7C14580050B5EF /* InvalidToken.json in Resources */,
+				76CA60E71E7C142A0050B5EF /* NoToken.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7680A0281E8FEB6600B965D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7680A0291E8FEB6600B965D5 /* RoomBookingTests.swift in Sources */,
+				7680A02A1E8FEB6600B965D5 /* TestURLSession.swift in Sources */,
+				7680A02B1E8FEB6600B965D5 /* UCLKitTests.swift in Sources */,
+				7680A02C1E8FEB6600B965D5 /* TestHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76C783921E66E58F0087093E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -465,7 +704,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B933C81E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */,
+				76B933CC1E6B865A005A3D31 /* TestURLSession.swift in Sources */,
 				76C783A61E66E58F0087093E /* UCLKitTests.swift in Sources */,
+				76B933D61E6B90F3005A3D31 /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +745,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B933C91E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */,
+				76B933CD1E6B865A005A3D31 /* TestURLSession.swift in Sources */,
 				76C783EB1E677ED40087093E /* UCLKitTests.swift in Sources */,
+				76B933D81E6B90F5005A3D31 /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,13 +756,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B933CA1E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */,
+				76B933CE1E6B865A005A3D31 /* TestURLSession.swift in Sources */,
 				76C783F81E677F400087093E /* UCLKitTests.swift in Sources */,
+				76B933D91E6B90F7005A3D31 /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7680A0261E8FEB6600B965D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76C783961E66E58F0087093E /* UCLKit iOS */;
+			targetProxy = 7680A0271E8FEB6600B965D5 /* PBXContainerItemProxy */;
+		};
 		76C783A31E66E58F0087093E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 76C783961E66E58F0087093E /* UCLKit iOS */;
@@ -536,6 +789,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		7680A0371E8FEB6600B965D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS";
+				INFOPLIST_FILE = UCLKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.watchOS.tests;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "UCLKit watchOS Tests";
+				SDKROOT = watchos;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7680A0381E8FEB6600B965D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS";
+				INFOPLIST_FILE = UCLKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.watchOS.tests;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "UCLKit watchOS Tests";
+				SDKROOT = watchos;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		76C783A91E66E58F0087093E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -563,6 +852,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -584,6 +874,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -616,6 +907,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -630,6 +922,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -638,6 +931,7 @@
 		76C783AC1E66E5900087093E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -653,8 +947,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.iOS;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = UCLKit;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -664,6 +959,7 @@
 		76C783AD1E66E5900087093E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -679,8 +975,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.iOS;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = UCLKit;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -692,10 +989,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.iOS.tests;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "UCLKit iOS Tests";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -706,10 +1006,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.iOS.tests;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "UCLKit iOS Tests";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -717,6 +1020,7 @@
 		76C783C51E677DF10087093E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -732,8 +1036,9 @@
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.watchOS;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = UCLKit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -745,6 +1050,7 @@
 		76C783C61E677DF10087093E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -760,8 +1066,9 @@
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.watchOS;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = UCLKit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -772,6 +1079,7 @@
 		76C783D41E677E6B0087093E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -787,8 +1095,9 @@
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.tvOS;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = UCLKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -801,6 +1110,7 @@
 		76C783D51E677E6B0087093E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -816,8 +1126,9 @@
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.tvOS;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = UCLKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -829,6 +1140,7 @@
 		76C783E31E677EA40087093E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -845,8 +1157,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.macOS;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = UCLKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -859,6 +1172,7 @@
 		76C783E41E677EA40087093E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -875,8 +1189,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.macOS;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = UCLKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -891,10 +1206,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.macOS.tests;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "UCLKit macOS Tests";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
 			};
@@ -906,10 +1223,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.macOS.tests;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "UCLKit macOS Tests";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
 			};
@@ -921,10 +1240,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.tvOS.tests;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "UCLKit tvOS Tests";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;
 			};
@@ -936,10 +1257,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.tvOS.tests;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "UCLKit tvOS Tests";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;
 			};
@@ -948,6 +1271,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7680A0361E8FEB6600B965D5 /* Build configuration list for PBXNativeTarget "UCLKit watchOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7680A0371E8FEB6600B965D5 /* Debug */,
+				7680A0381E8FEB6600B965D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		76C783911E66E58F0087093E /* Build configuration list for PBXProject "UCLKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -966,7 +1298,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		76C783AE1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKit Tests" */ = {
+		76C783AE1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKit iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				76C783AF1E66E5900087093E /* Debug */,

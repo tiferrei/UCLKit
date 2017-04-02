@@ -11,7 +11,7 @@ import RequestKit
 
 public let UCLKitErrorDomain = "com.tiferrei.UCLKit"
 
-public struct TanukiKit {
+public struct UCLKit {
     public let configuration: Configuration
 
     public init(_ config: Configuration = TokenConfiguration()) {

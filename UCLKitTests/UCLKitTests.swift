@@ -7,7 +7,8 @@
 //
 
 import XCTest
-import UCLKit
+import Foundation
+@testable import UCLKit
 
 private let baseURL = "https://uclapi.com/"
 

@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version          = "0.1.0"
   s.summary          = "UCL API communication in one line of code"
   s.description      = <<-DESC
-                        UCLKit allows you to integrsate the UCL API in Apple
+                        UCLKit allows you to integrate the UCL API in Apple
 						platform apps. Leave all the networking and parsing for
 						UCLKit, focus on the app itself.
 

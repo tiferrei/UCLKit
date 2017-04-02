@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "76C783C91E677E6B0087093E"
-               BuildableName = "UCLKit tvOS.framework"
+               BuildableName = "UCLKit.framework"
                BlueprintName = "UCLKit tvOS"
                ReferencedContainer = "container:UCLKit.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "76C783F41E677F400087093E"
-               BuildableName = "UCLKit tvOS Tests.xctest"
+               BuildableName = "UCLKitTests.xctest"
                BlueprintName = "UCLKit tvOS Tests"
                ReferencedContainer = "container:UCLKit.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "76C783C91E677E6B0087093E"
-            BuildableName = "UCLKit tvOS.framework"
+            BuildableName = "UCLKit.framework"
             BlueprintName = "UCLKit tvOS"
             ReferencedContainer = "container:UCLKit.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "76C783C91E677E6B0087093E"
-            BuildableName = "UCLKit tvOS.framework"
+            BuildableName = "UCLKit.framework"
             BlueprintName = "UCLKit tvOS"
             ReferencedContainer = "container:UCLKit.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "76C783C91E677E6B0087093E"
-            BuildableName = "UCLKit tvOS.framework"
+            BuildableName = "UCLKit.framework"
             BlueprintName = "UCLKit tvOS"
             ReferencedContainer = "container:UCLKit.xcodeproj">
          </BuildableReference>

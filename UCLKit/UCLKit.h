@@ -6,7 +6,7 @@
 //  Copyright © 2017 Tiago Ferreira. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for UCLKit.
 FOUNDATION_EXPORT double UCLKitVersionNumber;

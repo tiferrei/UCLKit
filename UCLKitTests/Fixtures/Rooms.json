@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "rooms": [
+    {
+      "roomname": "Wilkins Building (Main Building) Portico",
+      "roomid": "Z4",
+      "siteid": "005",
+      "sitename": "Main Building",
+      "capacity": 50,
+      "classification": "SS",
+      "automated": "N",
+      "location": {
+        "address": [
+          "Gower Street",
+          "London",
+          "WC1E 6BT",
+          ""
+        ]
+      }
+    }
+  ]
+}
