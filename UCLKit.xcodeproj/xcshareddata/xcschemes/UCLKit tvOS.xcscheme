@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "76C783F41E677F400087093E"
-               BuildableName = "UCLKitTests.xctest"
+               BuildableName = "UCLKit tvOS Tests.xctest"
                BlueprintName = "UCLKit tvOS Tests"
                ReferencedContainer = "container:UCLKit.xcodeproj">
             </BuildableReference>

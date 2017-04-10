@@ -39,8 +39,8 @@ import RequestKit
             siteID = json["siteid"] as? String
             siteName = json["sitename"] as? String
             capacity = json["capacity"] as? Int
-            classification = json["classification"] as? Classification
-            automated = json["automated"] as? Automation
+            classification = Classification(rawValue: json["classification"] as? String ?? "")
+            automated = Automation(rawValue: json["automated"] as? String ?? "")
             location = Location(json["location"] as? [String: AnyObject] ?? [:])
     }
 }
@@ -56,16 +56,18 @@ import RequestKit
 }
 
 public enum Classification: String {
-    case All = ""
     case LectureTheatre = "LT"
     case Classroom = "CR"
     case PublicCluster = "PC1"
+    case SocialSpace = "SS"
+    case Unknown = ""
 }
 
 public enum Automation: String {
     case Automated = "A"
     case NotAutomated = "N"
     case Dependent = "P"
+    case Unknown = ""
 }
 
 // Mark: Requests
@@ -77,11 +79,11 @@ public extension UCLKit {
      - parameter roomName: The name of the room. It often includes the name of the site (building) as well.
      - parameter siteID: Every room is inside a site (building). All sites have IDs.
      - parameter siteName: Every site (building) has a name. In some cases this is contained in the roomname as well.
-     - parameter classificaton: The type of room. LT = Lecture Theatre, CR = Classroom, SS = Social Space, PC1 = Public Cluster.
+     - parameter classificaton: The type of room. LT = Lecture Theatre, CR = Classroom, SS = Social Space, PC1 = Public Cluster or "" = Unknown
      - parameter capacity: very room has a set capacity of how many people can fit inside it. When supplied, all rooms with the given capacity or greater will be returned.
      - parameter completion: Callback for the outcome of the fetch.
      */
-    public func rooms(_ session: RequestKitURLSession = URLSession.shared, roomID: String = "", roomName: String = "", siteID: String = "", siteName: String = "", classification: Classification = Classification.All, capacity: String = "", completion: @escaping (_ response: Response<RoomsResponse>) -> Void) -> URLSessionDataTaskProtocol? {
+    public func rooms(_ session: RequestKitURLSession = URLSession.shared, roomID: String = "", roomName: String = "", siteID: String = "", siteName: String = "", classification: Classification = Classification.Unknown, capacity: String = "", completion: @escaping (_ response: Response<RoomsResponse>) -> Void) -> URLSessionDataTaskProtocol? {
         let router = RoomBookingsRouter.readRooms(configuration: configuration, roomID: roomID, roomName: roomName, siteID: siteID, siteName: siteName, classification: classification, capacity: capacity)
         return router.loadJSON(session, expectedResultType: [String: AnyObject].self) { json, error in
             if let error = error {
@@ -118,7 +120,7 @@ enum RoomBookingsRouter: Router {
     var params: [String: Any] {
         switch self {
         case .readRooms(_, let roomID, let roomName, let siteID, let siteName, let classification, let capacity):
-            return ["roomid": roomID, "roomname": roomName, "siteid": siteID, "sitename": siteName, "calssification": classification, "capacity": capacity]
+            return ["roomid": roomID, "roomname": roomName, "siteid": siteID, "sitename": siteName, "classification": classification, "capacity": capacity]
         }
     }
 

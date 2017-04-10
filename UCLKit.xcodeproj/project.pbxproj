@@ -32,7 +32,6 @@
 		76B933D61E6B90F3005A3D31 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933CF1E6B8790005A3D31 /* TestHelper.swift */; };
 		76B933D81E6B90F5005A3D31 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933CF1E6B8790005A3D31 /* TestHelper.swift */; };
 		76B933D91E6B90F7005A3D31 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933CF1E6B8790005A3D31 /* TestHelper.swift */; };
-		76B933EA1E6D93A7005A3D31 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; };
 		76B933EB1E6D93B7005A3D31 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; };
 		76B933EC1E6D93C3005A3D31 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933E41E6D938F005A3D31 /* RequestKit.framework */; };
 		76C783A11E66E58F0087093E /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit.framework */; };
@@ -208,7 +207,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76B933EA1E6D93A7005A3D31 /* RequestKit.framework in Frameworks */,
 				76C783A11E66E58F0087093E /* UCLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,10 +453,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76C783AE1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKit iOS Tests" */;
 			buildPhases = (
-				7680A01F1E8FEB0100B965D5 /* Carthage Embed */,
-				76C7839D1E66E58F0087093E /* Frameworks */,
 				76C7839C1E66E58F0087093E /* Sources */,
+				76C7839D1E66E58F0087093E /* Frameworks */,
 				76C7839E1E66E58F0087093E /* Resources */,
+				7680A01F1E8FEB0100B965D5 /* Carthage Embed */,
 			);
 			buildRules = (
 			);
@@ -798,7 +796,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.watchOS.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.watchOSTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "UCLKit watchOS Tests";
 				SDKROOT = watchos;
@@ -816,7 +814,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.watchOS.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.watchOSTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "UCLKit watchOS Tests";
 				SDKROOT = watchos;
@@ -931,7 +929,8 @@
 		76C783AC1E66E5900087093E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ANALYZER_NONNULL = YES_NONAGGRESSIVE;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -947,19 +946,22 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.iOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = UCLKit;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "armv7s armv7 arm64";
 			};
 			name = Debug;
 		};
 		76C783AD1E66E5900087093E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ANALYZER_NONNULL = YES_NONAGGRESSIVE;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -975,45 +977,51 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.iOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = UCLKit;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "armv7s armv7 arm64";
 			};
 			name = Release;
 		};
 		76C783AF1E66E5900087093E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ANALYZER_NONNULL = YES_NONAGGRESSIVE;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.iOS.tests;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.iOSTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "UCLKit iOS Tests";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
 		76C783B01E66E5900087093E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ANALYZER_NONNULL = YES_NONAGGRESSIVE;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.iOS.tests;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.iOSTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "UCLKit iOS Tests";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -1036,7 +1044,7 @@
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.watchOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = UCLKit;
 				SDKROOT = watchos;
@@ -1066,7 +1074,7 @@
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.watchOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = UCLKit;
 				SDKROOT = watchos;
@@ -1095,7 +1103,7 @@
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.tvOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = UCLKit;
 				SDKROOT = appletvos;
@@ -1126,7 +1134,7 @@
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.tvOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = UCLKit;
 				SDKROOT = appletvos;
@@ -1157,7 +1165,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.macOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = UCLKit;
 				SDKROOT = macosx;
@@ -1189,7 +1197,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.macOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = UCLKit;
 				SDKROOT = macosx;
@@ -1209,7 +1217,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.macOS.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.macOSTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "UCLKit macOS Tests";
 				SDKROOT = macosx;
@@ -1226,7 +1234,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.macOS.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.macOSTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "UCLKit macOS Tests";
 				SDKROOT = macosx;
@@ -1243,7 +1251,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.tvOS.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.tvOSTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "UCLKit tvOS Tests";
 				SDKROOT = appletvos;
@@ -1260,7 +1268,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.tvOS.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.tvOSTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "UCLKit tvOS Tests";
 				SDKROOT = appletvos;
