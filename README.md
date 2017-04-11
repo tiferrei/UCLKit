@@ -1,5 +1,5 @@
 <h1 align="center">
-Welcome to UCLKit!
+Welcome to UCLKit
 </h1>
 <br>
 <p align="center">
@@ -19,7 +19,6 @@ UCLKit is a Swift wrapper for the [UCL API](uclapi.com). I have developed UCLKit
 ## Main Features
 
 * 100% native Swift 3 framework
-* Full support of all endpoints
 * Fast and native networking
 * Smart error handling
 
