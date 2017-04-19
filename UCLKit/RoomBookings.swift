@@ -14,12 +14,12 @@ import RequestKit
 @objc open class RoomsResponse: NSObject {
     open var OK: Bool?
     open var error: String?
-    open var rooms: Room?
+    open var rooms: [Room]?
 
     public init(_ json: [String: Any]) {
         OK = json["ok"] as? Bool
         error = json["error"] as? String
-        rooms = Room(json["rooms"] as? [String: AnyObject] ?? [:])
+        rooms = (json["rooms"] as? [[String: AnyObject]])?.map { Room($0) }
     }
 }
 
@@ -91,8 +91,8 @@ public extension UCLKit {
             }
 
             if let json = json {
-                let results =  RoomsResponse(json)
-                completion(Response.success(results))
+                let response =  RoomsResponse(json)
+                completion(Response.success(response))
             }
         }
     }
