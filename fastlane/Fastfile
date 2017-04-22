@@ -1,4 +1,33 @@
-import_from_git(
-  url: 'https://github.com/AFNetworking/fastlane.git',
-  branch: '0.0.7'
-)
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.14.2"
+
+default_platform :ios
+platform :ios do
+  before_all do
+    clear_derived_data
+  end
+
+  desc "Test UCLKit iOS."
+  lane :test do
+    scan(
+	  sdk: "iphonesimulator",
+	  scheme: "UCLKit iOS",
+	  device: "iPhone 7",
+	  clean: true)
+  end
+end
+
+platform :mac do
+  before_all do
+    clear_derived_data
+  end
+
+  desc "Test UCLKit macOS."
+  lane :test do
+    scan(
+      sdk: "macosx10.12",
+	  scheme: "UCLKit macOS",
+	  clean: true)
+  end
+end
