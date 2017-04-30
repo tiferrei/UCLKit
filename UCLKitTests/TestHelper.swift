@@ -19,14 +19,6 @@ internal class TestHelper {
         return nil
     }
 
-    internal class func parseDate(date: String?) -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        let dateOutput = dateFormatter.date(from: date!)
-        return dateOutput
-    }
-
     internal class func JSONFromFile(name: String) -> Any {
         let bundle = Bundle(for: self)
         let path = bundle.url(forResource: name, withExtension: "json")!
