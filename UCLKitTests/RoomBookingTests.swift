@@ -10,7 +10,7 @@ import XCTest
 import Foundation
 @testable import UCLKit
 
-class RoomBookingTests: XCTestCase {
+class RoomTests: XCTestCase {
     
     // MARK: Request Tests
     
@@ -43,13 +43,33 @@ class RoomBookingTests: XCTestCase {
         XCTAssertTrue(session.wasCalled)
     }
 
+    // MARK: Model Tests
+    
+    func testRoomsParsing() {
+        let response = RoomsResponse(TestHelper.JSONFromFile(name: "Rooms") as! [String: AnyObject])
+        XCTAssertEqual(response.OK, true)
+        XCTAssertEqual(response.rooms![0].roomName, "Wilkins Building (Main Building) Portico")
+        XCTAssertEqual(response.rooms![0].roomID, "Z4")
+        XCTAssertEqual(response.rooms![0].siteID, "005")
+        XCTAssertEqual(response.rooms![0].siteName, "Main Building")
+        XCTAssertEqual(response.rooms![0].capacity, 50)
+        XCTAssertEqual(response.rooms![0].classification, Classification.SocialSpace)
+        XCTAssertEqual(response.rooms![0].automated, Automation.NotAutomated)
+        XCTAssertEqual(response.rooms![0].location!.address!, ["Gower Street", "London", "WC1E 6BT", ""])
+    }
+
+}
+
+class BookingTests: XCTestCase {
+
+    // MARK: Request Tests
+
     func testGetBookings() {
         let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/bookings?access_token=12345&contact=&date=&description=&end_datetime=&page_token=&results_per_page=1000&roomid=&roomname=&siteid=&start_datetime=", expectedHTTPMethod: "GET", jsonFile: "Bookings", statusCode: 200)
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).bookings(session) { response in
             switch response {
             case .success(let response):
-                print(response)
                 XCTAssertEqual(response.OK, true)
             case .failure(let error):
                 XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
@@ -86,22 +106,9 @@ class RoomBookingTests: XCTestCase {
         }
         XCTAssertTrue(session.wasCalled)
     }
-    
+
     // MARK: Model Tests
-    
-    func testRoomsParsing() {
-        let response = RoomsResponse(TestHelper.JSONFromFile(name: "Rooms") as! [String: AnyObject])
-        XCTAssertEqual(response.OK, true)
-        XCTAssertEqual(response.rooms![0].roomName, "Wilkins Building (Main Building) Portico")
-        XCTAssertEqual(response.rooms![0].roomID, "Z4")
-        XCTAssertEqual(response.rooms![0].siteID, "005")
-        XCTAssertEqual(response.rooms![0].siteName, "Main Building")
-        XCTAssertEqual(response.rooms![0].capacity, 50)
-        XCTAssertEqual(response.rooms![0].classification, Classification.SocialSpace)
-        XCTAssertEqual(response.rooms![0].automated, Automation.NotAutomated)
-        XCTAssertEqual(response.rooms![0].location!.address!, ["Gower Street", "London", "WC1E 6BT", ""])
-    }
-    
+
     func testBookingsParsing() {
         let response = BookingsResponse(TestHelper.JSONFromFile(name: "Bookings") as! [String: AnyObject])
         XCTAssertEqual(response.OK, true)
@@ -119,4 +126,54 @@ class RoomBookingTests: XCTestCase {
         XCTAssertEqual(response.pageToken, "6hb14hXjRV")
         XCTAssertEqual(response.count, 1197)
     }
+    
+}
+
+class EquipmentTests: XCTestCase {
+
+    // MARK: Request Tests
+
+    func testGetEquipment() {
+        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/equipment?access_token=12345&roomid=433&siteid=086", expectedHTTPMethod: "GET", jsonFile: "Equipment", statusCode: 200)
+        let config = TokenConfiguration("12345")
+        _ = UCLKit(config).equipment(session, roomID: "433", siteID: "086") { response in
+            switch response {
+            case .success(let response):
+                XCTAssertEqual(response.OK, true)
+            case .failure(let error):
+                XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
+            }
+        }
+        XCTAssertTrue(session.wasCalled)
+    }
+
+    func testFailToGetEquipment() {
+        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/equipment?access_token=12345&roomid=&siteid=", expectedHTTPMethod: "GET", jsonFile: "Equipment", statusCode: 400)
+        let config = TokenConfiguration("12345")
+        _ = UCLKit(config).equipment(session, roomID: "", siteID: "") { response in
+            switch response {
+            case .success(let response):
+                XCTAssert(false, "❌ Should not retrieve a response (\(response))")
+                XCTAssertEqual(response.OK, true)
+            case .failure(_):
+                XCTAssert(true)
+            }
+        }
+        XCTAssertTrue(session.wasCalled)
+    }
+
+
+    // MARK: Model Tests
+
+    func testBookingsParsing() {
+        let response = EquipmentResponse(TestHelper.JSONFromFile(name: "Equipment") as! [String: AnyObject])
+        XCTAssertEqual(response.OK, true)
+        XCTAssertEqual(response.equipment![0].type, Type.FixedFeature)
+        XCTAssertEqual(response.equipment![0].equipmentDescription, "Managed PC")
+        XCTAssertEqual(response.equipment![0].units, 1)
+        XCTAssertEqual(response.equipment![1].type, Type.FixedEquipment)
+        XCTAssertEqual(response.equipment![1].equipmentDescription, "Chairs with Tables")
+        XCTAssertEqual(response.equipment![1].units, 1)
+    }
+
 }

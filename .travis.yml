@@ -10,17 +10,12 @@ matrix:
     - osx_image: xcode8.3.1
       env: PLATFORM=ios
     - osx_image: xcode8.3.1
-      env: PLATFORM=mac
+      env: PLATFORM=macos
     - osx_image: xcode8.3.1
       env: PLATFORM=tvos
 	- osx_image: xcode8.3.1
 	  env: PLATFORM=watchos
 before_install:
-  - gem install fastlane --no-rdoc --no-ri --no-document --quiet
-  - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
-  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-  - brew outdated carthage || brew upgrade carthage || brew install carthage
-  - carthage bootstrap
+  - make install
 script:
-  - bundle exec fastlane $PLATFORM test configuration:Debug
-  - bundle exec fastlane $PLATFORM test configuration:Release
+  - make $PLATFORM

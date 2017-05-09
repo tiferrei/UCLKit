@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "equipment": [
+    {
+      "type": "FF",
+      "description": "Managed PC",
+      "units": 1
+    },
+    {
+      "type": "FE",
+      "description": "Chairs with Tables",
+      "units": 1
+    }
+  ]
+}

@@ -89,6 +89,29 @@ import RequestKit
     }
 }
 
+@objc open class EquipmentResponse: NSObject {
+    open var OK: Bool?
+    open var error: String?
+    open var equipment: [Equipment]?
+    
+    public init(_ json: [String: Any]) {
+        OK = json["ok"] as? Bool
+        error = json["error"] as? String
+        equipment = (json["equipment"] as? [[String: AnyObject]])?.map { Equipment($0) }
+    }
+}
+
+@objc open class Equipment: NSObject {
+    open var type: Type?
+    open var equipmentDescription: String?
+    open var units: Int?
+    
+    public init(_ json: [String: Any]) {
+        type = Type(rawValue: json["type"] as? String ?? "")
+        equipmentDescription = json["description"] as? String
+        units = json["units"] as? Int
+    }
+}
 
 // Mark: Helper Classes
 
@@ -112,6 +135,12 @@ public enum Automation: String {
     case Automated = "A"
     case NotAutomated = "N"
     case Dependent = "P"
+    case Unknown = ""
+}
+
+public enum Type: String {
+    case FixedEquipment = "FE"
+    case FixedFeature = "FF"
     case Unknown = ""
 }
 
@@ -169,6 +198,26 @@ public extension UCLKit {
             }
         }
     }
+    
+    /**
+     Returns any equipment/feature information about a specific room
+     - parameter roomID: The room ID (not to be confused, with the roomname).
+     - parameter siteID: Every room is inside a site (building). All sites have IDs.
+     - parameter completion: Callback for the outcome of the fetch.
+     */
+    public func equipment(_ session: RequestKitURLSession = URLSession.shared, roomID: String?, siteID: String?, completion: @escaping (_ response: Response<EquipmentResponse>) -> Void) -> URLSessionDataTaskProtocol? {
+        let router = RoomBookingsRouter.readEquipment(configuration: configuration, roomID: roomID!, siteID: siteID!)
+        return router.loadJSON(session, expectedResultType: [String: AnyObject].self) { json, error in
+            if let error = error {
+                completion(Response.failure(error))
+            }
+            
+            if let json = json {
+                let response =  EquipmentResponse(json)
+                completion(Response.success(response))
+            }
+        }
+    }
 }
 
 // MARK: Router
@@ -176,11 +225,13 @@ public extension UCLKit {
 enum RoomBookingsRouter: Router {
     case readRooms(configuration: Configuration, roomID: String, roomName: String, siteID: String, siteName: String, classification: Classification, capacity: String)
     case readBookings(configuration: Configuration, pageToken: String, roomName: String, roomID: String, startDateTime: String, endDateTime: String, date: String, siteID: String, description: String, contact: String, resultsPerPage: String)
+    case readEquipment(configuration: Configuration, roomID: String, siteID: String)
 
     var configuration: Configuration {
         switch self {
         case .readRooms(let config, _, _, _, _, _, _): return config
         case .readBookings(let config, _, _, _, _, _, _, _, _, _, _): return config
+        case .readEquipment(let config, _, _): return config
         }
     }
 
@@ -198,6 +249,8 @@ enum RoomBookingsRouter: Router {
             return ["roomid": roomID, "roomname": roomName, "siteid": siteID, "sitename": siteName, "classification": classification, "capacity": capacity]
         case .readBookings(_, let pageToken, let roomName, let roomID, let startDateTime, let endDateTime, let date, let siteID, let description, let contact, let resultsPerPage):
             return ["page_token": pageToken, "roomname": roomName, "roomid": roomID, "start_datetime": startDateTime, "end_datetime": endDateTime, "date": date, "siteid": siteID, "description": description, "contact": contact, "results_per_page": resultsPerPage]
+        case .readEquipment(_, let roomID, let siteID):
+            return ["roomid": roomID, "siteid": siteID]
         }
     }
 
@@ -207,6 +260,8 @@ enum RoomBookingsRouter: Router {
             return "roombookings/rooms"
         case .readBookings:
             return "roombookings/bookings"
+        case .readEquipment:
+            return "roombookings/equipment"
         }
     }
 }
