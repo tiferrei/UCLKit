@@ -1,5 +1,4 @@
 language: objective-c
-osx_image: xcode8.2
 sudo: false
 env:
   global:
@@ -7,15 +6,12 @@ env:
   - LANG=en_US.UTF-8
 matrix:
   include:
-    - osx_image: xcode8.3.1
-      env: PLATFORM=ios
-    - osx_image: xcode8.3.1
-      env: PLATFORM=macos
-    - osx_image: xcode8.3.1
-      env: PLATFORM=tvos
-	- osx_image: xcode8.3.1
-	  env: PLATFORM=watchos
-before_install:
+    env:
+      - PLATFORM=ios
+      - PLATFORM=macos
+      - PLATFORM=tvos
+      - PLATFORM=watchos
+install:
   - make install
 script:
   - make $PLATFORM
