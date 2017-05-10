@@ -3,7 +3,7 @@ BRANCH=$(shell git name-rev --name-only HEAD)
 
 install:
 	gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-	brew outdated carthage || brew upgrade carthage || brew install carthage
+	brew install carthage
 	carthage bootstrap
 
 ios:
