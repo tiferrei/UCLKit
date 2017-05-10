@@ -1,3 +1,4 @@
+os: osx
 language: objective-c
 sudo: false
 env:
@@ -6,11 +7,14 @@ env:
   - LANG=en_US.UTF-8
 matrix:
   include:
-    env:
-      - PLATFORM=ios
-      - PLATFORM=macos
-      - PLATFORM=tvos
-      - PLATFORM=watchos
+    - os: osx
+      env: PLATFORM=ios
+    - os: osx
+      env: PLATFORM=macos
+    - os: osx
+      env: PLATFORM=tvos
+    - os: osx
+      env: PLATFORM=watchos
 install:
   - make install
 script:
