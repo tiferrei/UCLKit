@@ -15,7 +15,7 @@ matrix:
       env: PLATFORM=tvos
     - os: osx
       env: PLATFORM=watchos
-install:
+before_install:
   - make install
 script:
   - make $PLATFORM
