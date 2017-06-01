@@ -7,38 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760F249F1EDF433400494E47 /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783D61E677E6B0087093E /* UCLKit.framework */; };
+		760F24A01EDF433D00494E47 /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783E51E677EA40087093E /* UCLKit.framework */; };
 		761630531EC10DD3003A1396 /* Equipment.json in Resources */ = {isa = PBXBuildFile; fileRef = 761630521EC10DD3003A1396 /* Equipment.json */; };
 		761630541EC10DD3003A1396 /* Equipment.json in Resources */ = {isa = PBXBuildFile; fileRef = 761630521EC10DD3003A1396 /* Equipment.json */; };
-		761630551EC10DD3003A1396 /* Equipment.json in Resources */ = {isa = PBXBuildFile; fileRef = 761630521EC10DD3003A1396 /* Equipment.json */; };
 		761630561EC10DD3003A1396 /* Equipment.json in Resources */ = {isa = PBXBuildFile; fileRef = 761630521EC10DD3003A1396 /* Equipment.json */; };
 		761630581EC1120F003A1396 /* TestTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761630571EC1120F003A1396 /* TestTime.swift */; };
 		761630591EC1120F003A1396 /* TestTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761630571EC1120F003A1396 /* TestTime.swift */; };
-		7616305A1EC1120F003A1396 /* TestTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761630571EC1120F003A1396 /* TestTime.swift */; };
 		7616305B1EC1120F003A1396 /* TestTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761630571EC1120F003A1396 /* TestTime.swift */; };
 		763DCAF11EB6387B00FA9EAA /* Bookings.json in Resources */ = {isa = PBXBuildFile; fileRef = 763DCAF01EB6387B00FA9EAA /* Bookings.json */; };
-		763DCAF21EB6387B00FA9EAA /* Bookings.json in Resources */ = {isa = PBXBuildFile; fileRef = 763DCAF01EB6387B00FA9EAA /* Bookings.json */; };
 		763DCAF31EB6387B00FA9EAA /* Bookings.json in Resources */ = {isa = PBXBuildFile; fileRef = 763DCAF01EB6387B00FA9EAA /* Bookings.json */; };
 		763DCAF41EB6387B00FA9EAA /* Bookings.json in Resources */ = {isa = PBXBuildFile; fileRef = 763DCAF01EB6387B00FA9EAA /* Bookings.json */; };
 		7649E8671EAF6F8200EF7892 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7649E8661EAF6F8200EF7892 /* Time.swift */; };
 		7649E8681EAF6F8200EF7892 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7649E8661EAF6F8200EF7892 /* Time.swift */; };
 		7649E8691EAF6F8200EF7892 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7649E8661EAF6F8200EF7892 /* Time.swift */; };
 		7649E86A1EAF6F8200EF7892 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7649E8661EAF6F8200EF7892 /* Time.swift */; };
-		7676355C1EBE2E44008A67A5 /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783E51E677EA40087093E /* UCLKit.framework */; };
 		7676355D1EBE2E54008A67A5 /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit.framework */; };
-		7676355E1EBE2E5D008A67A5 /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783C71E677DF10087093E /* UCLKit.framework */; };
-		7676355F1EBE2E66008A67A5 /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783D61E677E6B0087093E /* UCLKit.framework */; };
 		767635601EBE2FEC008A67A5 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; };
 		7680A0201E8FEB1D00B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7680A0221E8FEB4500B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7680A0241E8FEB5700B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933E41E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7680A0291E8FEB6600B965D5 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */; };
-		7680A02A1E8FEB6600B965D5 /* TestURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933CB1E6B865A005A3D31 /* TestURLSession.swift */; };
-		7680A02B1E8FEB6600B965D5 /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783A51E66E58F0087093E /* UCLKitTests.swift */; };
-		7680A02C1E8FEB6600B965D5 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933CF1E6B8790005A3D31 /* TestHelper.swift */; };
-		7680A0311E8FEB6600B965D5 /* Rooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 76B933D21E6B8947005A3D31 /* Rooms.json */; };
-		7680A0321E8FEB6600B965D5 /* InvalidToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CA60E81E7C14580050B5EF /* InvalidToken.json */; };
-		7680A0331E8FEB6600B965D5 /* NoToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CA60E41E7C142A0050B5EF /* NoToken.json */; };
-		7680A03B1E8FEB7A00B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933E81E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76B933C81E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */; };
 		76B933C91E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */; };
 		76B933CA1E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */; };
@@ -88,13 +76,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 76C783D81E677EA40087093E;
 			remoteInfo = "UCLKit macOS";
-		};
-		767635571EBE2D07008A67A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76C7838E1E66E58F0087093E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 76C783BA1E677DF10087093E;
-			remoteInfo = "UCLKit watchOS";
 		};
 		767635591EBE2D13008A67A5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -146,17 +127,6 @@
 			name = "Carthage Embed";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7680A0341E8FEB6600B965D5 /* Carthage Embed */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				7680A03B1E8FEB7A00B965D5 /* RequestKit.framework in Carthage Embed */,
-			);
-			name = "Carthage Embed";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -165,22 +135,17 @@
 		763DCAF01EB6387B00FA9EAA /* Bookings.json */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.json; path = Bookings.json; sourceTree = "<group>"; tabWidth = 2; };
 		7649E8661EAF6F8200EF7892 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		7680A01D1E8FB9B300B965D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		7680A0391E8FEB6600B965D5 /* UCLKit watchOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UCLKit watchOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7680A03C1E90182500B965D5 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomBookingTests.swift; sourceTree = "<group>"; };
 		76B933CB1E6B865A005A3D31 /* TestURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestURLSession.swift; sourceTree = "<group>"; };
 		76B933CF1E6B8790005A3D31 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		76B933D21E6B8947005A3D31 /* Rooms.json */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.json; path = Rooms.json; sourceTree = "<group>"; };
-		76B933DB1E6D938F005A3D31 /* 4F00B540-8C72-3107-812C-9CE64CA71277.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "4F00B540-8C72-3107-812C-9CE64CA71277.bcsymbolmap"; sourceTree = "<group>"; };
-		76B933DC1E6D938F005A3D31 /* D3DF52A6-CCBB-3629-AC94-8F7797D5011B.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "D3DF52A6-CCBB-3629-AC94-8F7797D5011B.bcsymbolmap"; sourceTree = "<group>"; };
 		76B933DD1E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
 		76B933DE1E6D938F005A3D31 /* RequestKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RequestKit.framework.dSYM; sourceTree = "<group>"; };
 		76B933E01E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
 		76B933E11E6D938F005A3D31 /* RequestKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RequestKit.framework.dSYM; sourceTree = "<group>"; };
-		76B933E31E6D938F005A3D31 /* DE35C1AA-6DD2-30A7-B74E-EFF3F6DAC547.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "DE35C1AA-6DD2-30A7-B74E-EFF3F6DAC547.bcsymbolmap"; sourceTree = "<group>"; };
 		76B933E41E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
 		76B933E51E6D938F005A3D31 /* RequestKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RequestKit.framework.dSYM; sourceTree = "<group>"; };
-		76B933E71E6D938F005A3D31 /* 2F8CAFB6-C112-3354-AEB6-618F076013E0.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2F8CAFB6-C112-3354-AEB6-618F076013E0.bcsymbolmap"; sourceTree = "<group>"; };
 		76B933E81E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
 		76B933E91E6D938F005A3D31 /* RequestKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RequestKit.framework.dSYM; sourceTree = "<group>"; };
 		76C783971E66E58F0087093E /* UCLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,14 +168,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7680A02D1E8FEB6600B965D5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7676355E1EBE2E5D008A67A5 /* UCLKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		76C783931E66E58F0087093E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,7 +212,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7676355C1EBE2E44008A67A5 /* UCLKit.framework in Frameworks */,
+				760F24A01EDF433D00494E47 /* UCLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7676355F1EBE2E66008A67A5 /* UCLKit.framework in Frameworks */,
+				760F249F1EDF433400494E47 /* UCLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,8 +242,6 @@
 		76B933DA1E6D938F005A3D31 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				76B933DB1E6D938F005A3D31 /* 4F00B540-8C72-3107-812C-9CE64CA71277.bcsymbolmap */,
-				76B933DC1E6D938F005A3D31 /* D3DF52A6-CCBB-3629-AC94-8F7797D5011B.bcsymbolmap */,
 				76B933DD1E6D938F005A3D31 /* RequestKit.framework */,
 				76B933DE1E6D938F005A3D31 /* RequestKit.framework.dSYM */,
 			);
@@ -307,7 +262,6 @@
 		76B933E21E6D938F005A3D31 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				76B933E31E6D938F005A3D31 /* DE35C1AA-6DD2-30A7-B74E-EFF3F6DAC547.bcsymbolmap */,
 				76B933E41E6D938F005A3D31 /* RequestKit.framework */,
 				76B933E51E6D938F005A3D31 /* RequestKit.framework.dSYM */,
 			);
@@ -318,7 +272,6 @@
 		76B933E61E6D938F005A3D31 /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				76B933E71E6D938F005A3D31 /* 2F8CAFB6-C112-3354-AEB6-618F076013E0.bcsymbolmap */,
 				76B933E81E6D938F005A3D31 /* RequestKit.framework */,
 				76B933E91E6D938F005A3D31 /* RequestKit.framework.dSYM */,
 			);
@@ -329,10 +282,10 @@
 		76C7838D1E66E58F0087093E = {
 			isa = PBXGroup;
 			children = (
-				76C783991E66E58F0087093E /* UCLKit */,
-				76C783A41E66E58F0087093E /* UCLKitTests */,
 				76C783B51E670D1F0087093E /* Frameworks */,
 				76C783981E66E58F0087093E /* Products */,
+				76C783991E66E58F0087093E /* UCLKit */,
+				76C783A41E66E58F0087093E /* UCLKitTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -346,7 +299,6 @@
 				76C783E51E677EA40087093E /* UCLKit.framework */,
 				76C783F21E677ED40087093E /* UCLKit macOS Tests.xctest */,
 				76C783FF1E677F400087093E /* UCLKit tvOS Tests.xctest */,
-				7680A0391E8FEB6600B965D5 /* UCLKit watchOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -430,25 +382,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7680A0251E8FEB6600B965D5 /* UCLKit watchOS Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7680A0361E8FEB6600B965D5 /* Build configuration list for PBXNativeTarget "UCLKit watchOS Tests" */;
-			buildPhases = (
-				7680A0281E8FEB6600B965D5 /* Sources */,
-				7680A02D1E8FEB6600B965D5 /* Frameworks */,
-				7680A0301E8FEB6600B965D5 /* Resources */,
-				7680A0341E8FEB6600B965D5 /* Carthage Embed */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				767635581EBE2D07008A67A5 /* PBXTargetDependency */,
-			);
-			name = "UCLKit watchOS Tests";
-			productName = UCLKitTests;
-			productReference = 7680A0391E8FEB6600B965D5 /* UCLKit watchOS Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		76C783961E66E58F0087093E /* UCLKit iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76C783AB1E66E5900087093E /* Build configuration list for PBXNativeTarget "UCLKit iOS" */;
@@ -585,7 +518,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Tiago Ferreira";
 				TargetAttributes = {
 					76C783961E66E58F0087093E = {
@@ -616,7 +549,6 @@
 				76C783D81E677EA40087093E /* UCLKit macOS */,
 				76C783E71E677ED40087093E /* UCLKit macOS Tests */,
 				76C783BA1E677DF10087093E /* UCLKit watchOS */,
-				7680A0251E8FEB6600B965D5 /* UCLKit watchOS Tests */,
 				76C783C91E677E6B0087093E /* UCLKit tvOS */,
 				76C783F41E677F400087093E /* UCLKit tvOS Tests */,
 			);
@@ -624,18 +556,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7680A0301E8FEB6600B965D5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7680A0311E8FEB6600B965D5 /* Rooms.json in Resources */,
-				763DCAF21EB6387B00FA9EAA /* Bookings.json in Resources */,
-				761630551EC10DD3003A1396 /* Equipment.json in Resources */,
-				7680A0321E8FEB6600B965D5 /* InvalidToken.json in Resources */,
-				7680A0331E8FEB6600B965D5 /* NoToken.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		76C783951E66E58F0087093E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -703,18 +623,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7680A0281E8FEB6600B965D5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7680A0291E8FEB6600B965D5 /* RoomBookingTests.swift in Sources */,
-				7680A02A1E8FEB6600B965D5 /* TestURLSession.swift in Sources */,
-				7680A02B1E8FEB6600B965D5 /* UCLKitTests.swift in Sources */,
-				7680A02C1E8FEB6600B965D5 /* TestHelper.swift in Sources */,
-				7616305A1EC1120F003A1396 /* TestTime.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		76C783921E66E58F0087093E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -803,11 +711,6 @@
 			target = 76C783D81E677EA40087093E /* UCLKit macOS */;
 			targetProxy = 767635551EBE2CF9008A67A5 /* PBXContainerItemProxy */;
 		};
-		767635581EBE2D07008A67A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 76C783BA1E677DF10087093E /* UCLKit watchOS */;
-			targetProxy = 767635571EBE2D07008A67A5 /* PBXContainerItemProxy */;
-		};
 		7676355A1EBE2D13008A67A5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 76C783C91E677E6B0087093E /* UCLKit tvOS */;
@@ -821,48 +724,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		7680A0371E8FEB6600B965D5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS";
-				INFOPLIST_FILE = UCLKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.watchOSTests;
-				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
-				PRODUCT_NAME = "UCLKit watchOS Tests";
-				SDKROOT = watchos;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos";
-				SWIFT_INCLUDE_PATHS = "";
-				SWIFT_VERSION = 3.0;
-				VALID_ARCHS = armv7k;
-			};
-			name = Debug;
-		};
-		7680A0381E8FEB6600B965D5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS";
-				INFOPLIST_FILE = UCLKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.watchOSTests;
-				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
-				PRODUCT_NAME = "UCLKit watchOS Tests";
-				SDKROOT = watchos;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos";
-				SWIFT_INCLUDE_PATHS = "";
-				SWIFT_VERSION = 3.0;
-				VALID_ARCHS = armv7k;
-			};
-			name = Release;
-		};
 		76C783A91E66E58F0087093E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -884,13 +745,13 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/**";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -905,15 +766,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
+				PRODUCT_NAME = UCLKit;
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -940,13 +802,13 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/**";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -955,14 +817,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
+				PRODUCT_NAME = UCLKit;
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -980,13 +844,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
@@ -997,9 +858,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "armv7s armv7 arm64";
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Debug;
 		};
@@ -1015,13 +874,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
@@ -1030,9 +886,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 3.0;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "armv7s armv7 arm64";
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Release;
 		};
@@ -1041,15 +895,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ANALYZER_NONNULL = YES_NONAGGRESSIVE;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.iOSTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "UCLKit iOS Tests";
+				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_INCLUDE_PATHS = "";
@@ -1063,15 +919,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ANALYZER_NONNULL = YES_NONAGGRESSIVE;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.iOSTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "UCLKit iOS Tests";
+				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 3.0;
@@ -1083,7 +941,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -1104,6 +961,7 @@
 				SUPPORTED_PLATFORMS = "watchsimulator watchos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
 				VALID_ARCHS = armv7k;
 				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
@@ -1113,7 +971,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -1133,6 +990,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
 				VALID_ARCHS = armv7k;
 				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
@@ -1142,7 +1000,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -1156,16 +1013,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
-				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
-				PRODUCT_NAME = UCLKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VALID_ARCHS = arm64;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Debug;
 		};
@@ -1173,7 +1027,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -1187,15 +1040,12 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
-				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
-				PRODUCT_NAME = UCLKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VALID_ARCHS = arm64;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Release;
 		};
@@ -1203,9 +1053,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1217,7 +1067,7 @@
 				);
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
@@ -1228,9 +1078,7 @@
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "i386 x86_64";
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Debug;
 		};
@@ -1238,9 +1086,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1252,7 +1100,7 @@
 				);
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit;
@@ -1262,9 +1110,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 3.0;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "i386 x86_64";
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Release;
 		};
@@ -1272,16 +1118,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.macOSTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "UCLKit macOS Tests";
 				SDKROOT = macosx;
+				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "i386 x86_64";
@@ -1292,16 +1144,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.macOSTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "UCLKit macOS Tests";
 				SDKROOT = macosx;
+				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "i386 x86_64";
@@ -1312,18 +1170,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.tvOSTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "UCLKit tvOS Tests";
 				SDKROOT = appletvos;
+				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = arm64;
 			};
 			name = Debug;
@@ -1332,18 +1192,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
 				INFOPLIST_FILE = UCLKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.tvOSTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "UCLKit tvOS Tests";
 				SDKROOT = appletvos;
+				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = arm64;
 			};
 			name = Release;
@@ -1351,15 +1213,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7680A0361E8FEB6600B965D5 /* Build configuration list for PBXNativeTarget "UCLKit watchOS Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7680A0371E8FEB6600B965D5 /* Debug */,
-				7680A0381E8FEB6600B965D5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		76C783911E66E58F0087093E /* Build configuration list for PBXProject "UCLKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
