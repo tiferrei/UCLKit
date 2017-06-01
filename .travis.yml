@@ -21,6 +21,8 @@ before_install:
 - make install
 script:
 - make $PLATFORM
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -J $PLATFORM
 before_deploy:
 - make deploy
 deploy:
