@@ -3,8 +3,8 @@ Welcome to UCLKit
 </h1>
 <br>
 <p align="center">
-<!-- <a href="https://gitlab.com/UCLAPI/UCLKit/commits/master"><img
-alt="UCLKit CI Status" src="https://gitlab.com/UCLAPI/UCLKit/badges/master/build.svg" /></a> -->
+<a href="https://github.com/tiferrei/UCLKit"><img
+alt="UCLKit CI Status" src="https://travis-ci.org/tiferrei/UCLKit.svg?branch=master" /></a>
 <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"/>
 <img src="https://img.shields.io/badge/macOS-Mavericks%20(10%2B)-blue.svg" alt="Platform: macOS Mavericks (10+)"/>
 <img src="https://img.shields.io/badge/iOS-8%2B-blue.svg" alt="Platform: iOS 8+"/>
