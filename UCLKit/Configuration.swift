@@ -11,6 +11,7 @@ import RequestKit
 
 let baseURL = "https://uclapi.com/"
 
+/// Base API and auth settings
 public struct TokenConfiguration: Configuration {
     public var apiEndpoint: String
     public var accessToken: String?

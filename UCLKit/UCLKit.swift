@@ -11,6 +11,7 @@ import RequestKit
 
 public let UCLKitErrorDomain = "com.tiferrei.UCLKit"
 
+/// Main UCLKit wrapping struct
 public struct UCLKit {
     public let configuration: Configuration
 

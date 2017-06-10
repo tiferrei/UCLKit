@@ -11,6 +11,7 @@ import RequestKit
 
 // Mark: Model
 
+/// Wrapper for the Rooms response
 @objc open class RoomsResponse: NSObject {
     open var OK: Bool?
     open var error: String?
@@ -23,6 +24,7 @@ import RequestKit
     }
 }
 
+/// Payload from the Rooms response
 @objc open class Room: NSObject {
     open let roomID: String?
     open var roomName: String?
@@ -45,6 +47,7 @@ import RequestKit
     }
 }
 
+/// Wrapper for the Bookings response
 @objc open class BookingsResponse: NSObject {
     open var OK: Bool?
     open var error: String?
@@ -63,6 +66,7 @@ import RequestKit
     }
 }
 
+/// Payload for the Bookings response
 @objc open class Booking: NSObject {
     open let slotID: Int?
     open var endTime: Date?
@@ -89,6 +93,7 @@ import RequestKit
     }
 }
 
+/// Wrapper for the Equipment response
 @objc open class EquipmentResponse: NSObject {
     open var OK: Bool?
     open var error: String?
@@ -101,6 +106,7 @@ import RequestKit
     }
 }
 
+/// Payload for the Equipment response
 @objc open class Equipment: NSObject {
     open var type: Type?
     open var equipmentDescription: String?
@@ -115,6 +121,7 @@ import RequestKit
 
 // Mark: Helper Classes
 
+/// Address sub-payload from the Room payload
 @objc open class Location: NSObject {
     open var address: [String]?
 
@@ -123,6 +130,7 @@ import RequestKit
     }
 }
 
+/// Classification enum to clarify options.
 public enum Classification: String {
     case LectureTheatre = "LT"
     case Classroom = "CR"
@@ -131,6 +139,7 @@ public enum Classification: String {
     case Unknown = ""
 }
 
+/// Automation enum to clarify options.
 public enum Automation: String {
     case Automated = "A"
     case NotAutomated = "N"
@@ -138,6 +147,7 @@ public enum Automation: String {
     case Unknown = ""
 }
 
+/// Type enum to clarify options.
 public enum Type: String {
     case FixedEquipment = "FE"
     case FixedFeature = "FF"
@@ -222,6 +232,12 @@ public extension UCLKit {
 
 // MARK: Router
 
+/**
+Main Room Bookings Router, contains:
+ - GET Rooms router
+ - GET Bookings router
+ - GET Equipment router
+*/
 enum RoomBookingsRouter: Router {
     case readRooms(configuration: Configuration, roomID: String, roomName: String, siteID: String, siteName: String, classification: Classification, capacity: String)
     case readBookings(configuration: Configuration, pageToken: String, roomName: String, roomID: String, startDateTime: String, endDateTime: String, date: String, siteID: String, description: String, contact: String, resultsPerPage: String)

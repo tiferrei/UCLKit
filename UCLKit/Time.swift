@@ -9,7 +9,6 @@
 import Foundation
 
 public extension UCLKit {
-    
     public struct Time {
         
         /**
