@@ -45,8 +45,6 @@ class UCLKitTests: XCTestCase {
             case .failure(let error as NSError):
                 XCTAssertEqual(error.code, 400)
                 XCTAssertEqual(error.domain, UCLKitErrorDomain)
-            case .failure:
-                XCTAssertTrue(false)
             }
         }
         XCTAssertTrue(session.wasCalled)

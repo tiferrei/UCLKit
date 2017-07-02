@@ -4,7 +4,7 @@ BRANCH=$(shell git name-rev --name-only HEAD)
 install:
 	brew update
 	gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-	carthage bootstrap
+	carthage bootstrap --no-use-binaries
 
 ios:
 	set -o pipefail && xcodebuild test -configuration Release ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES -scheme "UCLKit iOS" -destination 'platform=iOS Simulator,name=iPhone 7'
