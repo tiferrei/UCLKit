@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/tiferrei/UCLKit.git", :tag => s.version.to_s }
   s.social_media_url = "https://twitter.com/tiferrei2000"
   s.module_name     = "UCLKit"
-  s.dependency "NBNRequestKit", "~> 2.0"
+  s.dependency "NBNRequestKit", "~> 2.0.2"
   s.requires_arc = true
   s.source_files = "UCLKit/*.swift"
   s.ios.deployment_target = '8.0'

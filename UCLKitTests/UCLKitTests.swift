@@ -30,6 +30,8 @@ class UCLKitTests: XCTestCase {
             case .failure(let error as NSError):
                 XCTAssertEqual(error.code, 400)
                 XCTAssertEqual(error.domain, UCLKitErrorDomain)
+            default:
+                XCTAssert(false, "❌ Should retreive either fail or success")
             }
         }
         XCTAssertTrue(session.wasCalled)
@@ -45,6 +47,8 @@ class UCLKitTests: XCTestCase {
             case .failure(let error as NSError):
                 XCTAssertEqual(error.code, 400)
                 XCTAssertEqual(error.domain, UCLKitErrorDomain)
+            default:
+                XCTAssert(false, "❌ Should retreive either fail or success")
             }
         }
         XCTAssertTrue(session.wasCalled)
