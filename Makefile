@@ -3,7 +3,6 @@ BRANCH=$(shell git name-rev --name-only HEAD)
 
 install:
 	brew update
-	gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 	carthage bootstrap --no-use-binaries
 
 ios:
