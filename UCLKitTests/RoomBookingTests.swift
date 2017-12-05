@@ -20,7 +20,6 @@ class RoomTests: XCTestCase {
         _ = UCLKit(config).rooms(session) { response in
             switch response {
             case .success(let response):
-                print(response)
                 XCTAssertEqual(response.OK, true)
             case .failure(let error):
                 XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")

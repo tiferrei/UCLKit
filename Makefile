@@ -6,16 +6,16 @@ install:
 	carthage bootstrap --no-use-binaries
 
 ios:
-	set -o pipefail && xcodebuild test -configuration Release ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES -scheme "UCLKit iOS" -destination 'platform=iOS Simulator,name=iPhone 7'
+	set -o pipefail && xcodebuild test -configuration Release ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES -scheme "UCLKit iOS" -destination 'platform=iOS Simulator,name=iPhone X'
 
 macos:
 	set -o pipefail && xcodebuild test -configuration Release -enableCodeCoverage YES -scheme "UCLKit macOS" -destination 'platform=OS X,arch=x86_64'
 
 watchos:
-	set -o pipefail && xcodebuild -configuration Release ONLY_ACTIVE_ARCH=YES -scheme "UCLKit watchOS" -destination 'platform=watchOS Simulator,name=Apple Watch Series 2 - 42mm' build
+	set -o pipefail && xcodebuild -configuration Release ONLY_ACTIVE_ARCH=YES -scheme "UCLKit watchOS" -destination 'platform=watchOS Simulator,name=Apple Watch Series 3 - 42mm' build
 
 tvos:
-	set -o pipefail && xcodebuild test -configuration Release ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES -scheme "UCLKit tvOS" -destination 'platform=tvOS Simulator,name=Apple TV 1080p'
+	set -o pipefail && xcodebuild test -configuration Release ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES -scheme "UCLKit tvOS" -destination 'platform=tvOS Simulator,name=Apple TV 4K'
 
 all:
 	make ios

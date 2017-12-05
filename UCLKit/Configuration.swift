@@ -9,7 +9,7 @@
 import Foundation
 import RequestKit
 
-let baseURL = "https://uclapi.com/"
+public let baseURL = "https://uclapi.com/"
 
 /// Base API and auth settings
 public struct TokenConfiguration: Configuration {
