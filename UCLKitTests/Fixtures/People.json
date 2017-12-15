@@ -1,0 +1,11 @@
+{
+  "ok": true,
+    "people": [
+      {
+        "name": "Jane Doe",
+        "status": "Student",
+        "department": "Dept of Med Phys & Biomedical Eng",
+        "email": "jane.doe.17@ucl.ac.uk"
+    },
+  ]
+}

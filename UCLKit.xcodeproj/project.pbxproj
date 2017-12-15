@@ -22,6 +22,16 @@
 		7649E8681EAF6F8200EF7892 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7649E8661EAF6F8200EF7892 /* Time.swift */; };
 		7649E8691EAF6F8200EF7892 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7649E8661EAF6F8200EF7892 /* Time.swift */; };
 		7649E86A1EAF6F8200EF7892 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7649E8661EAF6F8200EF7892 /* Time.swift */; };
+		765821C51FC85E4A00885FA7 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765821C41FC85E4A00885FA7 /* Search.swift */; };
+		765821C61FC85E4A00885FA7 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765821C41FC85E4A00885FA7 /* Search.swift */; };
+		765821C71FC85E4A00885FA7 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765821C41FC85E4A00885FA7 /* Search.swift */; };
+		765821C81FC85E4A00885FA7 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765821C41FC85E4A00885FA7 /* Search.swift */; };
+		76665FDF1FCC7BC100626867 /* People.json in Resources */ = {isa = PBXBuildFile; fileRef = 76665FDE1FCC7BC100626867 /* People.json */; };
+		76665FE01FCC7BC100626867 /* People.json in Resources */ = {isa = PBXBuildFile; fileRef = 76665FDE1FCC7BC100626867 /* People.json */; };
+		76665FE11FCC7BC100626867 /* People.json in Resources */ = {isa = PBXBuildFile; fileRef = 76665FDE1FCC7BC100626867 /* People.json */; };
+		76665FE31FCC81CD00626867 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76665FE21FCC81CD00626867 /* SearchTests.swift */; };
+		76665FE41FCC81CD00626867 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76665FE21FCC81CD00626867 /* SearchTests.swift */; };
+		76665FE51FCC81CD00626867 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76665FE21FCC81CD00626867 /* SearchTests.swift */; };
 		7676355D1EBE2E54008A67A5 /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit.framework */; };
 		767635601EBE2FEC008A67A5 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; };
 		7680A0201E8FEB1D00B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -134,6 +144,9 @@
 		761630571EC1120F003A1396 /* TestTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTime.swift; sourceTree = "<group>"; };
 		763DCAF01EB6387B00FA9EAA /* Bookings.json */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.json; path = Bookings.json; sourceTree = "<group>"; tabWidth = 2; };
 		7649E8661EAF6F8200EF7892 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		765821C41FC85E4A00885FA7 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		76665FDE1FCC7BC100626867 /* People.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = People.json; sourceTree = "<group>"; };
+		76665FE21FCC81CD00626867 /* SearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
 		7680A01D1E8FB9B300B965D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7680A03C1E90182500B965D5 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomBookingTests.swift; sourceTree = "<group>"; };
@@ -235,6 +248,7 @@
 				761630521EC10DD3003A1396 /* Equipment.json */,
 				76CA60E41E7C142A0050B5EF /* NoToken.json */,
 				76CA60E81E7C14580050B5EF /* InvalidToken.json */,
+				76665FDE1FCC7BC100626867 /* People.json */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -310,6 +324,7 @@
 				76C783B11E66FE2C0087093E /* UCLKit.swift */,
 				76C783B31E6709CD0087093E /* Configuration.swift */,
 				76C783B81E6764170087093E /* RoomBookings.swift */,
+				765821C41FC85E4A00885FA7 /* Search.swift */,
 				7649E8661EAF6F8200EF7892 /* Time.swift */,
 				76C7839B1E66E58F0087093E /* Info.plist */,
 			);
@@ -322,6 +337,7 @@
 				76B933D11E6B892A005A3D31 /* Fixtures */,
 				76C783A51E66E58F0087093E /* UCLKitTests.swift */,
 				76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */,
+				76665FE21FCC81CD00626867 /* SearchTests.swift */,
 				76B933CF1E6B8790005A3D31 /* TestHelper.swift */,
 				761630571EC1120F003A1396 /* TestTime.swift */,
 				76B933CB1E6B865A005A3D31 /* TestURLSession.swift */,
@@ -570,6 +586,7 @@
 			files = (
 				76B933D31E6B8947005A3D31 /* Rooms.json in Resources */,
 				763DCAF11EB6387B00FA9EAA /* Bookings.json in Resources */,
+				76665FDF1FCC7BC100626867 /* People.json in Resources */,
 				761630531EC10DD3003A1396 /* Equipment.json in Resources */,
 				76CA60E91E7C14580050B5EF /* InvalidToken.json in Resources */,
 				76CA60E51E7C142A0050B5EF /* NoToken.json in Resources */,
@@ -603,6 +620,7 @@
 			files = (
 				76B933D41E6B8947005A3D31 /* Rooms.json in Resources */,
 				763DCAF31EB6387B00FA9EAA /* Bookings.json in Resources */,
+				76665FE01FCC7BC100626867 /* People.json in Resources */,
 				761630541EC10DD3003A1396 /* Equipment.json in Resources */,
 				76CA60EA1E7C14580050B5EF /* InvalidToken.json in Resources */,
 				76CA60E61E7C142A0050B5EF /* NoToken.json in Resources */,
@@ -615,6 +633,7 @@
 			files = (
 				76B933D51E6B8947005A3D31 /* Rooms.json in Resources */,
 				763DCAF41EB6387B00FA9EAA /* Bookings.json in Resources */,
+				76665FE11FCC7BC100626867 /* People.json in Resources */,
 				761630561EC10DD3003A1396 /* Equipment.json in Resources */,
 				76CA60EB1E7C14580050B5EF /* InvalidToken.json in Resources */,
 				76CA60E71E7C142A0050B5EF /* NoToken.json in Resources */,
@@ -630,6 +649,7 @@
 			files = (
 				7649E8671EAF6F8200EF7892 /* Time.swift in Sources */,
 				76C783B41E6709CD0087093E /* Configuration.swift in Sources */,
+				765821C51FC85E4A00885FA7 /* Search.swift in Sources */,
 				76C783B21E66FE2C0087093E /* UCLKit.swift in Sources */,
 				76C783B91E6764170087093E /* RoomBookings.swift in Sources */,
 			);
@@ -642,6 +662,7 @@
 				76B933C81E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */,
 				76B933CC1E6B865A005A3D31 /* TestURLSession.swift in Sources */,
 				76C783A61E66E58F0087093E /* UCLKitTests.swift in Sources */,
+				76665FE31FCC81CD00626867 /* SearchTests.swift in Sources */,
 				76B933D61E6B90F3005A3D31 /* TestHelper.swift in Sources */,
 				761630581EC1120F003A1396 /* TestTime.swift in Sources */,
 			);
@@ -653,6 +674,7 @@
 			files = (
 				7649E8681EAF6F8200EF7892 /* Time.swift in Sources */,
 				76C783BC1E677DF10087093E /* Configuration.swift in Sources */,
+				765821C71FC85E4A00885FA7 /* Search.swift in Sources */,
 				76C783BD1E677DF10087093E /* UCLKit.swift in Sources */,
 				76C783BE1E677DF10087093E /* RoomBookings.swift in Sources */,
 			);
@@ -664,6 +686,7 @@
 			files = (
 				7649E86A1EAF6F8200EF7892 /* Time.swift in Sources */,
 				76C783CB1E677E6B0087093E /* Configuration.swift in Sources */,
+				765821C81FC85E4A00885FA7 /* Search.swift in Sources */,
 				76C783CC1E677E6B0087093E /* UCLKit.swift in Sources */,
 				76C783CD1E677E6B0087093E /* RoomBookings.swift in Sources */,
 			);
@@ -675,6 +698,7 @@
 			files = (
 				76C783DB1E677EA40087093E /* UCLKit.swift in Sources */,
 				76C783DA1E677EA40087093E /* Configuration.swift in Sources */,
+				765821C61FC85E4A00885FA7 /* Search.swift in Sources */,
 				7649E8691EAF6F8200EF7892 /* Time.swift in Sources */,
 				76C783DC1E677EA40087093E /* RoomBookings.swift in Sources */,
 			);
@@ -687,6 +711,7 @@
 				76B933C91E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */,
 				76B933CD1E6B865A005A3D31 /* TestURLSession.swift in Sources */,
 				76C783EB1E677ED40087093E /* UCLKitTests.swift in Sources */,
+				76665FE41FCC81CD00626867 /* SearchTests.swift in Sources */,
 				76B933D81E6B90F5005A3D31 /* TestHelper.swift in Sources */,
 				761630591EC1120F003A1396 /* TestTime.swift in Sources */,
 			);
@@ -699,6 +724,7 @@
 				76B933CA1E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */,
 				76B933CE1E6B865A005A3D31 /* TestURLSession.swift in Sources */,
 				76C783F81E677F400087093E /* UCLKitTests.swift in Sources */,
+				76665FE51FCC81CD00626867 /* SearchTests.swift in Sources */,
 				76B933D91E6B90F7005A3D31 /* TestHelper.swift in Sources */,
 				7616305B1EC1120F003A1396 /* TestTime.swift in Sources */,
 			);
