@@ -12,35 +12,35 @@ import RequestKit
 // Mark: Model
 
 /// Wrapper for the People response
-@objc open class PeopleResponse: NSObject {
+@objc open class PeopleResponse: NSObject, Codable {
     open var OK: Bool?
     open var error: String?
     open var people: [Person]?
 
-    public init(_ json: [String: Any]) {
-        OK = json["ok"] as? Bool
-        error = json["error"] as? String
-        people = (json["people"] as? [[String: AnyObject]])?.map { Person($0) }
+    enum CodingKeys: String, CodingKey {
+        case OK = "ok"
+        case error
+        case people
     }
 }
 
 /// Payload from the People response
-@objc open class Person: NSObject {
+@objc open class Person: NSObject, Codable {
     open var name: String?
     open var status: Status?
     open var department: String?
     open var email: String?
 
-    public init(_ json: [String: Any]) {
-        name = json["name"] as? String
-        status = Status(rawValue: json["status"] as? String ?? "")
-        department = json["department"] as? String
-        email = json["email"] as? String
+    enum CodingKeys: String, CodingKey {
+        case name
+        case status
+        case department
+        case email
     }
 }
 
 /// Status enum to clarify options.
-public enum Status: String {
+public enum Status: String, Codable {
     case Student = "Student"
     case Staff = "Staff"
     case Unknown = ""
@@ -55,15 +55,14 @@ public extension UCLKit {
      - parameter completion: Callback for the outcome of the fetch.
      */
     public func people(_ session: RequestKitURLSession = URLSession.shared, query: String, completion: @escaping (_ response: Response<PeopleResponse>) -> Void) -> URLSessionDataTaskProtocol? {
-        let router = SearchRouter.searchPeople(configuration: configuration, query: query)
-        return router.loadJSON(session, expectedResultType: [String: AnyObject].self) { json, error in
+        let router = SearchRouter.searchPeople(configuration, query)
+        return router.load(session, expectedResultType: PeopleResponse.self) { people, error in
             if let error = error {
                 completion(Response.failure(error))
             }
 
-            if let json = json {
-                let response = PeopleResponse(json)
-                completion(Response.success(response))
+            if let people = people {
+                completion(Response.success(people))
             }
         }
     }
@@ -76,7 +75,7 @@ public extension UCLKit {
  - GET People router
  */
 enum SearchRouter: Router {
-    case searchPeople(configuration: Configuration, query: String)
+    case searchPeople(Configuration, String)
 
     var configuration: Configuration {
         switch self {

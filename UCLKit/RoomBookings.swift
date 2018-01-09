@@ -12,43 +12,43 @@ import RequestKit
 // Mark: Model
 
 /// Wrapper for the Rooms response
-@objc open class RoomsResponse: NSObject {
+@objc open class RoomsResponse: NSObject, Codable {
     open var OK: Bool?
     open var error: String?
     open var rooms: [Room]?
 
-    public init(_ json: [String: Any]) {
-        OK = json["ok"] as? Bool
-        error = json["error"] as? String
-        rooms = (json["rooms"] as? [[String: AnyObject]])?.map { Room($0) }
+    enum CodingKeys: String, CodingKey {
+        case OK = "ok"
+        case error
+        case rooms
     }
 }
 
 /// Payload from the Rooms response
-@objc open class Room: NSObject {
-    open let roomID: String?
-    open var roomName: String?
-    open var siteID: String?
-    open var siteName: String?
+@objc open class Room: NSObject, Codable {
+    @objc open var roomID: String?
+    @objc open var roomName: String?
+    @objc open var siteID: String?
+    @objc open var siteName: String?
     open var capacity: Int?
     open var classification: Classification?
     open var automated: Automation?
-    open var location: Location?
+    @objc open var location: Location?
 
-    public init(_ json: [String: Any]) {
-            roomID = json["roomid"] as? String
-            roomName = json["roomname"] as? String
-            siteID = json["siteid"] as? String
-            siteName = json["sitename"] as? String
-            capacity = json["capacity"] as? Int
-            classification = Classification(rawValue: json["classification"] as? String ?? "")
-            automated = Automation(rawValue: json["automated"] as? String ?? "")
-            location = Location(json["location"] as? [String: AnyObject] ?? [:])
+    enum CodingKeys: String, CodingKey {
+        case roomID = "roomid"
+        case roomName = "roomname"
+        case siteID = "siteid"
+        case siteName = "sitename"
+        case capacity
+        case classification
+        case automated
+        case location
     }
 }
 
 /// Wrapper for the Bookings response
-@objc open class BookingsResponse: NSObject {
+@objc open class BookingsResponse: NSObject, Codable {
     open var OK: Bool?
     open var error: String?
     open var bookings: [Booking]?
@@ -56,82 +56,82 @@ import RequestKit
     open var pageToken: String?
     open var count: Int?
     
-    public init(_ json: [String: Any]) {
-        OK = json["ok"] as? Bool
-        error = json["error"] as? String
-        bookings = (json["bookings"] as? [[String: AnyObject]])?.map { Booking($0) }
-        nextPageExists = json["next_page_exists"] as? Bool
-        pageToken = json["page_token"] as? String
-        count = json["count"] as? Int
+    enum CodingKeys: String, CodingKey {
+        case OK = "ok"
+        case error
+        case bookings
+        case nextPageExists = "next_page_exists"
+        case pageToken = "page_token"
+        case count
     }
 }
 
 /// Payload for the Bookings response
-@objc open class Booking: NSObject {
-    open let slotID: Int?
-    open var endTime: Date?
-    open var bookingDescription: String?
-    open var roomName: String?
-    open var siteID: String?
-    open var contact: String?
+@objc open class Booking: NSObject, Codable {
+    @objc open private(set) var slotID: Int = -1
+    @objc open var endTime: Date?
+    @objc open var bookingDescription: String?
+    @objc open var roomName: String?
+    @objc open var siteID: String?
+    @objc open var contact: String?
     open var weekNumber: Int?
-    open var roomID: String?
-    open var startTime: Date?
-    open var phone: String?
+    @objc open var roomID: String?
+    @objc open var startTime: Date?
+    @objc open var phone: String?
 
-    public init(_ json: [String: Any]) {
-        slotID = json["slotid"] as? Int
-        endTime = UCLKit.Time.parseString(string: json["end_time"] as? String)
-        bookingDescription = json["description"] as? String
-        roomName = json["roomname"] as? String
-        siteID = json["siteid"] as? String
-        contact = json["contact"] as? String
-        weekNumber = json["weeknumber"] as? Int
-        roomID = json["roomid"] as? String
-        startTime = UCLKit.Time.parseString(string: json["start_time"] as? String)
-        phone = json["phone"] as? String
+    enum CodingKeys: String, CodingKey {
+        case slotID = "slotid"
+        case endTime = "end_time"
+        case bookingDescription = "description"
+        case roomName = "roomname"
+        case siteID = "siteid"
+        case contact
+        case weekNumber = "weeknumber"
+        case roomID = "roomid"
+        case startTime = "start_time"
+        case phone
     }
 }
 
 /// Wrapper for the Equipment response
-@objc open class EquipmentResponse: NSObject {
+@objc open class EquipmentResponse: NSObject, Codable {
     open var OK: Bool?
     open var error: String?
     open var equipment: [Equipment]?
     
-    public init(_ json: [String: Any]) {
-        OK = json["ok"] as? Bool
-        error = json["error"] as? String
-        equipment = (json["equipment"] as? [[String: AnyObject]])?.map { Equipment($0) }
+    enum CodingKeys: String, CodingKey {
+        case OK = "ok"
+        case error
+        case equipment
     }
 }
 
 /// Payload for the Equipment response
-@objc open class Equipment: NSObject {
+@objc open class Equipment: NSObject, Codable {
     open var type: Type?
     open var equipmentDescription: String?
     open var units: Int?
     
-    public init(_ json: [String: Any]) {
-        type = Type(rawValue: json["type"] as? String ?? "")
-        equipmentDescription = json["description"] as? String
-        units = json["units"] as? Int
+    enum CodingKeys: String, CodingKey {
+        case type
+        case equipmentDescription = "description"
+        case units
     }
 }
 
 // Mark: Helper Classes
 
 /// Address sub-payload from the Room payload
-@objc open class Location: NSObject {
+@objc open class Location: NSObject, Codable {
     open var address: [String]?
 
-    public init(_ json: [String: Any]) {
-        address = json["address"] as? [String]
+    enum CodingKeys: String, CodingKey {
+        case address
     }
 }
 
 /// Classification enum to clarify options.
-public enum Classification: String {
+public enum Classification: String, Codable {
     case LectureTheatre = "LT"
     case Classroom = "CR"
     case PublicCluster = "PC1"
@@ -140,7 +140,7 @@ public enum Classification: String {
 }
 
 /// Automation enum to clarify options.
-public enum Automation: String {
+public enum Automation: String, Codable {
     case Automated = "A"
     case NotAutomated = "N"
     case Dependent = "P"
@@ -148,7 +148,7 @@ public enum Automation: String {
 }
 
 /// Type enum to clarify options.
-public enum Type: String {
+public enum Type: String, Codable {
     case FixedEquipment = "FE"
     case FixedFeature = "FF"
     case Unknown = ""
@@ -168,15 +168,14 @@ public extension UCLKit {
      - parameter completion: Callback for the outcome of the fetch.
      */
     public func rooms(_ session: RequestKitURLSession = URLSession.shared, roomID: String = "", roomName: String = "", siteID: String = "", siteName: String = "", classification: Classification = Classification.Unknown, capacity: String = "", completion: @escaping (_ response: Response<RoomsResponse>) -> Void) -> URLSessionDataTaskProtocol? {
-        let router = RoomBookingsRouter.readRooms(configuration: configuration, roomID: roomID, roomName: roomName, siteID: siteID, siteName: siteName, classification: classification, capacity: capacity)
-        return router.loadJSON(session, expectedResultType: [String: AnyObject].self) { json, error in
+        let router = RoomBookingsRouter.readRooms(configuration, roomID, roomName, siteID, siteName, classification, capacity)
+        return router.load(session, expectedResultType: RoomsResponse.self) { rooms, error in
             if let error = error {
                 completion(Response.failure(error))
             }
 
-            if let json = json {
-                let response =  RoomsResponse(json)
-                completion(Response.success(response))
+            if let rooms = rooms {
+                completion(Response.success(rooms))
             }
         }
     }
@@ -196,15 +195,14 @@ public extension UCLKit {
      - parameter completion: Callback for the outcome of the fetch.
      */
     public func bookings(_ session: RequestKitURLSession = URLSession.shared, pageToken: String = "", roomName: String = "", roomID: String = "", startDateTime: String = "", endDateTime: String = "", date: String = "", siteID: String = "", description: String = "", contact: String = "", resultsPerPage: String = "1000", completion: @escaping (_ response: Response<BookingsResponse>) -> Void) -> URLSessionDataTaskProtocol? {
-        let router = RoomBookingsRouter.readBookings(configuration: configuration, pageToken: pageToken, roomName: roomName, roomID: roomID, startDateTime: startDateTime, endDateTime: endDateTime, date: date, siteID: siteID, description: description, contact: contact, resultsPerPage: resultsPerPage)
-        return router.loadJSON(session, expectedResultType: [String: AnyObject].self) { json, error in
+        let router = RoomBookingsRouter.readBookings(configuration, pageToken, roomName, roomID, startDateTime, endDateTime, date, siteID, description, contact, resultsPerPage)
+        return router.load(session, dateDecodingStrategy: .formatted(Time.inclusiveISO8601DateFormatter), expectedResultType: BookingsResponse.self) { bookings, error in
             if let error = error {
                 completion(Response.failure(error))
             }
             
-            if let json = json {
-                let response =  BookingsResponse(json)
-                completion(Response.success(response))
+            if let bookings = bookings {
+                completion(Response.success(bookings))
             }
         }
     }
@@ -215,16 +213,15 @@ public extension UCLKit {
      - parameter siteID: Every room is inside a site (building). All sites have IDs.
      - parameter completion: Callback for the outcome of the fetch.
      */
-    public func equipment(_ session: RequestKitURLSession = URLSession.shared, roomID: String?, siteID: String?, completion: @escaping (_ response: Response<EquipmentResponse>) -> Void) -> URLSessionDataTaskProtocol? {
-        let router = RoomBookingsRouter.readEquipment(configuration: configuration, roomID: roomID!, siteID: siteID!)
-        return router.loadJSON(session, expectedResultType: [String: AnyObject].self) { json, error in
+    public func equipment(_ session: RequestKitURLSession = URLSession.shared, roomID: String, siteID: String, completion: @escaping (_ response: Response<EquipmentResponse>) -> Void) -> URLSessionDataTaskProtocol? {
+        let router = RoomBookingsRouter.readEquipment(configuration, roomID, siteID)
+        return router.load(session, expectedResultType: EquipmentResponse.self) { equipment, error in
             if let error = error {
                 completion(Response.failure(error))
             }
             
-            if let json = json {
-                let response =  EquipmentResponse(json)
-                completion(Response.success(response))
+            if let equipment = equipment {
+                completion(Response.success(equipment))
             }
         }
     }
@@ -239,9 +236,9 @@ Main Room Bookings Router, contains:
  - GET Equipment router
 */
 enum RoomBookingsRouter: Router {
-    case readRooms(configuration: Configuration, roomID: String, roomName: String, siteID: String, siteName: String, classification: Classification, capacity: String)
-    case readBookings(configuration: Configuration, pageToken: String, roomName: String, roomID: String, startDateTime: String, endDateTime: String, date: String, siteID: String, description: String, contact: String, resultsPerPage: String)
-    case readEquipment(configuration: Configuration, roomID: String, siteID: String)
+    case readRooms(Configuration, String, String, String, String, Classification, String)
+    case readBookings(Configuration, String, String, String, String, String, String, String, String, String, String)
+    case readEquipment(Configuration, String, String)
 
     var configuration: Configuration {
         switch self {

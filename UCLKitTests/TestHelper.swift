@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UCLKit
 
-internal class TestHelper {
+internal class Helper {
     internal class func stringFromFile(_ name: String) -> String? {
         let bundle = Bundle(for: self)
         let path = bundle.path(forResource: name, ofType: "json")
@@ -18,12 +19,22 @@ internal class TestHelper {
         }
         return nil
     }
-
-    internal class func JSONFromFile(name: String) -> Any {
+    
+    internal class func JSONFromFile(_ name: String) -> Any {
         let bundle = Bundle(for: self)
-        let path = bundle.url(forResource: name, withExtension: "json")!
-        let data = try! Data(contentsOf: path)
-        let dict: Any? = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+        let path = bundle.path(forResource: name, ofType: "json")!
+        let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+        let dict: Any? = try? JSONSerialization.jsonObject(with: data,
+        options: JSONSerialization.ReadingOptions.mutableContainers)
         return dict!
+    }
+    
+    internal class func codableFromFile<T>(_ name: String, type: T.Type) -> T where T: Codable {
+        let bundle = Bundle(for: self)
+        let path = bundle.path(forResource: name, ofType: "json")!
+        let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(Time.inclusiveISO8601DateFormatter)
+        return try! decoder.decode(T.self, from: data)
     }
 }

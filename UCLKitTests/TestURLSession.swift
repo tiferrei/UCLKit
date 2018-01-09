@@ -36,7 +36,7 @@ class URLTestSession: RequestKitURLSession {
         self.expectedURL = expectedURL
         self.expectedHTTPMethod = expectedHTTPMethod
         if let jsonFile = jsonFile {
-            self.responseString = TestHelper.stringFromFile(jsonFile)
+            self.responseString = Helper.stringFromFile(jsonFile)
         } else {
             self.responseString = nil
         }

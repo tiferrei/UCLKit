@@ -45,7 +45,7 @@ class RoomTests: XCTestCase {
     // MARK: Model Tests
     
     func testRoomsParsing() {
-        let response = RoomsResponse(TestHelper.JSONFromFile(name: "Rooms") as! [String: AnyObject])
+        let response = Helper.codableFromFile("Rooms", type: RoomsResponse.self)
         XCTAssertEqual(response.OK, true)
         XCTAssertEqual(response.rooms![0].roomName, "Wilkins Building (Main Building) Portico")
         XCTAssertEqual(response.rooms![0].roomID, "Z4")
@@ -109,17 +109,17 @@ class BookingTests: XCTestCase {
     // MARK: Model Tests
 
     func testBookingsParsing() {
-        let response = BookingsResponse(TestHelper.JSONFromFile(name: "Bookings") as! [String: AnyObject])
+        let response = Helper.codableFromFile("Bookings", type: BookingsResponse.self)
         XCTAssertEqual(response.OK, true)
         XCTAssertEqual(response.bookings![0].slotID, 998503)
-        XCTAssertEqual(response.bookings![0].endTime, UCLKit.Time.parseString(string: "2016-09-02T18:00:00+00:00"))
+        XCTAssertEqual(response.bookings![0].endTime, Time.iso8601Date("2016-09-02T18:00:00+00:00"))
         XCTAssertEqual(response.bookings![0].bookingDescription, "split weeks to assist rooming 29.06")
         XCTAssertEqual(response.bookings![0].roomName, "Torrington (1-19) 433")
         XCTAssertEqual(response.bookings![0].siteID, "086")
         XCTAssertEqual(response.bookings![0].contact, "Ms Leah Markwick")
         XCTAssertEqual(response.bookings![0].weekNumber, 1)
         XCTAssertEqual(response.bookings![0].roomID, "433")
-        XCTAssertEqual(response.bookings![0].startTime, UCLKit.Time.parseString(string: "2016-09-02T09:00:00+00:00"))
+        XCTAssertEqual(response.bookings![0].startTime, Time.iso8601Date("2016-09-02T09:00:00+00:00"))
         XCTAssertEqual(response.bookings![0].phone, "45699")
         XCTAssertEqual(response.nextPageExists, true)
         XCTAssertEqual(response.pageToken, "6hb14hXjRV")
@@ -165,7 +165,7 @@ class EquipmentTests: XCTestCase {
     // MARK: Model Tests
 
     func testBookingsParsing() {
-        let response = EquipmentResponse(TestHelper.JSONFromFile(name: "Equipment") as! [String: AnyObject])
+        let response = Helper.codableFromFile("Equipment", type: EquipmentResponse.self)
         XCTAssertEqual(response.OK, true)
         XCTAssertEqual(response.equipment![0].type, Type.FixedFeature)
         XCTAssertEqual(response.equipment![0].equipmentDescription, "Managed PC")

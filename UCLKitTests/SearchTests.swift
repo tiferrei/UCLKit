@@ -45,7 +45,7 @@ class SearchTests: XCTestCase {
     // MARK: Model Tests
 
     func testRoomsParsing() {
-        let response = PeopleResponse(TestHelper.JSONFromFile(name: "People") as! [String: AnyObject])
+        let response = Helper.codableFromFile("People", type: PeopleResponse.self)
         XCTAssertEqual(response.OK, true)
         XCTAssertEqual(response.people![0].name, "Jane Doe")
         XCTAssertEqual(response.people![0].status, Status.Student)
