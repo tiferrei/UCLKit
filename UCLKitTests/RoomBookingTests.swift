@@ -41,6 +41,21 @@ class RoomTests: XCTestCase {
         }
         XCTAssertTrue(session.wasCalled)
     }
+    
+    func testFailToGetRooms() {
+        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/rooms?access_token=invalidToken&capacity=&roomid=&roomname=&siteid=&sitename=", expectedHTTPMethod: "GET", jsonFile: "InvalidToken", statusCode: 400)
+        let config = TokenConfiguration("invalidToken")
+        _ = UCLKit(config).rooms(session) { response in
+            switch response {
+            case .success(let rooms):
+                XCTAssert(false, "❌ Should retrieve an error, instead got –> (\(rooms))")
+            case .failure(let error as NSError):
+                var json = error.userInfo["json"]! as? [String: Any]
+                XCTAssertEqual(json!["error"] as? String, "Token does not exist")
+            }
+        }
+        XCTAssertTrue(session.wasCalled)
+    }
 
     // MARK: Model Tests
     

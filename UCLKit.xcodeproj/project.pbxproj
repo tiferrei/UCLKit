@@ -34,6 +34,7 @@
 		7680A0201E8FEB1D00B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7680A0221E8FEB4500B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7680A0241E8FEB5700B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933E41E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		769A83D320372CE6003B96B5 /* RequestKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; };
 		76B933C81E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */; };
 		76B933C91E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */; };
 		76B933CA1E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */; };
@@ -572,6 +573,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				769A83D320372CE6003B96B5 /* RequestKit.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
