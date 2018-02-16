@@ -2,9 +2,8 @@ SHA=$(shell git rev-parse HEAD)
 BRANCH=$(shell git name-rev --name-only HEAD)
 
 install:
-	brew update
 	carthage bootstrap --no-use-binaries
-	gem install xcpretty
+	sudo gem install xcpretty
 
 ios:
 	set -o pipefail && xcodebuild test -configuration Release ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES -workspace UCLKit.xcworkspace -scheme "UCLKit iOS" -destination 'platform=iOS Simulator,name=iPhone 7' | xcpretty

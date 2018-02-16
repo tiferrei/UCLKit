@@ -3,7 +3,7 @@ Welcome to UCLKit
 </h1>
 <br>
 <p align="center">
-<a href="https://travis-ci.org/tiferrei/UCLKit"><img alt="UCLKit CI Status" src="https://travis-ci.org/tiferrei/UCLKit.svg?branch=master" /></a>
+<a href="https://circleci.org/gh/tiferrei/UCLKit"><img alt="UCLKit CI Status" src="https://circleci.com/gh/tiferrei/UCLKit/tree/master.svg?style=svg" /></a>
 <img src="https://img.shields.io/badge/macOS-Mavericks%20(10%2B)-blue.svg" alt="Platform: macOS Mavericks (10+)"/>
 <img src="https://img.shields.io/badge/iOS-8%2B-blue.svg" alt="Platform: iOS 8+"/>
 <img src="https://img.shields.io/badge/watchOS-2.1%2B-blue.svg" alt="Platform: watchOS 2.1+"/>
