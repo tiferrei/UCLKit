@@ -122,7 +122,6 @@
 		7694686E2036117E00F940A1 = {
 			isa = PBXGroup;
 			children = (
-				769A83D420372F63003B96B5 /* RequestKit.framework */,
 				76023D032036346D0091C659 /* AppDelegate.swift */,
 				76023D05203634720091C659 /* MasterViewController.swift */,
 				76023D07203634760091C659 /* DetailViewController.swift */,
@@ -131,6 +130,7 @@
 				76023D0B2036349B0091C659 /* Assets.xcassets */,
 				76023D132036350D0091C659 /* Info.plist */,
 				769468782036117E00F940A1 /* Products */,
+				769A83D420372F63003B96B5 /* RequestKit.framework */,
 				7694688D2036127300F940A1 /* UCLKit.xcodeproj */,
 			);
 			sourceTree = "<group>";

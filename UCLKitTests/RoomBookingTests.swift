@@ -8,6 +8,7 @@
 
 import XCTest
 import Foundation
+import RequestKit
 @testable import UCLKit
 
 class RoomTests: XCTestCase {
@@ -50,7 +51,7 @@ class RoomTests: XCTestCase {
             case .success(let rooms):
                 XCTAssert(false, "❌ Should retrieve an error, instead got –> (\(rooms))")
             case .failure(let error as NSError):
-                var json = error.userInfo["json"]! as? [String: Any]
+                var json = error.userInfo[RequestKitErrorKey]! as? [String: Any]
                 XCTAssertEqual(json!["error"] as? String, "Token does not exist")
             }
         }
