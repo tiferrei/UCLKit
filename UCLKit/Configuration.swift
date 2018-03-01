@@ -21,4 +21,8 @@ public struct TokenConfiguration: Configuration {
         apiEndpoint = url
         accessToken = token
     }
+    
+    public var accessTokenFieldName: String {
+        return "token"
+    }
 }

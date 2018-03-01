@@ -10,6 +10,7 @@ import Foundation
 import RequestKit
 
 public let UCLKitErrorDomain = "com.tiferrei.UCLKit"
+public let UCLKitErrorKey = RequestKitErrorKey
 
 /// Main UCLKit wrapping struct
 public struct UCLKit {
