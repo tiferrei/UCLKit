@@ -136,6 +136,11 @@ public enum Classification: String, Codable {
     case Classroom = "CR"
     case PublicCluster = "PC1"
     case SocialSpace = "SS"
+    case TheatreHall = "TH"
+    case UndocumentedCFE = "CFE" // FIXME: Undocumented option CFE (UCLAPI #326)
+    case UndocumentedMR = "MR" // FIXME: Undocumented option MR (UCLAPI #326)
+    case UndocumentedER = "ER" // FIXME: Undocumented option ER (UCLAPI #326)
+    case UndocumentedCF = "CF" // FIXME: Undocumented option CF (UCLAPI #326)
     case Unknown = ""
 }
 
@@ -259,7 +264,7 @@ enum RoomBookingsRouter: Router {
     var params: [String: Any] {
         switch self {
         case .readRooms(_, let roomID, let roomName, let siteID, let siteName, let classification, let capacity):
-            return ["roomid": roomID, "roomname": roomName, "siteid": siteID, "sitename": siteName, "classification": classification, "capacity": capacity]
+            return ["roomid": roomID, "roomname": roomName, "siteid": siteID, "sitename": siteName, "classification": classification.rawValue, "capacity": capacity]
         case .readBookings(_, let pageToken, let roomName, let roomID, let startDateTime, let endDateTime, let date, let siteID, let description, let contact, let resultsPerPage):
             return ["page_token": pageToken, "roomname": roomName, "roomid": roomID, "start_datetime": startDateTime, "end_datetime": endDateTime, "date": date, "siteid": siteID, "description": description, "contact": contact, "results_per_page": resultsPerPage]
         case .readEquipment(_, let roomID, let siteID):
