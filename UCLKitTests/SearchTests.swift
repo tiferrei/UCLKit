@@ -15,7 +15,7 @@ class SearchTests: XCTestCase {
     // MARK: Request Tests
 
     func testSearchPeople() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/search/people?access_token=12345&query=Jane", expectedHTTPMethod: "GET", jsonFile: "People", statusCode: 200)
+        let session = URLTestSession(expectedURL: "https://uclapi.com/search/people?query=Jane&token=12345", expectedHTTPMethod: "GET", jsonFile: "People", statusCode: 200)
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).people(session, query: "Jane") { response in
             switch response {
@@ -29,7 +29,7 @@ class SearchTests: XCTestCase {
     }
 
     func testFailToSearchPeople() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/search/people?access_token=12345&query=", expectedHTTPMethod: "GET", jsonFile: "People", statusCode: 400)
+        let session = URLTestSession(expectedURL: "https://uclapi.com/search/people?query=&token=12345", expectedHTTPMethod: "GET", jsonFile: "People", statusCode: 400)
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).people(session, query: "") { response in
             switch response {
