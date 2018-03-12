@@ -36,7 +36,7 @@ class UCLKitTests: XCTestCase {
         }
         XCTAssertTrue(session.wasCalled)
     }
-    
+
     func testMissingAuth() {
         let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=", expectedHTTPMethod: "GET", jsonFile: "NoToken", statusCode: 400)
         let config = TokenConfiguration("")

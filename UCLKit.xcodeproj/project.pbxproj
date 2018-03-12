@@ -35,6 +35,10 @@
 		7680A0221E8FEB4500B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7680A0241E8FEB5700B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933E41E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		769A83D320372CE6003B96B5 /* RequestKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; };
+		76B0E764203A1678007EAB35 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; };
+		76B0E765203A167F007EAB35 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; };
+		76B0E766203A1682007EAB35 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933E41E6D938F005A3D31 /* RequestKit.framework */; };
+		76B0E767203A1685007EAB35 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933E81E6D938F005A3D31 /* RequestKit.framework */; };
 		76B933C81E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */; };
 		76B933C91E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */; };
 		76B933CA1E6B0E9D005A3D31 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */; };
@@ -51,17 +55,14 @@
 		76C783A81E66E58F0087093E /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C7839A1E66E58F0087093E /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76C783B21E66FE2C0087093E /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B11E66FE2C0087093E /* UCLKit.swift */; };
 		76C783B41E6709CD0087093E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B31E6709CD0087093E /* Configuration.swift */; };
-		76C783B71E670D1F0087093E /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783B61E670D1F0087093E /* RequestKit.framework */; };
 		76C783B91E6764170087093E /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B81E6764170087093E /* RoomBookings.swift */; };
 		76C783BC1E677DF10087093E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B31E6709CD0087093E /* Configuration.swift */; };
 		76C783BD1E677DF10087093E /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B11E66FE2C0087093E /* UCLKit.swift */; };
 		76C783BE1E677DF10087093E /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B81E6764170087093E /* RoomBookings.swift */; };
-		76C783C01E677DF10087093E /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783B61E670D1F0087093E /* RequestKit.framework */; };
 		76C783C21E677DF10087093E /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C7839A1E66E58F0087093E /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76C783CB1E677E6B0087093E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B31E6709CD0087093E /* Configuration.swift */; };
 		76C783CC1E677E6B0087093E /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B11E66FE2C0087093E /* UCLKit.swift */; };
 		76C783CD1E677E6B0087093E /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B81E6764170087093E /* RoomBookings.swift */; };
-		76C783CF1E677E6B0087093E /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783B61E670D1F0087093E /* RequestKit.framework */; };
 		76C783D11E677E6B0087093E /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C7839A1E66E58F0087093E /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76C783DA1E677EA40087093E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B31E6709CD0087093E /* Configuration.swift */; };
 		76C783DB1E677EA40087093E /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C783B11E66FE2C0087093E /* UCLKit.swift */; };
@@ -166,7 +167,6 @@
 		76C783A71E66E58F0087093E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76C783B11E66FE2C0087093E /* UCLKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UCLKit.swift; sourceTree = "<group>"; };
 		76C783B31E6709CD0087093E /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		76C783B61E670D1F0087093E /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RequestKit.framework; path = Carthage/Build/iOS/RequestKit.framework; sourceTree = "<group>"; };
 		76C783B81E6764170087093E /* RoomBookings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomBookings.swift; sourceTree = "<group>"; };
 		76C783C71E677DF10087093E /* UCLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C783D61E677E6B0087093E /* UCLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,7 +182,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C783B71E670D1F0087093E /* RequestKit.framework in Frameworks */,
+				76B0E767203A1685007EAB35 /* RequestKit.framework in Frameworks */,
+				76B0E764203A1678007EAB35 /* RequestKit.framework in Frameworks */,
+				76B0E765203A167F007EAB35 /* RequestKit.framework in Frameworks */,
+				76B0E766203A1682007EAB35 /* RequestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +201,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C783C01E677DF10087093E /* RequestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +208,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C783CF1E677E6B0087093E /* RequestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +352,6 @@
 				76B933DF1E6D938F005A3D31 /* Mac */,
 				76B933E21E6D938F005A3D31 /* tvOS */,
 				76B933E61E6D938F005A3D31 /* watchOS */,
-				76C783B61E670D1F0087093E /* RequestKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -402,6 +402,7 @@
 				76C783931E66E58F0087093E /* Frameworks */,
 				76C783941E66E58F0087093E /* Headers */,
 				76C783951E66E58F0087093E /* Resources */,
+				C4080D5DBBDDE8DC70E38C9F /* Tailor */,
 			);
 			buildRules = (
 			);
@@ -530,7 +531,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Tiago Ferreira";
 				TargetAttributes = {
 					76C783961E66E58F0087093E = {
@@ -638,6 +639,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C4080D5DBBDDE8DC70E38C9F /* Tailor */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Tailor;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if hash tailor 2>/dev/null; then\n  tailor\nelse\n  echo \"warning: Please install Tailor from https://tailor.sh\"\nfi";
+			showEnvVarsInLog = 1;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		76C783921E66E58F0087093E /* Sources */ = {
@@ -758,6 +777,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -765,6 +785,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -821,6 +842,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -828,6 +850,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -878,7 +901,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -908,7 +936,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

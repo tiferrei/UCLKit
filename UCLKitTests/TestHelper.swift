@@ -19,7 +19,7 @@ internal class Helper {
         }
         return nil
     }
-    
+
     internal class func JSONFromFile(_ name: String) -> Any {
         let bundle = Bundle(for: self)
         let path = bundle.path(forResource: name, ofType: "json")!
@@ -28,7 +28,7 @@ internal class Helper {
         options: JSONSerialization.ReadingOptions.mutableContainers)
         return dict!
     }
-    
+
     internal class func codableFromFile<T>(_ name: String, type: T.Type) -> T where T: Codable {
         let bundle = Bundle(for: self)
         let path = bundle.path(forResource: name, ofType: "json")!

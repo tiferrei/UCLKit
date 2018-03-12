@@ -12,9 +12,9 @@ import RequestKit
 @testable import UCLKit
 
 class RoomTests: XCTestCase {
-    
+
     // MARK: Request Tests
-    
+
     func testGetRooms() {
         let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=12345", expectedHTTPMethod: "GET", jsonFile: "Rooms", statusCode: 200)
         let config = TokenConfiguration("12345")
@@ -42,7 +42,7 @@ class RoomTests: XCTestCase {
         }
         XCTAssertTrue(session.wasCalled)
     }
-    
+
     func testFailToGetRooms() {
         let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=invalidToken", expectedHTTPMethod: "GET", jsonFile: "InvalidToken", statusCode: 400)
         let config = TokenConfiguration("invalidToken")
@@ -59,7 +59,7 @@ class RoomTests: XCTestCase {
     }
 
     // MARK: Model Tests
-    
+
     func testRoomsParsing() {
         let response = Helper.codableFromFile("Rooms", type: RoomsResponse.self)
         XCTAssertEqual(response.OK, true)
@@ -92,7 +92,7 @@ class BookingTests: XCTestCase {
         }
         XCTAssertTrue(session.wasCalled)
     }
-    
+
     func testGetBookingsWithParams() {
         let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/bookings?contact=Mark%20Herbster&date=20160202&description=Lecture&end_datetime=2016-10-20T19%3A00%3A00%2B00%3A00&page_token=&results_per_page=1000&roomid=433&roomname=Cruciform%20Building%20B.3.05&siteid=086&start_datetime=2016-10-20T18%3A00%3A00%2B00%3A00&token=12345", expectedHTTPMethod: "GET", jsonFile: "Bookings", statusCode: 200)
         let config = TokenConfiguration("12345")
@@ -106,7 +106,7 @@ class BookingTests: XCTestCase {
         }
         XCTAssertTrue(session.wasCalled)
     }
-    
+
     func testGetPaginatedBookings() {
         let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/bookings?contact=&date=&description=&end_datetime=&page_token=6hb14hXjRV&results_per_page=1000&roomid=&roomname=&siteid=&start_datetime=&token=12345", expectedHTTPMethod: "GET", jsonFile: "Bookings", statusCode: 200)
         let config = TokenConfiguration("12345")
@@ -141,7 +141,7 @@ class BookingTests: XCTestCase {
         XCTAssertEqual(response.pageToken, "6hb14hXjRV")
         XCTAssertEqual(response.count, 1197)
     }
-    
+
 }
 
 class EquipmentTests: XCTestCase {

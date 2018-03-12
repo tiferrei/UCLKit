@@ -9,7 +9,7 @@
 import Foundation
 
 public struct Time {
-    
+
     /**
      A date formatter for ISO 8601 style timestamps. Uses GB locale and GMT timezone.
      - [https://tools.ietf.org/html/rfc3339](https://tools.ietf.org/html/rfc3339)
@@ -23,7 +23,7 @@ public struct Time {
         formatter.timeZone = TimeZone(secondsFromGMT: 0)
         return formatter
     }()
-    
+
     /**
      Parses RFC 3339 date strings into NSDate
      - parameter string: The string representation of the date

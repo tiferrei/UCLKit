@@ -11,14 +11,13 @@ import UCLKit
 
 class DetailViewController: UITableViewController {
     enum Sections: Int {
-        case Request, Data
+        case request, data
     }
 
+    var params: [String: String] = [:]
     var request: [String: String] = [:]
     var data: [String: String] = [:]
     var segueIdentifier: String?
-
-    // MARK: View Lifecycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,19 +33,24 @@ class DetailViewController: UITableViewController {
 
     @IBAction func refresh() {
         refreshControl?.beginRefreshing()
-        data.removeAll()
+        // data.removeAll()
+        // request.removeAll()
         let config = TokenConfiguration("uclapi-82a6442136f95a5-20d5ae3e0620b03-1a2983e54e33312-1c37b049e34fbfe")
         if let segueIdentifier = self.segueIdentifier {
             switch segueIdentifier {
             case "ROOMS":
-                let _ = UCLKit(config).rooms() { response in
+                let _ = UCLKit(config).rooms { response in
                     switch response {
                     case .success(let responseData):
-                        self.request["STATUS"] = "200 OK"
-                        self.data["OK"] = "\(responseData.OK ?? false)"
+                        self.request["HTTP STATUS"] = "200 OK"
+                        self.request["Results"] = "\(responseData.rooms!.count)"
+                        for room in responseData.rooms! {
+                            self.data[room.roomID!] = room.roomName!
+                        }
                     case .failure(let error as NSError):
-                        self.request["STATUS"] = "\(error.code)"
-                        self.data ["OK"] = "false"
+                        self.request["HTTP STATUS"] = "\(error.code)"
+                        self.data["OK"] = "false"
+                        print(error.userInfo)
                     }
                 }
             default:
@@ -64,16 +68,16 @@ class DetailViewController: UITableViewController {
 extension DetailViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch Sections(rawValue: section)! {
-        case .Request:
+        case .request:
             return request.count
-        case .Data:
+        case .data:
             return data.count
         }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch Sections(rawValue: (indexPath as NSIndexPath).section)! {
-        case .Request:
+        case .request:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Request")!
             let field = request.keys.sorted(by: <)[indexPath.row]
             let value = request[field]
@@ -82,11 +86,11 @@ extension DetailViewController {
             cell.detailTextLabel?.text = value
 
             return cell
-        case .Data:
+        case .data:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Data")!
             let field = data.keys.sorted(by: <)[indexPath.row]
             let value = data[field]
-            
+
             cell.textLabel?.text = field
             cell.detailTextLabel?.text = value
 
@@ -108,15 +112,10 @@ extension DetailViewController {
         }
 
         switch Sections(rawValue: section)! {
-        case .Request:
+        case .request:
             return "Request"
-        case .Data:
+        case .data:
             return "Data"
         }
     }
-    
-    //TODO: Check if this actually does something or if it is dead code
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return tableView.rowHeight
-//    }
 }

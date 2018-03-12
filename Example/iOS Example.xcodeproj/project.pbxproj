@@ -15,8 +15,8 @@
 		76023D0E2036349E0091C659 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76023D0D2036349E0091C659 /* LaunchScreen.storyboard */; };
 		76023D10203634A00091C659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76023D0F203634A00091C659 /* Main.storyboard */; };
 		76023D12203634DE0091C659 /* UCLKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 769468982036127300F940A1 /* UCLKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		769A83D520372F63003B96B5 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769A83D420372F63003B96B5 /* RequestKit.framework */; };
-		769A83D620372F63003B96B5 /* RequestKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 769A83D420372F63003B96B5 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76AAB0AF204FE86900DB22D1 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76AAB0AE204FE86800DB22D1 /* RequestKit.framework */; };
+		76AAB0B0204FE86900DB22D1 /* RequestKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 76AAB0AE204FE86800DB22D1 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +86,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				76023D12203634DE0091C659 /* UCLKit.framework in Copy Frameworks */,
-				769A83D620372F63003B96B5 /* RequestKit.framework in Copy Frameworks */,
+				76AAB0B0204FE86900DB22D1 /* RequestKit.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,9 +101,10 @@
 		76023D0D2036349E0091C659 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76023D0F203634A00091C659 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		76023D132036350D0091C659 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		769468772036117E00F940A1 /* UCLKit Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UCLKit Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		769468772036117E00F940A1 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7694688D2036127300F940A1 /* UCLKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UCLKit.xcodeproj; path = ../UCLKit.xcodeproj; sourceTree = "<group>"; };
-		769A83D420372F63003B96B5 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RequestKit.framework; path = ../Carthage/Build/iOS/RequestKit.framework; sourceTree = "<group>"; };
+		76AAB0AE204FE86800DB22D1 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RequestKit.framework; path = ../Carthage/Build/iOS/RequestKit.framework; sourceTree = "<group>"; };
+		76B933DD1E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +112,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				769A83D520372F63003B96B5 /* RequestKit.framework in Frameworks */,
 				76023D0A203634890091C659 /* UCLKit.framework in Frameworks */,
+				76AAB0AF204FE86900DB22D1 /* RequestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,23 +123,21 @@
 		7694686E2036117E00F940A1 = {
 			isa = PBXGroup;
 			children = (
-				76023D032036346D0091C659 /* AppDelegate.swift */,
-				76023D05203634720091C659 /* MasterViewController.swift */,
-				76023D07203634760091C659 /* DetailViewController.swift */,
-				76023D0F203634A00091C659 /* Main.storyboard */,
-				76023D0D2036349E0091C659 /* LaunchScreen.storyboard */,
-				76023D0B2036349B0091C659 /* Assets.xcassets */,
+				76AAB0AE204FE86800DB22D1 /* RequestKit.framework */,
 				76023D132036350D0091C659 /* Info.plist */,
+				76C38790203A154800F35AF7 /* Source */,
+				76C3878E203A152400F35AF7 /* Supporting Files */,
 				769468782036117E00F940A1 /* Products */,
-				769A83D420372F63003B96B5 /* RequestKit.framework */,
 				7694688D2036127300F940A1 /* UCLKit.xcodeproj */,
+				76AAB0A4204FE6EF00DB22D1 /* Recovered References */,
+				76AAB0AB204FE7A800DB22D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		769468782036117E00F940A1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				769468772036117E00F940A1 /* UCLKit Demo.app */,
+				769468772036117E00F940A1 /* iOS Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,12 +156,47 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		76AAB0A4204FE6EF00DB22D1 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				76B933DD1E6D938F005A3D31 /* RequestKit.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		76AAB0AB204FE7A800DB22D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76C3878E203A152400F35AF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76023D0F203634A00091C659 /* Main.storyboard */,
+				76023D0D2036349E0091C659 /* LaunchScreen.storyboard */,
+				76023D0B2036349B0091C659 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76C38790203A154800F35AF7 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				76023D032036346D0091C659 /* AppDelegate.swift */,
+				76023D05203634720091C659 /* MasterViewController.swift */,
+				76023D07203634760091C659 /* DetailViewController.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		769468762036117E00F940A1 /* UCLKit Demo */ = {
+		769468762036117E00F940A1 /* iOS Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 769468892036117E00F940A1 /* Build configuration list for PBXNativeTarget "UCLKit Demo" */;
+			buildConfigurationList = 769468892036117E00F940A1 /* Build configuration list for PBXNativeTarget "iOS Example" */;
 			buildPhases = (
 				769468732036117E00F940A1 /* Sources */,
 				769468742036117E00F940A1 /* Frameworks */,
@@ -174,9 +208,9 @@
 			dependencies = (
 				76023D01203634590091C659 /* PBXTargetDependency */,
 			);
-			name = "UCLKit Demo";
+			name = "iOS Example";
 			productName = "UCLKit Demo";
-			productReference = 769468772036117E00F940A1 /* UCLKit Demo.app */;
+			productReference = 769468772036117E00F940A1 /* iOS Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +220,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Tiago Ferreira";
 				TargetAttributes = {
 					769468762036117E00F940A1 = {
@@ -195,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 769468722036117E00F940A1 /* Build configuration list for PBXProject "UCLKit Demo" */;
+			buildConfigurationList = 769468722036117E00F940A1 /* Build configuration list for PBXProject "iOS Example" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -214,7 +248,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				769468762036117E00F940A1 /* UCLKit Demo */,
+				769468762036117E00F940A1 /* iOS Example */,
 			);
 		};
 /* End PBXProject section */
@@ -320,6 +354,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -327,6 +362,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -377,6 +413,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -384,6 +421,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -419,9 +457,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X69WG8TQF9;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS/**";
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tiferrei.UCLKit.UCLKit-Demo";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiferrei.UCLKit.iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -434,9 +473,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X69WG8TQF9;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS/**";
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tiferrei.UCLKit.UCLKit-Demo";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiferrei.UCLKit.iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,7 +486,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		769468722036117E00F940A1 /* Build configuration list for PBXProject "UCLKit Demo" */ = {
+		769468722036117E00F940A1 /* Build configuration list for PBXProject "iOS Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				769468872036117E00F940A1 /* Debug */,
@@ -455,7 +495,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		769468892036117E00F940A1 /* Build configuration list for PBXNativeTarget "UCLKit Demo" */ = {
+		769468892036117E00F940A1 /* Build configuration list for PBXNativeTarget "iOS Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7694688A2036117E00F940A1 /* Debug */,

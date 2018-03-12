@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:UCLKit Demo/UCLKit Demo.xcodeproj">
+      location = "container:UCLKit.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:UCLKit.xcodeproj">
+      location = "group:Example/iOS Example.xcodeproj">
    </FileRef>
 </Workspace>
