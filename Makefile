@@ -2,7 +2,7 @@ SHA=$(shell git rev-parse HEAD)
 BRANCH=$(shell git name-rev --name-only HEAD)
 
 install:
-	carthage bootstrap --no-use-binaries
+	carthage bootstrap
 	sudo gem install xcpretty
 
 ios:
