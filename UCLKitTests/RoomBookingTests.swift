@@ -52,7 +52,7 @@ class RoomTests: XCTestCase {
                 XCTAssert(false, "❌ Should retrieve an error, instead got –> (\(rooms))")
             case .failure(let error as NSError):
                 var json = error.userInfo[RequestKitErrorKey]! as? [String: Any]
-                XCTAssertEqual(json!["error"] as? String, "Token does not exist")
+                XCTAssertEqual(json!["error"] as? String, "Token is invalid.")
             }
         }
         XCTAssertTrue(session.wasCalled)

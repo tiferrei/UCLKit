@@ -1,4 +1,4 @@
 {
-  "error": "Token does not exist",
+  "error": "Token is invalid.",
   "ok": false
 }

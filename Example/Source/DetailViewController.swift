@@ -14,6 +14,7 @@ class DetailViewController: UITableViewController {
         case request, data
     }
 
+    var config: TokenConfiguration?
     var params: [String: String] = [:]
     var request: [String: String] = [:]
     var data: [String: String] = [:]
@@ -33,10 +34,7 @@ class DetailViewController: UITableViewController {
 
     @IBAction func refresh() {
         refreshControl?.beginRefreshing()
-        // data.removeAll()
-        // request.removeAll()
-        let config = TokenConfiguration("uclapi-82a6442136f95a5-20d5ae3e0620b03-1a2983e54e33312-1c37b049e34fbfe")
-        if let segueIdentifier = self.segueIdentifier {
+        if let segueIdentifier = self.segueIdentifier, let config = config {
             switch segueIdentifier {
             case "ROOMS":
                 let _ = UCLKit(config).rooms { response in
@@ -50,7 +48,7 @@ class DetailViewController: UITableViewController {
                     case .failure(let error as NSError):
                         self.request["HTTP STATUS"] = "\(error.code)"
                         self.data["OK"] = "false"
-                        print(error.userInfo)
+                        self.data["error"] = UCLKit(config).parseError(error)
                     }
                 }
             default:

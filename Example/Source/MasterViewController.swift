@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import UCLKit
 
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = NSMutableArray()
+    var tempConfig: TokenConfiguration?
 
     // MARK: - View Lifecycle
 
@@ -24,7 +26,25 @@ class MasterViewController: UITableViewController {
             if let navigationController = controllers.last as? UINavigationController,
             let topViewController = navigationController.topViewController as? DetailViewController {
                 detailViewController = topViewController
+
             }
+        }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if self.tempConfig == nil {
+            // Ask the user to enter token.
+            let alertController = UIAlertController(title: "Welcome!", message: "Please enter your token.", preferredStyle: .alert)
+            alertController.addTextField { (textField) in
+                textField.placeholder = "token"
+            }
+            let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (_) in
+                self.tempConfig = TokenConfiguration(alertController.textFields![0].text)
+            }
+            alertController.addAction(confirmAction)
+            self.present(alertController, animated: true, completion: nil)
         }
     }
 
@@ -82,7 +102,7 @@ class MasterViewController: UITableViewController {
                     return [:]
                 }
             }
-
+            detailViewController.config = tempConfig
             detailViewController.params = requestForSegue(segue)
         }
     }
