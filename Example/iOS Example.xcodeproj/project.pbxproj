@@ -104,7 +104,6 @@
 		769468772036117E00F940A1 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7694688D2036127300F940A1 /* UCLKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UCLKit.xcodeproj; path = ../UCLKit.xcodeproj; sourceTree = "<group>"; };
 		76AAB0AE204FE86800DB22D1 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RequestKit.framework; path = ../Carthage/Build/iOS/RequestKit.framework; sourceTree = "<group>"; };
-		76B933DD1E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +128,6 @@
 				76C3878E203A152400F35AF7 /* Supporting Files */,
 				769468782036117E00F940A1 /* Products */,
 				7694688D2036127300F940A1 /* UCLKit.xcodeproj */,
-				76AAB0A4204FE6EF00DB22D1 /* Recovered References */,
-				76AAB0AB204FE7A800DB22D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,21 +151,6 @@
 				769468A42036127300F940A1 /* UCLKit tvOS Tests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		76AAB0A4204FE6EF00DB22D1 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				76B933DD1E6D938F005A3D31 /* RequestKit.framework */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		76AAB0AB204FE7A800DB22D1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		76C3878E203A152400F35AF7 /* Supporting Files */ = {

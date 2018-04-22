@@ -10,18 +10,21 @@ import UIKit
 import UCLKit
 
 class DetailViewController: UITableViewController {
+
+    // TODO: Implement title based on node selection and first property.
+    // FIXME: Remove spacing when Request section is hidden.
+
     enum Sections: Int {
-        case request, data
+        case request
+        case data
     }
 
-    var config: TokenConfiguration?
-    var params: [String: String] = [:]
-    var request: [String: String] = [:]
-    var data: [String: String] = [:]
-    var segueIdentifier: String?
+    var request = [String: String]()
+    var data = [String: Any]()
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(DetailViewController.refresh), for: .valueChanged)
     }
 
@@ -30,32 +33,7 @@ class DetailViewController: UITableViewController {
         refresh()
     }
 
-    // MARK: IBActions
-
     @IBAction func refresh() {
-        refreshControl?.beginRefreshing()
-        if let segueIdentifier = self.segueIdentifier, let config = config {
-            switch segueIdentifier {
-            case "ROOMS":
-                let _ = UCLKit(config).rooms { response in
-                    switch response {
-                    case .success(let responseData):
-                        self.request["HTTP STATUS"] = "200 OK"
-                        self.request["Results"] = "\(responseData.rooms!.count)"
-                        for room in responseData.rooms! {
-                            self.data[room.roomID!] = room.roomName!
-                        }
-                    case .failure(let error as NSError):
-                        self.request["HTTP STATUS"] = "\(error.code)"
-                        self.data["OK"] = "false"
-                        self.data["error"] = UCLKit(config).parseError(error)
-                    }
-                }
-            default:
-                break
-            }
-        }
-
         self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
     }
@@ -77,8 +55,12 @@ extension DetailViewController {
         switch Sections(rawValue: (indexPath as NSIndexPath).section)! {
         case .request:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Request")!
-            let field = request.keys.sorted(by: <)[indexPath.row]
+            let keys = Array(request.keys)
+            let field = keys[indexPath.row]
             let value = request[field]
+
+            cell.selectionStyle = .none
+            cell.isUserInteractionEnabled = false
 
             cell.textLabel?.text = field
             cell.detailTextLabel?.text = value
@@ -86,12 +68,27 @@ extension DetailViewController {
             return cell
         case .data:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Data")!
-            let field = data.keys.sorted(by: <)[indexPath.row]
-            let value = data[field]
-
+            let keys = Array(data.keys)
+            let field = keys[indexPath.row]
             cell.textLabel?.text = field
-            cell.detailTextLabel?.text = value
+            if let value = data[field] as? String {
+                cell.selectionStyle = .none
+                cell.isUserInteractionEnabled = false
 
+                cell.detailTextLabel?.text = value
+            } else if let nodes = data[field] as? [String: Any] {
+                tableView.allowsSelection = true
+                cell.isUserInteractionEnabled = true
+                cell.accessoryType = .disclosureIndicator
+
+                cell.detailTextLabel?.text = "\(nodes.count) nodes"
+            } else if let nodes = data[field] as? [Any] {
+                tableView.allowsSelection = true
+                cell.isUserInteractionEnabled = true
+                cell.accessoryType = .disclosureIndicator
+
+                cell.detailTextLabel?.text = "\(nodes.count) nodes"
+            }
             return cell
         }
     }
@@ -105,15 +102,35 @@ extension DetailViewController {
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if self.tableView(tableView, numberOfRowsInSection: section) == 0 {
-            return ""
-        }
-
         switch Sections(rawValue: section)! {
         case .request:
+            if request.isEmpty {
+                return nil
+            }
             return "Request"
         case .data:
+            if data.isEmpty {
+                return nil
+            }
             return "Data"
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nodeDetailViewController = segue.destination as? DetailViewController {
+            let keys = Array(data.keys)
+            let field = keys[tableView.indexPathForSelectedRow!.row]
+            if let nodes = data[field] as? [Any] {
+                var nodeData = [String: Any]()
+                for (index, anyNode) in nodes.enumerated() {
+                    if let node = anyNode as? [String: Any] {
+                        nodeData["Node \(index)"] = node
+                    }
+                }
+                nodeDetailViewController.data = nodeData
+            } else if let nodes = data[field] as? [String: Any] {
+                nodeDetailViewController.data = nodes
+            }
         }
     }
 }

@@ -71,6 +71,7 @@ class RoomTests: XCTestCase {
         XCTAssertEqual(response.rooms![0].classification, Classification.SocialSpace)
         XCTAssertEqual(response.rooms![0].automated, Automation.NotAutomated)
         XCTAssertEqual(response.rooms![0].location!.address!, ["Gower Street", "London", "WC1E 6BT", ""])
+        // TODO: Test coordinates parsing.
     }
 
 }

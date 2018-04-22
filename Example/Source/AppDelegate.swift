@@ -8,8 +8,7 @@
 
 import UIKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
+@UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
 
@@ -28,8 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
         if let secondaryAsNavController = secondaryViewController as? UINavigationController,
-        let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController {
-            return topAsDetailController.config == nil
+        let _ = secondaryAsNavController.topViewController as? DetailViewController {
+            return true
         }
 
         return false
