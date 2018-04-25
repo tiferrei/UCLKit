@@ -116,6 +116,19 @@ extension DetailViewController {
         }
     }
 
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch Sections(rawValue: section)! {
+        case .request:
+            if request.isEmpty {
+                return CGFloat.leastNormalMagnitude
+            } else {
+                return UITableViewAutomaticDimension
+            }
+        case .data:
+            return UITableViewAutomaticDimension
+        }
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let nodeDetailViewController = segue.destination as? DetailViewController {
             let keys = Array(data.keys)
