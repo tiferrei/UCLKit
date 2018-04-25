@@ -1,6 +1,6 @@
 //
 //  DetailViewController.swift
-//  UCLKit Demo
+//  UCLKit
 //
 //  Created by Tiago Ferreira on 15/02/2018.
 //  Copyright © 2018 Tiago Ferreira. All rights reserved.
@@ -10,10 +10,6 @@ import UIKit
 import UCLKit
 
 class DetailViewController: UITableViewController {
-
-    // TODO: Implement title based on node selection and first property.
-    // FIXME: Remove spacing when Request section is hidden.
-
     enum Sections: Int {
         case request
         case data
@@ -133,6 +129,7 @@ extension DetailViewController {
         if let nodeDetailViewController = segue.destination as? DetailViewController {
             let keys = Array(data.keys)
             let field = keys[tableView.indexPathForSelectedRow!.row]
+            nodeDetailViewController.title = field
             if let nodes = data[field] as? [Any] {
                 var nodeData = [String: Any]()
                 for (index, anyNode) in nodes.enumerated() {

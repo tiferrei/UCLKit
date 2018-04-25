@@ -1,6 +1,6 @@
 //
 //  MasterViewController.swift
-//  UCLKit Demo
+//  UCLKit
 //
 //  Created by Tiago Ferreira on 15/02/2018.
 //  Copyright © 2018 Tiago Ferreira. All rights reserved.
@@ -94,43 +94,44 @@ class MasterViewController: UITableViewController {
         let detailViewController = navigationController.topViewController as? DetailViewController {
             detailViewController.refreshControl?.beginRefreshing()
             DispatchQueue.main.async {
+                detailViewController.title = segue.identifier!
                 switch segue.identifier! {
-                case "ROOMS":
+                case "GET Rooms":
                     let _ = UCLKit(config).rooms { rooms in
                         self.parse(rooms, for: detailViewController, with: config)
                     }
-                case "BOOKINGS":
+                case "GET Bookings":
                     let _ = UCLKit(config).bookings { bookings in
                         self.parse(bookings, for: detailViewController, with: config)
                     }
-                case "EQUIPMENT":
+                case "GET Equipment":
                     self.requestParamsWithAlert("roomID", "siteID") { params in
                         let _ = UCLKit(config).equipment(roomID: params["roomID"]!, siteID: params["siteID"]!) { equipment in
                                 self.parse(equipment, for: detailViewController, with: config, and: params)
                         }
                     }
-                case "FREE ROOMS":
+                case "GET Free Rooms":
                     self.requestParamsWithAlert("start_datetime", "end_datetime") { params in
                         // TODO: Free Rooms endpoint.
                         fatalError("Not implemented yet.")
                     }
-                case "PEOPLE":
+                case "GET People":
                     self.requestParamsWithAlert("query") { params in
                         let _ = UCLKit(config).people(query: params["query"]!) { people in
                             self.parse(people, for: detailViewController, with: config, and: params)
                         }
                     }
-                case "PERSONAL TIMETABLE":
+                case "GET Personal Timetable":
                     self.requestParamsWithAlert("client_secret") { params in
                         // TODO: Personal Timetable endpoint.
                         fatalError("Not implemented yet.")
                     }
-                case "TIMETABLE BY MODULES":
+                case "GET Timetable By Modules":
                     self.requestParamsWithAlert("client_secret", "modules") { params in
                         // TODO: Timetable By Modules endpoint.
                         fatalError("Not implemented yet.")
                     }
-                case "DESKTOP AVAILABILITY":
+                case "GET Desktop Availability":
                     // TODO: Desktop Availability endpoint.
                     fatalError("Not implemented yet.")
                 default:

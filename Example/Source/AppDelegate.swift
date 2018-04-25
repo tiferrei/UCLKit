@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  UCLKit Demo
+//  UCLKit
 //
 //  Created by Tiago Ferreira on 15/02/2018.
 //  Copyright © 2018 Tiago Ferreira. All rights reserved.
