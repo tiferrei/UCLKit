@@ -55,6 +55,5 @@ extension Decodable {
             }
         }
         return dict
-        // FIXME: Swift runtime does not yet support dynamically querying conditional conformance.
     }
 }

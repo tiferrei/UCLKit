@@ -112,7 +112,6 @@ class MasterViewController: UITableViewController {
                     }
                 case "GET Free Rooms":
                     self.requestParamsWithAlert("start_datetime", "end_datetime") { params in
-                        // TODO: Free Rooms endpoint.
                         fatalError("Not implemented yet.")
                     }
                 case "GET People":
@@ -123,16 +122,13 @@ class MasterViewController: UITableViewController {
                     }
                 case "GET Personal Timetable":
                     self.requestParamsWithAlert("client_secret") { params in
-                        // TODO: Personal Timetable endpoint.
                         fatalError("Not implemented yet.")
                     }
                 case "GET Timetable By Modules":
                     self.requestParamsWithAlert("client_secret", "modules") { params in
-                        // TODO: Timetable By Modules endpoint.
                         fatalError("Not implemented yet.")
                     }
                 case "GET Desktop Availability":
-                    // TODO: Desktop Availability endpoint.
                     fatalError("Not implemented yet.")
                 default:
                     fatalError("Unknown segue identifier received.")
