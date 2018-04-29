@@ -35,9 +35,6 @@
 		767C291020574205001E2608 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C290E20574205001E2608 /* ErrorHandling.swift */; };
 		767C291120574205001E2608 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C290E20574205001E2608 /* ErrorHandling.swift */; };
 		767C291220574205001E2608 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C290E20574205001E2608 /* ErrorHandling.swift */; };
-		767C29142057516B001E2608 /* ErrorHandlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C29132057516B001E2608 /* ErrorHandlingTests.swift */; };
-		767C29152057516B001E2608 /* ErrorHandlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C29132057516B001E2608 /* ErrorHandlingTests.swift */; };
-		767C29162057516B001E2608 /* ErrorHandlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C29132057516B001E2608 /* ErrorHandlingTests.swift */; };
 		7680A0201E8FEB1D00B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7680A0221E8FEB4500B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7680A0241E8FEB5700B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933E41E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -87,6 +84,9 @@
 		76CA60E91E7C14580050B5EF /* InvalidToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CA60E81E7C14580050B5EF /* InvalidToken.json */; };
 		76CA60EA1E7C14580050B5EF /* InvalidToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CA60E81E7C14580050B5EF /* InvalidToken.json */; };
 		76CA60EB1E7C14580050B5EF /* InvalidToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CA60E81E7C14580050B5EF /* InvalidToken.json */; };
+		76D454C92092757100AD6C43 /* HelperToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D454C82092757100AD6C43 /* HelperToolsTests.swift */; };
+		76D454CA2092757100AD6C43 /* HelperToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D454C82092757100AD6C43 /* HelperToolsTests.swift */; };
+		76D454CB2092757100AD6C43 /* HelperToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D454C82092757100AD6C43 /* HelperToolsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,7 +157,6 @@
 		76665FDE1FCC7BC100626867 /* People.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = People.json; sourceTree = "<group>"; };
 		76665FE21FCC81CD00626867 /* SearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
 		767C290E20574205001E2608 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
-		767C29132057516B001E2608 /* ErrorHandlingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingTests.swift; sourceTree = "<group>"; };
 		7680A01D1E8FB9B300B965D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7680A03C1E90182500B965D5 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		76AC4FA7207E63AB00D15312 /* DecodableToDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableToDictionary.swift; sourceTree = "<group>"; };
@@ -189,6 +188,7 @@
 		76C783FF1E677F400087093E /* UCLKit tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UCLKit tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CA60E41E7C142A0050B5EF /* NoToken.json */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.json; path = NoToken.json; sourceTree = "<group>"; };
 		76CA60E81E7C14580050B5EF /* InvalidToken.json */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.json; path = InvalidToken.json; sourceTree = "<group>"; };
+		76D454C82092757100AD6C43 /* HelperToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperToolsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,7 +351,7 @@
 				76B933D11E6B892A005A3D31 /* Fixtures */,
 				76C783A51E66E58F0087093E /* UCLKitTests.swift */,
 				76B933C71E6B0E9D005A3D31 /* RoomBookingTests.swift */,
-				767C29132057516B001E2608 /* ErrorHandlingTests.swift */,
+				76D454C82092757100AD6C43 /* HelperToolsTests.swift */,
 				76665FE21FCC81CD00626867 /* SearchTests.swift */,
 				76B933CF1E6B8790005A3D31 /* TestHelper.swift */,
 				76B933CB1E6B865A005A3D31 /* TestURLSession.swift */,
@@ -713,7 +713,7 @@
 				76C783A61E66E58F0087093E /* UCLKitTests.swift in Sources */,
 				76665FE31FCC81CD00626867 /* SearchTests.swift in Sources */,
 				76B933D61E6B90F3005A3D31 /* TestHelper.swift in Sources */,
-				767C29142057516B001E2608 /* ErrorHandlingTests.swift in Sources */,
+				76D454C92092757100AD6C43 /* HelperToolsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,7 +768,7 @@
 				76C783EB1E677ED40087093E /* UCLKitTests.swift in Sources */,
 				76665FE41FCC81CD00626867 /* SearchTests.swift in Sources */,
 				76B933D81E6B90F5005A3D31 /* TestHelper.swift in Sources */,
-				767C29152057516B001E2608 /* ErrorHandlingTests.swift in Sources */,
+				76D454CA2092757100AD6C43 /* HelperToolsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,7 +781,7 @@
 				76C783F81E677F400087093E /* UCLKitTests.swift in Sources */,
 				76665FE51FCC81CD00626867 /* SearchTests.swift in Sources */,
 				76B933D91E6B90F7005A3D31 /* TestHelper.swift in Sources */,
-				767C29162057516B001E2608 /* ErrorHandlingTests.swift in Sources */,
+				76D454CB2092757100AD6C43 /* HelperToolsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
