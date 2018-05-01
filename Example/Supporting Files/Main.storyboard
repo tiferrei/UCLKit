@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -230,6 +229,37 @@
                                         <connections>
                                             <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="GET Desktop Availability" id="R5p-Ji-Qva"/>
                                         </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Settings" id="VxC-Ol-AEI">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="aUa-RE-fyi">
+                                        <rect key="frame" x="0.0" y="599.33333333333337" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aUa-RE-fyi" id="0nj-gZ-b8g">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tt-4r-X7j">
+                                                    <rect key="frame" x="-0.66666666666665719" y="0.33333333333333215" width="375.33333333333326" height="43.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <state key="normal" title="Sign Out">
+                                                        <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="didTouchSignOut:" destination="7bK-jq-Zjz" eventType="touchUpInside" id="So5-V9-kga"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7tt-4r-X7j" firstAttribute="width" secondItem="0nj-gZ-b8g" secondAttribute="width" id="9Xf-eV-7WO"/>
+                                                <constraint firstItem="7tt-4r-X7j" firstAttribute="centerX" secondItem="0nj-gZ-b8g" secondAttribute="centerX" id="YJB-Er-DX4"/>
+                                                <constraint firstItem="7tt-4r-X7j" firstAttribute="centerY" secondItem="0nj-gZ-b8g" secondAttribute="centerY" id="Yo1-EG-hWD"/>
+                                                <constraint firstItem="7tt-4r-X7j" firstAttribute="height" secondItem="0nj-gZ-b8g" secondAttribute="height" id="beL-DB-2eb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

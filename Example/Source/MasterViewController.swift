@@ -8,47 +8,73 @@
 
 import UIKit
 import UCLKit
+import Locksmith
 import RequestKit
+import LocalAuthentication
 
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
+    let localAuthenticationContext = LAContext()
     var config: TokenConfiguration?
 
     // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         if let split = splitViewController {
             let controllers = split.viewControllers
-
             if let navigationController = controllers.last as? UINavigationController,
-            let topViewController = navigationController.topViewController as? DetailViewController {
+                let topViewController = navigationController.topViewController as? DetailViewController {
                 detailViewController = topViewController
-
             }
         }
+    }
+
+    func askForAuth() {
+        // Ask the user to enter token.
+        let alertController = UIAlertController(title: "Welcome!", message: "Please enter your token.", preferredStyle: .alert)
+        alertController.addTextField { (textField) in
+            textField.placeholder = "token"
+        }
+        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (_) in
+            try! Locksmith.updateData(data: ["token": alertController.textFields![0].text!], forUserAccount: "UCLAPI User")
+            self.config = TokenConfiguration(alertController.textFields![0].text)
+        }
+        alertController.addAction(confirmAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         if self.config == nil {
-            // Ask the user to enter token.
-            let alertController = UIAlertController(title: "Welcome!", message: "Please enter your token.", preferredStyle: .alert)
-            alertController.addTextField { (textField) in
-                textField.placeholder = "token"
+            if let data = Locksmith.loadDataForUserAccount(userAccount: "UCLAPI User"), let token = data["token"] as? String {
+                var authError: NSError?
+                if localAuthenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
+                    localAuthenticationContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Your device will now verify your biometrics to make sure only you have access to your token.") { success, error in
+                        if success {
+                            self.config = TokenConfiguration(token)
+                        } else {
+                            try! Locksmith.deleteDataForUserAccount(userAccount: "UCLAPI User")
+                            self.askForAuth()
+                        }
+                    }
+                } else if localAuthenticationContext.canEvaluatePolicy(.deviceOwnerAuthentication, error: &authError) {
+                    localAuthenticationContext.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Your device will now verify your passcode to make sure only you have access to your token.") { success, error in
+                        if success {
+                            self.config = TokenConfiguration(token)
+                        } else {
+                            try! Locksmith.deleteDataForUserAccount(userAccount: "UCLAPI User")
+                            self.askForAuth()
+                        }
+                    }
+                }
+            } else {
+                askForAuth()
             }
-            let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (_) in
-                self.config = TokenConfiguration(alertController.textFields![0].text)
-            }
-            alertController.addAction(confirmAction)
-            self.present(alertController, animated: true, completion: nil)
         }
     }
 
-    // MARK: - UIStoryboardSegue
     func requestParamsWithAlert(_ keys: String..., requestCompletion: @escaping (_ params: [String: String]) -> Void) {
         let alertController = UIAlertController(title: "More Info Needed", message: "Please enter required param(s).", preferredStyle: .alert)
 
@@ -89,6 +115,12 @@ class MasterViewController: UITableViewController {
         }
     }
 
+    @IBAction func didTouchSignOut(_ sender: Any) {
+        try! Locksmith.deleteDataForUserAccount(userAccount: "UCLAPI User")
+        askForAuth()
+    }
+
+    // MARK: - UIStoryboardSegue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let config = self.config, let navigationController = segue.destination as? UINavigationController,
         let detailViewController = navigationController.topViewController as? DetailViewController {
