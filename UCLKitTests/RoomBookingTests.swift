@@ -71,6 +71,8 @@ class RoomTests: XCTestCase {
         XCTAssertEqual(response.rooms![0].classification, Classification.SocialSpace)
         XCTAssertEqual(response.rooms![0].automated, Automation.NotAutomated)
         XCTAssertEqual(response.rooms![0].location!.address!, ["Gower Street", "London", "WC1E 6BT", ""])
+        XCTAssertEqual(response.rooms![0].location!.coordinates!.latitude!, "51.524699")
+        XCTAssertEqual(response.rooms![0].location!.coordinates!.longitude!, "-0.13366")
     }
 
 }
@@ -88,6 +90,21 @@ class BookingTests: XCTestCase {
                 XCTAssertEqual(response.OK, true)
             case .failure(let error):
                 XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
+            }
+        }
+        XCTAssertTrue(session.wasCalled)
+    }
+
+    func testFailToGetBookings() {
+        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/bookings?contact=&date=&description=&end_datetime=&page_token=&results_per_page=1000&roomid=&roomname=&siteid=&start_datetime=&token=12345", expectedHTTPMethod: "GET", jsonFile: "Bookings", statusCode: 400)
+        let config = TokenConfiguration("12345")
+        _ = UCLKit(config).bookings(session) { response in
+            switch response {
+            case .success(let response):
+                XCTAssert(false, "❌ Should not retrieve a response (\(response))")
+                XCTAssertEqual(response.OK, true)
+            case .failure(_):
+                XCTAssert(true)
             }
         }
         XCTAssertTrue(session.wasCalled)

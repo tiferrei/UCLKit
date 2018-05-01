@@ -3,7 +3,7 @@ version: 2
 jobs:
   dependencies:
     macos:
-      xcode: "9.2.0"
+      xcode: "9.3.0"
     working_directory: ~/UCLKit
     steps:
       - checkout
@@ -17,7 +17,7 @@ jobs:
 
   macOS:
     macos:
-      xcode: "9.2.0"
+      xcode: "9.3.0"
     working_directory: ~/UCLKit
     steps:
       - restore_cache:
@@ -29,7 +29,7 @@ jobs:
 
   iOS:
     macos:
-      xcode: "9.2.0"
+      xcode: "9.3.0"
     working_directory: ~/UCLKit
     steps:
       - restore_cache:
@@ -41,7 +41,7 @@ jobs:
 
   watchOS:
     macos:
-      xcode: "9.2.0"
+      xcode: "9.3.0"
     working_directory: ~/UCLKit
     steps:
       - restore_cache:
@@ -53,7 +53,7 @@ jobs:
 
   tvOS:
     macos:
-      xcode: "9.2.0"
+      xcode: "9.3.0"
     working_directory: ~/UCLKit
     steps:
       - restore_cache:
@@ -65,7 +65,7 @@ jobs:
 
   deploy:
     macos:
-      xcode: "9.2.0"
+      xcode: "9.3.0"
     working_directory: ~/UCLKit
     steps:
       - restore_cache:

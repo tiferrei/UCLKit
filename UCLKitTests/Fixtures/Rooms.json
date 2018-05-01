@@ -10,6 +10,10 @@
       "classification": "SS",
       "automated": "N",
       "location": {
+        "coordinates": {
+          "lat": "51.524699",
+          "lng": "-0.13366"
+        },
         "address": [
           "Gower Street",
           "London",

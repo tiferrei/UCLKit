@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14105" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,7 +68,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="ROOMS" id="QsG-8B-Xdw"/>
+                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="GET Rooms" id="QsG-8B-Xdw"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="kv2-3k-J9w" style="IBUITableViewCellStyleDefault" id="Bba-qf-fdr">
@@ -90,7 +89,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="BOOKINGS" id="gbn-qk-unj"/>
+                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="GET Bookings" id="gbn-qk-unj"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="gGF-bI-vhg" style="IBUITableViewCellStyleDefault" id="QdK-ID-hbj">
@@ -111,7 +110,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="EQUIPMENT" id="L8u-G7-u3Y"/>
+                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="GET Equipment" id="L8u-G7-u3Y"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="jsW-Zp-fZf" style="IBUITableViewCellStyleDefault" id="Mmy-5X-lLC">
@@ -132,7 +131,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="FREE ROOMS" id="LTC-qA-tEy"/>
+                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="GET Free Rooms" id="LTC-qA-tEy"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -157,7 +156,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="PEOPLE" id="hTM-1G-3EM"/>
+                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="GET People" id="hTM-1G-3EM"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -182,7 +181,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="PERSONAL TIMETABLE" id="Zyf-cZ-ceV"/>
+                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="GET Personal Timetable" id="Zyf-cZ-ceV"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="QTR-30-dfd" style="IBUITableViewCellStyleDefault" id="dcO-yf-hVc">
@@ -203,7 +202,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="TIMETABLE BY MODULES" id="lq5-TS-ag0"/>
+                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="GET Timetable By Modules" id="lq5-TS-ag0"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -228,8 +227,39 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="DESKTOP AVAILABILITY" id="R5p-Ji-Qva"/>
+                                            <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="GET Desktop Availability" id="R5p-Ji-Qva"/>
                                         </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Settings" id="VxC-Ol-AEI">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="aUa-RE-fyi">
+                                        <rect key="frame" x="0.0" y="599.33333333333337" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aUa-RE-fyi" id="0nj-gZ-b8g">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tt-4r-X7j">
+                                                    <rect key="frame" x="-0.66666666666665719" y="0.33333333333333215" width="375.33333333333326" height="43.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <state key="normal" title="Sign Out">
+                                                        <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="didTouchSignOut:" destination="7bK-jq-Zjz" eventType="touchUpInside" id="So5-V9-kga"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7tt-4r-X7j" firstAttribute="width" secondItem="0nj-gZ-b8g" secondAttribute="width" id="9Xf-eV-7WO"/>
+                                                <constraint firstItem="7tt-4r-X7j" firstAttribute="centerX" secondItem="0nj-gZ-b8g" secondAttribute="centerX" id="YJB-Er-DX4"/>
+                                                <constraint firstItem="7tt-4r-X7j" firstAttribute="centerY" secondItem="0nj-gZ-b8g" secondAttribute="centerY" id="Yo1-EG-hWD"/>
+                                                <constraint firstItem="7tt-4r-X7j" firstAttribute="height" secondItem="0nj-gZ-b8g" secondAttribute="height" id="beL-DB-2eb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -239,7 +269,7 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="UCLKit Demo" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="UCLKit" id="Zdf-7t-Un8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
@@ -260,7 +290,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-38" y="30"/>
+            <point key="canvasLocation" x="-39" y="9"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Vi6-fp-rZb">
@@ -319,7 +349,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="NEW TABLE" id="waf-Nw-4x1"/>
+                                    <segue destination="hay-0o-6iw" kind="show" identifier="NEW NODE" id="NE2-MH-lzw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -336,11 +366,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwc-ms-sMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604" y="30"/>
+            <point key="canvasLocation" x="604" y="9"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6ca-np-Pjq"/>
+        <segue reference="R5p-Ji-Qva"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.79647636413574219" green="0.17503035068511963" blue="0.091383159160614014" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

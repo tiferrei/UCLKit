@@ -15,6 +15,8 @@
 		76023D0E2036349E0091C659 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76023D0D2036349E0091C659 /* LaunchScreen.storyboard */; };
 		76023D10203634A00091C659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76023D0F203634A00091C659 /* Main.storyboard */; };
 		76023D12203634DE0091C659 /* UCLKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 769468982036127300F940A1 /* UCLKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7644D19E20979FF800D1EDB0 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7644D19C20979FE600D1EDB0 /* Locksmith.framework */; };
+		7644D19F20979FF800D1EDB0 /* Locksmith.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7644D19C20979FE600D1EDB0 /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76AAB0AF204FE86900DB22D1 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76AAB0AE204FE86800DB22D1 /* RequestKit.framework */; };
 		76AAB0B0204FE86900DB22D1 /* RequestKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 76AAB0AE204FE86800DB22D1 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -85,6 +87,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7644D19F20979FF800D1EDB0 /* Locksmith.framework in Copy Frameworks */,
 				76023D12203634DE0091C659 /* UCLKit.framework in Copy Frameworks */,
 				76AAB0B0204FE86900DB22D1 /* RequestKit.framework in Copy Frameworks */,
 			);
@@ -101,10 +104,11 @@
 		76023D0D2036349E0091C659 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76023D0F203634A00091C659 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		76023D132036350D0091C659 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7644D19A20979F3400D1EDB0 /* iOS Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iOS Example.entitlements"; sourceTree = "<group>"; };
+		7644D19C20979FE600D1EDB0 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = ../Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
 		769468772036117E00F940A1 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7694688D2036127300F940A1 /* UCLKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UCLKit.xcodeproj; path = ../UCLKit.xcodeproj; sourceTree = "<group>"; };
 		76AAB0AE204FE86800DB22D1 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RequestKit.framework; path = ../Carthage/Build/iOS/RequestKit.framework; sourceTree = "<group>"; };
-		76B933DD1E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7644D19E20979FF800D1EDB0 /* Locksmith.framework in Frameworks */,
 				76023D0A203634890091C659 /* UCLKit.framework in Frameworks */,
 				76AAB0AF204FE86900DB22D1 /* RequestKit.framework in Frameworks */,
 			);
@@ -120,17 +125,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7644D19B20979FE600D1EDB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7644D19C20979FE600D1EDB0 /* Locksmith.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7694686E2036117E00F940A1 = {
 			isa = PBXGroup;
 			children = (
 				76AAB0AE204FE86800DB22D1 /* RequestKit.framework */,
-				76023D132036350D0091C659 /* Info.plist */,
 				76C38790203A154800F35AF7 /* Source */,
 				76C3878E203A152400F35AF7 /* Supporting Files */,
 				769468782036117E00F940A1 /* Products */,
 				7694688D2036127300F940A1 /* UCLKit.xcodeproj */,
-				76AAB0A4204FE6EF00DB22D1 /* Recovered References */,
-				76AAB0AB204FE7A800DB22D1 /* Frameworks */,
+				7644D19B20979FE600D1EDB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,27 +167,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		76AAB0A4204FE6EF00DB22D1 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				76B933DD1E6D938F005A3D31 /* RequestKit.framework */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		76AAB0AB204FE7A800DB22D1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		76C3878E203A152400F35AF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				76023D0F203634A00091C659 /* Main.storyboard */,
 				76023D0D2036349E0091C659 /* LaunchScreen.storyboard */,
 				76023D0B2036349B0091C659 /* Assets.xcassets */,
+				7644D19A20979F3400D1EDB0 /* iOS Example.entitlements */,
+				76023D132036350D0091C659 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -226,6 +224,11 @@
 					769468762036117E00F940A1 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -455,10 +458,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Supporting Files/iOS Example.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X69WG8TQF9;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS/**";
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiferrei.UCLKit.iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -471,10 +476,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Supporting Files/iOS Example.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X69WG8TQF9;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS/**";
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiferrei.UCLKit.iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";

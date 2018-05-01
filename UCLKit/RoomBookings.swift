@@ -124,9 +124,22 @@ import RequestKit
 /// Address sub-payload from the Room payload
 @objc open class Location: NSObject, Codable {
     open var address: [String]?
+    open var coordinates: Coordinate?
 
     enum CodingKeys: String, CodingKey {
         case address
+        case coordinates
+    }
+}
+
+/// Coordinate sub-payload from the Location
+@objc open class Coordinate: NSObject, Codable {
+    open var latitude: String?
+    open var longitude: String?
+
+    enum CodingKeys: String, CodingKey {
+        case latitude = "lat"
+        case longitude = "lng"
     }
 }
 
