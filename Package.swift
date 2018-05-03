@@ -1,17 +1,16 @@
+// swift-tools-version:4.0
 import PackageDescription
 
 let package = Package(
-    name: "UCLKit"
-    products: [.library(name: "UCLKit", targets: ["UCLKit macOS", "UCLKit iOS", "UCLKit tvOS", "UCLKit watchOS"])],
-    dependencies: [.package(url: "https://github.com/nerdishbynature/RequestKit", from: "2.2.0")],
+    name: "UCLKit",
+    products: [
+        .library(name: "UCLKit", targets: ["UCLKit"])
+    ],
+    dependencies: [
+        .package(url: "https://github.com/nerdishbynature/RequestKit.git", from: "2.2.0")
+    ],
     targets: [
-        .target(name: "UCLKit macOS", dependencies: ["RequestKit"]),
-        .testTarget(name: "UCLKit macOS Tests", dependencies: ["UCLKit macOS"]),
-        .target(name: "UCLKit iOS", dependencies: ["RequestKit"]),
-        .testTarget(name: "UCLKit iOS Tests", dependencies: ["UCLKit iOS"]),
-        .target(name: "UCLKit tvOS", dependencies: ["RequestKit"]),
-        .testTarget(name: "UCLKit tvOS Tests", dependencies: ["UCLKit tvOS"]),
-        .target(name: "UCLKit watchOS", dependencies: ["RequestKit"])],
-    version: "0.1.0",
-    swiftLanguageVersions: [3, 4]
+        .target(name: "UCLKit", dependencies: ["RequestKit"], path: "Source"),
+        .testTarget(name: "UCLKit Tests", dependencies: ["UCLKit"], path: "Tests")
+   ]
 )
