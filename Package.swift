@@ -7,7 +7,7 @@ let package = Package(
         .library(name: "UCLKit", targets: ["UCLKit"])
     ],
     dependencies: [
-        .package(url: "https://github.com/nerdishbynature/RequestKit.git", from: "2.2.0")
+        .package(url: "https://github.com/nerdishbynature/RequestKit.git", .branch("swiftPackageManager"))
     ],
     targets: [
         .target(name: "UCLKit", dependencies: ["RequestKit"], path: "Source"),
