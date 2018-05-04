@@ -144,7 +144,9 @@ class MasterViewController: UITableViewController {
                     }
                 case "GET Free Rooms":
                     self.requestParamsWithAlert("start_datetime", "end_datetime") { params in
-                        fatalError("Not implemented yet.")
+                        let _ = UCLKit(config).freeRooms(startDateTime: params["start_datetime"]!, endDateTime: params["end_datetime"]!) { freeRooms in
+                            self.parse(freeRooms, for: detailViewController, with: config, and: params)
+                        }
                     }
                 case "GET People":
                     self.requestParamsWithAlert("query") { params in

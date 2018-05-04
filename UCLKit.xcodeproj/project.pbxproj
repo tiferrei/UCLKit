@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7608B392209CF30D008593AE /* FreeRooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 7608B391209CF30D008593AE /* FreeRooms.json */; };
+		7608B393209CF30D008593AE /* FreeRooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 7608B391209CF30D008593AE /* FreeRooms.json */; };
+		7608B394209CF30D008593AE /* FreeRooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 7608B391209CF30D008593AE /* FreeRooms.json */; };
 		760F249F1EDF433400494E47 /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783D61E677E6B0087093E /* UCLKit.framework */; };
 		760F24A01EDF433D00494E47 /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783E51E677EA40087093E /* UCLKit.framework */; };
 		7676355D1EBE2E54008A67A5 /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit.framework */; };
@@ -153,6 +156,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7608B391209CF30D008593AE /* FreeRooms.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FreeRooms.json; sourceTree = "<group>"; };
 		7680A01D1E8FB9B300B965D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7680A03C1E90182500B965D5 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		76B933DD1E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
@@ -353,6 +357,7 @@
 				76D84703209A374100F60856 /* NoToken.json */,
 				76D84704209A374100F60856 /* Bookings.json */,
 				76D84705209A374100F60856 /* Rooms.json */,
+				7608B391209CF30D008593AE /* FreeRooms.json */,
 				76D84706209A374100F60856 /* InvalidToken.json */,
 				76D84707209A374100F60856 /* People.json */,
 				76D84708209A374100F60856 /* Equipment.json */,
@@ -609,6 +614,7 @@
 				76D84724209A374100F60856 /* People.json in Resources */,
 				76D84718209A374100F60856 /* NoToken.json in Resources */,
 				76D8471B209A374100F60856 /* Bookings.json in Resources */,
+				7608B392209CF30D008593AE /* FreeRooms.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +652,7 @@
 				76D84725209A374100F60856 /* People.json in Resources */,
 				76D84719209A374100F60856 /* NoToken.json in Resources */,
 				76D8471C209A374100F60856 /* Bookings.json in Resources */,
+				7608B393209CF30D008593AE /* FreeRooms.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +666,7 @@
 				76D84726209A374100F60856 /* People.json in Resources */,
 				76D8471A209A374100F60856 /* NoToken.json in Resources */,
 				76D8471D209A374100F60856 /* Bookings.json in Resources */,
+				7608B394209CF30D008593AE /* FreeRooms.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

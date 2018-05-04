@@ -24,6 +24,19 @@ import RequestKit
     }
 }
 
+/// Wrapper for the Free Rooms response
+@objc open class FreeRoomsResponse: NSObject, Codable {
+    open var OK: Bool?
+    open var error: String?
+    open var freeRooms: [Room]?
+
+    enum CodingKeys: String, CodingKey {
+        case OK = "ok"
+        case error
+        case freeRooms = "free_rooms"
+    }
+}
+
 /// Payload from the Rooms response
 @objc open class Room: NSObject, Codable {
     @objc open var roomID: String?
@@ -203,8 +216,8 @@ public extension UCLKit {
      - parameter pageToken: Page token received in initial /bookings request. The page token does not change as you paginate through the results.
      - parameter roomName: The name of the room. It often includes the name of the site (building) as well.
      - parameter roomID: The room ID (not to be confused with the roomname).
-     - parameter startDateTime: Start datetime of the booking. Returns bookings with a start_datetime after the **String** supplied. Use **UCLKit.Time.parseDate** to get an NSDate into the appropriate String format.
-     - parameter endDateTime: End datetime of the booking. Returns bookings with endDate before the **String** supplied. Use **UCLKit.Time.parseDate** to get an NSDate into the appropriate String format
+     - parameter startDateTime: Start datetime of the booking. Returns bookings with a start_datetime after the **String** supplied. Use **UCLKit.Time.parseDate()** to get an NSDate into the appropriate String format.
+     - parameter endDateTime: End datetime of the booking. Returns bookings with endDate before the **String** supplied. Use **UCLKit.Time.parseDate()** to get an NSDate into the appropriate String format
      - parameter date: Date of the bookings you need, in the format YYYYMMDD. Returns bookings occurring on this day. This query parameter is only considered when end_datetime and start_datetime are not supplied.
      - parameter siteID: Every room is inside a site (building). All sites have IDs.
      - parameter description: Describes what the booking is. Could contain a module code (for example WIBRG005) or just the type of activity (for example Lecture).
@@ -226,7 +239,7 @@ public extension UCLKit {
     }
     
     /**
-     Returns any equipment/feature information about a specific room
+     Returns any equipment/feature information about a specific room.
      - parameter roomID: The room ID (not to be confused, with the roomname).
      - parameter siteID: Every room is inside a site (building). All sites have IDs.
      - parameter completion: Callback for the outcome of the fetch.
@@ -243,6 +256,25 @@ public extension UCLKit {
             }
         }
     }
+
+    /**
+     Returns all rooms which are free in a specific time range.
+     - parameter startDateTime: Start datetime of the time range. Returns bookings with a start_datetime after the **String** supplied. Use **UCLKit.Time.parseDate()** to get an NSDate into the appropriate String format.
+     - parameter endDateTime: End datetime of the time range. Returns bookings with endDate before the **String** supplied. Use **UCLKit.Time.parseDate()** to get an NSDate into the appropriate String format
+     - parameter completion: Callback for the outcome of the fetch.
+     */
+    public func freeRooms(_ session: RequestKitURLSession = URLSession.shared, startDateTime: String, endDateTime: String, completion: @escaping (_ response: Response<FreeRoomsResponse>) -> Void) -> URLSessionDataTaskProtocol? {
+        let router = RoomBookingsRouter.readFreeRooms(configuration, startDateTime, endDateTime)
+        return router.load(session, expectedResultType: FreeRoomsResponse.self) { freeRooms, error in
+            if let error = error {
+                completion(Response.failure(error))
+            }
+
+            if let freeRooms = freeRooms {
+                completion(Response.success(freeRooms))
+            }
+        }
+    }
 }
 
 // MARK: Router
@@ -252,17 +284,20 @@ Main Room Bookings Router, contains:
  - GET Rooms router
  - GET Bookings router
  - GET Equipment router
+ - GET Free Rooms router
 */
 enum RoomBookingsRouter: Router {
     case readRooms(Configuration, String, String, String, String, Classification, String)
     case readBookings(Configuration, String, String, String, String, String, String, String, String, String, String)
     case readEquipment(Configuration, String, String)
+    case readFreeRooms(Configuration, String, String)
 
     var configuration: Configuration {
         switch self {
         case .readRooms(let config, _, _, _, _, _, _): return config
         case .readBookings(let config, _, _, _, _, _, _, _, _, _, _): return config
         case .readEquipment(let config, _, _): return config
+        case .readFreeRooms(let config, _, _): return config
         }
     }
 
@@ -282,6 +317,8 @@ enum RoomBookingsRouter: Router {
             return ["page_token": pageToken, "roomname": roomName, "roomid": roomID, "start_datetime": startDateTime, "end_datetime": endDateTime, "date": date, "siteid": siteID, "description": description, "contact": contact, "results_per_page": resultsPerPage]
         case .readEquipment(_, let roomID, let siteID):
             return ["roomid": roomID, "siteid": siteID]
+        case .readFreeRooms(_, let startDateTime, let endDateTime):
+            return ["start_datetime": startDateTime, "end_datetime": endDateTime]
         }
     }
 
@@ -293,6 +330,8 @@ enum RoomBookingsRouter: Router {
             return "roombookings/bookings"
         case .readEquipment:
             return "roombookings/equipment"
+        case .readFreeRooms:
+            return "roombookings/freerooms"
         }
     }
 }

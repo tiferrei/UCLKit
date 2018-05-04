@@ -1,5 +1,6 @@
 exclude:
     - Carthage
+    - .build
 
 except:
     - function-whitespace

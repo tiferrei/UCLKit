@@ -209,3 +209,56 @@ class EquipmentTests: XCTestCase {
     }
 
 }
+
+class FreeRoomsTests: XCTestCase {
+
+    // MARK: Request Tests
+
+    func testGetFreeRooms() {
+        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/freerooms?end_datetime=2011-03-06T04%3A36%3A45%2B00%3A00&start_datetime=2011-03-06T03%3A36%3A45%2B00%3A00&token=12345", expectedHTTPMethod: "GET", jsonFile: "FreeRooms", statusCode: 200)
+        let config = TokenConfiguration("12345")
+        _ = UCLKit(config).freeRooms(session, startDateTime: "2011-03-06T03:36:45+00:00", endDateTime: "2011-03-06T04:36:45+00:00") { response in
+            switch response {
+            case .success(let response):
+                XCTAssertEqual(response.OK, true)
+            case .failure(let error):
+                XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
+            }
+        }
+        XCTAssertTrue(session.wasCalled)
+    }
+
+    func testFailToGetFreeRooms() {
+        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/freerooms?end_datetime=&start_datetime=&token=12345", expectedHTTPMethod: "GET", jsonFile: "FreeRooms", statusCode: 400)
+        let config = TokenConfiguration("12345")
+        _ = UCLKit(config).freeRooms(session, startDateTime: "", endDateTime: "") { response in
+            switch response {
+            case .success(let response):
+                XCTAssert(false, "❌ Should not retrieve a response (\(response))")
+                XCTAssertEqual(response.OK, true)
+            case .failure(_):
+                XCTAssert(true)
+            }
+        }
+        XCTAssertTrue(session.wasCalled)
+    }
+
+
+    // MARK: Model Tests
+
+    func testFreeRoomsParsing() {
+        let response = Helper.codableFromFile("FreeRooms", type: FreeRoomsResponse.self)
+        XCTAssertEqual(response.OK, true)
+        XCTAssertEqual(response.freeRooms![0].roomName, "Wilkins Building (Main Building) Portico")
+        XCTAssertEqual(response.freeRooms![0].roomID, "Z4")
+        XCTAssertEqual(response.freeRooms![0].siteID, "005")
+        XCTAssertEqual(response.freeRooms![0].siteName, "Main Building")
+        XCTAssertEqual(response.freeRooms![0].capacity, 50)
+        XCTAssertEqual(response.freeRooms![0].classification, Classification.SocialSpace)
+        XCTAssertEqual(response.freeRooms![0].automated, Automation.NotAutomated)
+        XCTAssertEqual(response.freeRooms![0].location!.address!, ["Gower Street", "London", "WC1E 6BT", ""])
+        XCTAssertEqual(response.freeRooms![0].location!.coordinates!.latitude!, "51.524699")
+        XCTAssertEqual(response.freeRooms![0].location!.coordinates!.longitude!, "-0.13366")
+    }
+
+}
