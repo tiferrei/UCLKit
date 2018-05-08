@@ -12,7 +12,7 @@ import RequestKit
 // Mark: Model
 
 /// Wrapper for the Rooms response
-@objc open class RoomsResponse: NSObject, Codable {
+@objc public final class RoomsResponse: NSObject, Codable {
     open var OK: Bool?
     open var error: String?
     open var rooms: [Room]?
@@ -38,7 +38,7 @@ import RequestKit
 }
 
 /// Payload from the Rooms response
-@objc open class Room: NSObject, Codable {
+@objc public final class Room: NSObject, Codable {
     @objc open var roomID: String?
     @objc open var roomName: String?
     @objc open var siteID: String?
