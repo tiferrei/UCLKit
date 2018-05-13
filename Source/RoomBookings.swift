@@ -25,7 +25,7 @@ import RequestKit
 }
 
 /// Wrapper for the Free Rooms response
-@objc open class FreeRoomsResponse: NSObject, Codable {
+@objc public final class FreeRoomsResponse: NSObject, Codable {
     open var OK: Bool?
     open var error: String?
     open var freeRooms: [Room]?
@@ -61,7 +61,7 @@ import RequestKit
 }
 
 /// Wrapper for the Bookings response
-@objc open class BookingsResponse: NSObject, Codable {
+@objc public final class BookingsResponse: NSObject, Codable {
     open var OK: Bool?
     open var error: String?
     open var bookings: [Booking]?
@@ -80,7 +80,7 @@ import RequestKit
 }
 
 /// Payload for the Bookings response
-@objc open class Booking: NSObject, Codable {
+@objc public final class Booking: NSObject, Codable {
     @objc open private(set) var slotID: Int = -1
     @objc open var endTime: Date?
     @objc open var bookingDescription: String?
@@ -107,7 +107,7 @@ import RequestKit
 }
 
 /// Wrapper for the Equipment response
-@objc open class EquipmentResponse: NSObject, Codable {
+@objc public final class EquipmentResponse: NSObject, Codable {
     open var OK: Bool?
     open var error: String?
     open var equipment: [Equipment]?
@@ -120,7 +120,7 @@ import RequestKit
 }
 
 /// Payload for the Equipment response
-@objc open class Equipment: NSObject, Codable {
+@objc public final class Equipment: NSObject, Codable {
     open var type: Type?
     open var equipmentDescription: String?
     open var units: Int?
@@ -135,7 +135,7 @@ import RequestKit
 // Mark: Helper Classes
 
 /// Address sub-payload from the Room payload
-@objc open class Location: NSObject, Codable {
+@objc public final class Location: NSObject, Codable {
     open var address: [String]?
     open var coordinates: Coordinate?
 
@@ -146,7 +146,7 @@ import RequestKit
 }
 
 /// Coordinate sub-payload from the Location
-@objc open class Coordinate: NSObject, Codable {
+@objc public final class Coordinate: NSObject, Codable {
     open var latitude: String?
     open var longitude: String?
 

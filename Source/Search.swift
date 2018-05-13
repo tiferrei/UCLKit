@@ -12,7 +12,7 @@ import RequestKit
 // Mark: Model
 
 /// Wrapper for the People response
-@objc open class PeopleResponse: NSObject, Codable {
+@objc public final class PeopleResponse: NSObject, Codable {
     open var OK: Bool?
     open var error: String?
     open var people: [Person]?
@@ -25,7 +25,7 @@ import RequestKit
 }
 
 /// Payload from the People response
-@objc open class Person: NSObject, Codable {
+@objc public final class Person: NSObject, Codable {
     open var name: String?
     open var status: Status?
     open var department: String?
