@@ -10,7 +10,7 @@ import Foundation
 
 // Mark: Model
 
-@objc public final class UCLError: NSObject, Codable {
+public final class UCLError: Codable {
     open var OK: Bool?
     open var error: String?
 
