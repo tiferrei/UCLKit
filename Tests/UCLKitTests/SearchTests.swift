@@ -11,6 +11,21 @@ import Foundation
 @testable import UCLKit
 
 class SearchTests: XCTestCase {
+    static var allTests = [
+        ("testSearchPeople", testSearchPeople),
+        ("testFailToSearchPeople", testFailToSearchPeople),
+        ("testRoomsParsing", testRoomsParsing),
+        ("testLinuxTestSuiteIncludesAllTests", testLinuxTestSuiteIncludesAllTests)
+    ]
+
+    func testLinuxTestSuiteIncludesAllTests() {
+        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+            let thisClass = type(of: self)
+            let linuxCount = thisClass.allTests.count
+            let darwinCount = thisClass.defaultTestSuite.tests.count
+            XCTAssertEqual(linuxCount, darwinCount, "\(darwinCount - linuxCount) tests are missing from allTests")
+        #endif
+    }
 
     // MARK: Request Tests
 

@@ -63,6 +63,15 @@ jobs:
           name: Build and run macOS tests
           command: make macos
 
+  Linux:
+    docker:
+      - image: swift:4.1
+    steps:
+      - checkout
+      - run:
+          name: Compile code with optimisations
+          command: swift build -c release
+
   deploy:
     macos:
       xcode: "9.3.0"
@@ -95,12 +104,16 @@ workflows:
       - tvOS:
           requires:
             - dependencies
+      - Linux:
+          requires:
+            - dependencies
       - deploy:
           requires:
             - macOS
             - iOS
             - watchOS
             - tvOS
+            - Linux
           filters:
             tags:
               only: /.*/

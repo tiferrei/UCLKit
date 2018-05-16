@@ -12,6 +12,22 @@ import RequestKit
 @testable import UCLKit
 
 class RoomTests: XCTestCase {
+    static var allTests = [
+        ("testGetRooms", testGetRooms),
+        ("testGetRoomsWithParams", testGetRoomsWithParams),
+        ("testFailToGetRooms", testFailToGetRooms),
+        ("testRoomsParsing", testRoomsParsing),
+        ("testLinuxTestSuiteIncludesAllTests", testLinuxTestSuiteIncludesAllTests)
+    ]
+
+    func testLinuxTestSuiteIncludesAllTests() {
+        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+            let thisClass = type(of: self)
+            let linuxCount = thisClass.allTests.count
+            let darwinCount = thisClass.defaultTestSuite.tests.count
+            XCTAssertEqual(linuxCount, darwinCount, "\(darwinCount - linuxCount) tests are missing from allTests")
+        #endif
+    }
 
     // MARK: Request Tests
 
@@ -78,6 +94,23 @@ class RoomTests: XCTestCase {
 }
 
 class BookingTests: XCTestCase {
+    static var allTests = [
+        ("testGetBookings", testGetBookings),
+        ("testFailToGetBookings", testFailToGetBookings),
+        ("testGetBookingsWithParams", testGetBookingsWithParams),
+        ("testGetPaginatedBookings", testGetPaginatedBookings),
+        ("testBookingsParsing", testBookingsParsing),
+        ("testLinuxTestSuiteIncludesAllTests", testLinuxTestSuiteIncludesAllTests)
+    ]
+
+    func testLinuxTestSuiteIncludesAllTests() {
+        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+            let thisClass = type(of: self)
+            let linuxCount = thisClass.allTests.count
+            let darwinCount = thisClass.defaultTestSuite.tests.count
+            XCTAssertEqual(linuxCount, darwinCount, "\(darwinCount - linuxCount) tests are missing from allTests")
+        #endif
+    }
 
     // MARK: Request Tests
 
@@ -162,6 +195,21 @@ class BookingTests: XCTestCase {
 }
 
 class EquipmentTests: XCTestCase {
+    static var allTests = [
+        ("testGetEquipment", testGetEquipment),
+        ("testFailToGetEquipment", testFailToGetEquipment),
+        ("testEquipmentParsing", testEquipmentParsing),
+        ("testLinuxTestSuiteIncludesAllTests", testLinuxTestSuiteIncludesAllTests)
+    ]
+
+    func testLinuxTestSuiteIncludesAllTests() {
+        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+            let thisClass = type(of: self)
+            let linuxCount = thisClass.allTests.count
+            let darwinCount = thisClass.defaultTestSuite.tests.count
+            XCTAssertEqual(linuxCount, darwinCount, "\(darwinCount - linuxCount) tests are missing from allTests")
+        #endif
+    }
 
     // MARK: Request Tests
 
@@ -197,7 +245,7 @@ class EquipmentTests: XCTestCase {
 
     // MARK: Model Tests
 
-    func testBookingsParsing() {
+    func testEquipmentParsing() {
         let response = Helper.codableFromFile("Equipment", type: EquipmentResponse.self)
         XCTAssertEqual(response.OK, true)
         XCTAssertEqual(response.equipment![0].type, Type.FixedFeature)
@@ -211,6 +259,21 @@ class EquipmentTests: XCTestCase {
 }
 
 class FreeRoomsTests: XCTestCase {
+    static var allTests = [
+        ("testGetFreeRooms", testGetFreeRooms),
+        ("testFailToGetFreeRooms", testFailToGetFreeRooms),
+        ("testFreeRoomsParsing", testFreeRoomsParsing),
+        ("testLinuxTestSuiteIncludesAllTests", testLinuxTestSuiteIncludesAllTests)
+    ]
+
+    func testLinuxTestSuiteIncludesAllTests() {
+        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+            let thisClass = type(of: self)
+            let linuxCount = thisClass.allTests.count
+            let darwinCount = thisClass.defaultTestSuite.testCaseCount
+            XCTAssertEqual(linuxCount, darwinCount, "\(darwinCount - linuxCount) tests are missing from allTests")
+        #endif
+    }
 
     // MARK: Request Tests
 

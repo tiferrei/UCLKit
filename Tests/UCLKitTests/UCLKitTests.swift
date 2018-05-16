@@ -13,6 +13,21 @@ import Foundation
 private let baseURL = "https://uclapi.com/"
 
 class UCLKitTests: XCTestCase {
+    static var allTests = [
+        ("testConfiguration", testConfiguration),
+        ("testFailedAuth", testFailedAuth),
+        ("testMissingAuth", testMissingAuth),
+        ("testLinuxTestSuiteIncludesAllTests", testLinuxTestSuiteIncludesAllTests)
+    ]
+
+    func testLinuxTestSuiteIncludesAllTests() {
+        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+            let thisClass = type(of: self)
+            let linuxCount = thisClass.allTests.count
+            let darwinCount = thisClass.defaultTestSuite.tests.count
+            XCTAssertEqual(linuxCount, darwinCount, "\(darwinCount - linuxCount) tests are missing from allTests")
+        #endif
+    }
 
     func testConfiguration() {
         let subject = TokenConfiguration("12345")

@@ -13,6 +13,23 @@ import Foundation
 @testable import UCLKit
 
 class HelperToolsTests: XCTestCase {
+    static var allTests = [
+        ("testRoomsDictionaryParsing", testRoomsDictionaryParsing),
+        ("testBookingDictionaryParsing", testBookingDictionaryParsing),
+        ("testEquipmentDictionaryParsing", testEquipmentDictionaryParsing),
+        ("testSearchDictionaryParsing", testSearchDictionaryParsing),
+        ("testErrorParsing", testErrorParsing),
+        ("testLinuxTestSuiteIncludesAllTests", testLinuxTestSuiteIncludesAllTests)
+    ]
+
+    func testLinuxTestSuiteIncludesAllTests() {
+        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+            let thisClass = type(of: self)
+            let linuxCount = thisClass.allTests.count
+            let darwinCount = thisClass.defaultTestSuite.tests.count
+            XCTAssertEqual(linuxCount, darwinCount, "\(darwinCount - linuxCount) tests are missing from allTests")
+        #endif
+    }
 
     // MARK: Parsing Tests
 
