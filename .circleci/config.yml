@@ -69,8 +69,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Compile code with optimisations
-          command: swift build -c release
+          name: Build and run Linux tests 
+          command: swift test
 
   Swift:
     macos:
