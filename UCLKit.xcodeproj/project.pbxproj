@@ -41,9 +41,9 @@
 		7671914520AC3BC9000C7816 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912320AC3BC8000C7816 /* Configuration.swift */; };
 		7671914620AC3BC9000C7816 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912320AC3BC8000C7816 /* Configuration.swift */; };
 		7671914720AC3BC9000C7816 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912320AC3BC8000C7816 /* Configuration.swift */; };
-		7671915920AC3BD4000C7816 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914A20AC3BD4000C7816 /* RoomBookingTests.swift */; };
-		7671915A20AC3BD4000C7816 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914A20AC3BD4000C7816 /* RoomBookingTests.swift */; };
-		7671915B20AC3BD4000C7816 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914A20AC3BD4000C7816 /* RoomBookingTests.swift */; };
+		7671915920AC3BD4000C7816 /* RoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914A20AC3BD4000C7816 /* RoomTests.swift */; };
+		7671915A20AC3BD4000C7816 /* RoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914A20AC3BD4000C7816 /* RoomTests.swift */; };
+		7671915B20AC3BD4000C7816 /* RoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914A20AC3BD4000C7816 /* RoomTests.swift */; };
 		7671915C20AC3BD4000C7816 /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914B20AC3BD4000C7816 /* UCLKitTests.swift */; };
 		7671915D20AC3BD4000C7816 /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914B20AC3BD4000C7816 /* UCLKitTests.swift */; };
 		7671915E20AC3BD4000C7816 /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914B20AC3BD4000C7816 /* UCLKitTests.swift */; };
@@ -69,6 +69,15 @@
 		76C172DB20ADCCD5000C5703 /* ResourcesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172DA20ADCCD5000C5703 /* ResourcesManager.swift */; };
 		76C172DC20ADCCD5000C5703 /* ResourcesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172DA20ADCCD5000C5703 /* ResourcesManager.swift */; };
 		76C172DD20ADCCD5000C5703 /* ResourcesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172DA20ADCCD5000C5703 /* ResourcesManager.swift */; };
+		76C172DF20ADD9B8000C5703 /* BookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172DE20ADD9B8000C5703 /* BookingTests.swift */; };
+		76C172E020ADD9B8000C5703 /* BookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172DE20ADD9B8000C5703 /* BookingTests.swift */; };
+		76C172E120ADD9B8000C5703 /* BookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172DE20ADD9B8000C5703 /* BookingTests.swift */; };
+		76C172E320ADD9E9000C5703 /* EquipmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172E220ADD9E9000C5703 /* EquipmentTests.swift */; };
+		76C172E420ADD9E9000C5703 /* EquipmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172E220ADD9E9000C5703 /* EquipmentTests.swift */; };
+		76C172E520ADD9E9000C5703 /* EquipmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172E220ADD9E9000C5703 /* EquipmentTests.swift */; };
+		76C172E720ADDA26000C5703 /* FreeRoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172E620ADDA26000C5703 /* FreeRoomsTests.swift */; };
+		76C172E820ADDA26000C5703 /* FreeRoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172E620ADDA26000C5703 /* FreeRoomsTests.swift */; };
+		76C172E920ADDA26000C5703 /* FreeRoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172E620ADDA26000C5703 /* FreeRoomsTests.swift */; };
 		76D84733209A38E700F60856 /* RequestKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; };
 		76D84734209A38F700F60856 /* RequestKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 76B933E81E6D938F005A3D31 /* RequestKit.framework */; };
 		76D84735209A38FD00F60856 /* RequestKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 76B933E41E6D938F005A3D31 /* RequestKit.framework */; };
@@ -147,7 +156,7 @@
 		7671912120AC3BC8000C7816 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7671912220AC3BC8000C7816 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		7671912320AC3BC8000C7816 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		7671914A20AC3BD4000C7816 /* RoomBookingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomBookingTests.swift; sourceTree = "<group>"; };
+		7671914A20AC3BD4000C7816 /* RoomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTests.swift; sourceTree = "<group>"; };
 		7671914B20AC3BD4000C7816 /* UCLKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UCLKitTests.swift; sourceTree = "<group>"; };
 		7671914C20AC3BD4000C7816 /* SearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
 		7671914D20AC3BD4000C7816 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
@@ -166,6 +175,9 @@
 		76B933E81E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
 		76B933E91E6D938F005A3D31 /* RequestKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RequestKit.framework.dSYM; sourceTree = "<group>"; };
 		76C172DA20ADCCD5000C5703 /* ResourcesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesManager.swift; sourceTree = "<group>"; };
+		76C172DE20ADD9B8000C5703 /* BookingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTests.swift; sourceTree = "<group>"; };
+		76C172E220ADD9E9000C5703 /* EquipmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentTests.swift; sourceTree = "<group>"; };
+		76C172E620ADDA26000C5703 /* FreeRoomsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeRoomsTests.swift; sourceTree = "<group>"; };
 		76C783971E66E58F0087093E /* UCLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C783A01E66E58F0087093E /* UCLKit iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UCLKit iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C783C71E677DF10087093E /* UCLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,7 +283,10 @@
 			isa = PBXGroup;
 			children = (
 				7671914B20AC3BD4000C7816 /* UCLKitTests.swift */,
-				7671914A20AC3BD4000C7816 /* RoomBookingTests.swift */,
+				7671914A20AC3BD4000C7816 /* RoomTests.swift */,
+				76C172DE20ADD9B8000C5703 /* BookingTests.swift */,
+				76C172E220ADD9E9000C5703 /* EquipmentTests.swift */,
+				76C172E620ADDA26000C5703 /* FreeRoomsTests.swift */,
 				7671914C20AC3BD4000C7816 /* SearchTests.swift */,
 				7671915720AC3BD4000C7816 /* HelperToolsTests.swift */,
 				7671915820AC3BD4000C7816 /* TestURLSession.swift */,
@@ -659,8 +674,11 @@
 				76F3783F20AC815D00FC5F77 /* XCTestManifests.swift in Sources */,
 				7671917D20AC3BD4000C7816 /* HelperToolsTests.swift in Sources */,
 				7671915F20AC3BD4000C7816 /* SearchTests.swift in Sources */,
-				7671915920AC3BD4000C7816 /* RoomBookingTests.swift in Sources */,
+				7671915920AC3BD4000C7816 /* RoomTests.swift in Sources */,
+				76C172E720ADDA26000C5703 /* FreeRoomsTests.swift in Sources */,
+				76C172E320ADD9E9000C5703 /* EquipmentTests.swift in Sources */,
 				7671915C20AC3BD4000C7816 /* UCLKitTests.swift in Sources */,
+				76C172DF20ADD9B8000C5703 /* BookingTests.swift in Sources */,
 				76C172DB20ADCCD5000C5703 /* ResourcesManager.swift in Sources */,
 				7671918020AC3BD4000C7816 /* TestURLSession.swift in Sources */,
 				7671916220AC3BD4000C7816 /* TestHelper.swift in Sources */,
@@ -716,8 +734,11 @@
 				76F3784020AC815D00FC5F77 /* XCTestManifests.swift in Sources */,
 				7671917E20AC3BD4000C7816 /* HelperToolsTests.swift in Sources */,
 				7671916020AC3BD4000C7816 /* SearchTests.swift in Sources */,
-				7671915A20AC3BD4000C7816 /* RoomBookingTests.swift in Sources */,
+				7671915A20AC3BD4000C7816 /* RoomTests.swift in Sources */,
+				76C172E820ADDA26000C5703 /* FreeRoomsTests.swift in Sources */,
+				76C172E420ADD9E9000C5703 /* EquipmentTests.swift in Sources */,
 				7671915D20AC3BD4000C7816 /* UCLKitTests.swift in Sources */,
+				76C172E020ADD9B8000C5703 /* BookingTests.swift in Sources */,
 				76C172DC20ADCCD5000C5703 /* ResourcesManager.swift in Sources */,
 				7671918120AC3BD4000C7816 /* TestURLSession.swift in Sources */,
 				7671916320AC3BD4000C7816 /* TestHelper.swift in Sources */,
@@ -731,8 +752,11 @@
 				76F3784120AC815D00FC5F77 /* XCTestManifests.swift in Sources */,
 				7671917F20AC3BD4000C7816 /* HelperToolsTests.swift in Sources */,
 				7671916120AC3BD4000C7816 /* SearchTests.swift in Sources */,
-				7671915B20AC3BD4000C7816 /* RoomBookingTests.swift in Sources */,
+				7671915B20AC3BD4000C7816 /* RoomTests.swift in Sources */,
+				76C172E920ADDA26000C5703 /* FreeRoomsTests.swift in Sources */,
+				76C172E520ADD9E9000C5703 /* EquipmentTests.swift in Sources */,
 				7671915E20AC3BD4000C7816 /* UCLKitTests.swift in Sources */,
+				76C172E120ADD9B8000C5703 /* BookingTests.swift in Sources */,
 				76C172DD20ADCCD5000C5703 /* ResourcesManager.swift in Sources */,
 				7671918220AC3BD4000C7816 /* TestURLSession.swift in Sources */,
 				7671916420AC3BD4000C7816 /* TestHelper.swift in Sources */,
