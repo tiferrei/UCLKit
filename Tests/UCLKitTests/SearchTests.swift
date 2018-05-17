@@ -30,7 +30,8 @@ class SearchTests: XCTestCase {
     // MARK: Request Tests
 
     func testSearchPeople() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/search/people?query=Jane&token=12345", expectedHTTPMethod: "GET", jsonFile: "People", statusCode: 200)
+        let sessionURL = "https://uclapi.com/search/people?query=Jane&token=12345"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .People, statusCode: 200)
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).people(session, query: "Jane") { response in
             switch response {
@@ -44,7 +45,8 @@ class SearchTests: XCTestCase {
     }
 
     func testFailToSearchPeople() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/search/people?query=&token=12345", expectedHTTPMethod: "GET", jsonFile: "People", statusCode: 400)
+        let sessionURL = "https://uclapi.com/search/people?query=&token=12345"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .People, statusCode: 400)
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).people(session, query: "") { response in
             switch response {
@@ -60,7 +62,7 @@ class SearchTests: XCTestCase {
     // MARK: Model Tests
 
     func testRoomsParsing() {
-        let response = Helper.codableFromFile("People", type: PeopleResponse.self)
+        let response = Helper.codableFromResource(.People, type: PeopleResponse.self)
         XCTAssertEqual(response.OK, true)
         XCTAssertEqual(response.people![0].name, "Jane Doe")
         XCTAssertEqual(response.people![0].status, Status.Student)

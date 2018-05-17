@@ -8,28 +8,18 @@
 
 import Foundation
 
-// Mark: Model
-
-public final class UCLError: Codable {
-    open var OK: Bool?
-    open var error: String?
-
-    enum CodingKeys: String, CodingKey {
-        case OK = "ok"
-        case error
-    }
-}
-
 public extension UCLKit {
     /**
      Parses an UCL API error message from userInfo in NSError.
      - parameter error: The error returned by UCLKit.
      */
-    public func parseError(_ error: NSError) -> String {
+    public func parseError(_ error: Error) -> String {
         var message = ""
-        if let errorResponse = error.userInfo[UCLKitErrorKey] as? [String: Any],
-        let errorString = errorResponse["error"] as? String {
-            message = errorString
+        if let error = error as? NSError {
+            if let errorResponse = error.userInfo[UCLKitErrorKey] as? [String: String],
+                let errorString = errorResponse["error"] {
+                message = errorString
+            }
         }
         return message
     }

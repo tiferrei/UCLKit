@@ -32,11 +32,11 @@ class URLTestSession: RequestKitURLSession {
         self.statusCode = statusCode
     }
 
-    init(expectedURL: String, expectedHTTPMethod: String, jsonFile: String?, statusCode: Int) {
+    init(expectedURL: String, expectedHTTPMethod: String, resource: ResourcesManager?, statusCode: Int) {
         self.expectedURL = expectedURL
         self.expectedHTTPMethod = expectedHTTPMethod
-        if let jsonFile = jsonFile {
-            self.responseString = Helper.stringFromFile(jsonFile)
+        if let resource = resource {
+            self.responseString = resource.rawValue
         } else {
             self.responseString = nil
         }

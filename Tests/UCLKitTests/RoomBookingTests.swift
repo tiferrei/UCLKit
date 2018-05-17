@@ -32,7 +32,8 @@ class RoomTests: XCTestCase {
     // MARK: Request Tests
 
     func testGetRooms() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=12345", expectedHTTPMethod: "GET", jsonFile: "Rooms", statusCode: 200)
+    let sessionURL = "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=12345"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .Rooms, statusCode: 200)
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).rooms(session) { response in
             switch response {
@@ -46,9 +47,10 @@ class RoomTests: XCTestCase {
     }
 
     func testGetRoomsWithParams() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/rooms?capacity=123&classification=&roomid=123&roomname=NAME&siteid=123&sitename=NAME&token=12345", expectedHTTPMethod: "GET", jsonFile: "Rooms", statusCode: 200)
+        let sessionURL = "https://uclapi.com/roombookings/rooms?capacity=123&classification=&roomid=123&roomname=NAME&siteid=123&sitename=NAME&token=12345"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .Rooms, statusCode: 200)
         let config = TokenConfiguration("12345")
-        _ = UCLKit(config).rooms(session, roomID: "123", roomName: "NAME", siteID: "123", siteName: "NAME", classification: Classification.Unknown, capacity: "123") { response in
+        _ = UCLKit(config).rooms(session, roomID: "123", roomName: "NAME", siteID: "123", siteName: "NAME", classification: .Unknown, capacity: "123") { response in
             switch response {
             case .success(let response):
                 XCTAssertEqual(response.OK, true)
@@ -60,15 +62,15 @@ class RoomTests: XCTestCase {
     }
 
     func testFailToGetRooms() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=invalidToken", expectedHTTPMethod: "GET", jsonFile: "InvalidToken", statusCode: 400)
-        let config = TokenConfiguration("invalidToken")
+        let sessionURL = "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=InvalidToken"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .InvalidToken, statusCode: 400)
+        let config = TokenConfiguration("InvalidToken")
         _ = UCLKit(config).rooms(session) { response in
             switch response {
             case .success(let rooms):
                 XCTAssert(false, "❌ Should retrieve an error, instead got –> (\(rooms))")
-            case .failure(let error as NSError):
-                var json = error.userInfo[RequestKitErrorKey]! as? [String: Any]
-                XCTAssertEqual(json!["error"] as? String, "Token is invalid.")
+            case .failure(let error):
+                XCTAssertEqual(UCLKit(config).parseError(error), "Token is invalid.")
             }
         }
         XCTAssertTrue(session.wasCalled)
@@ -77,7 +79,7 @@ class RoomTests: XCTestCase {
     // MARK: Model Tests
 
     func testRoomsParsing() {
-        let response = Helper.codableFromFile("Rooms", type: RoomsResponse.self)
+        let response = Helper.codableFromResource(.Rooms, type: RoomsResponse.self)
         XCTAssertEqual(response.OK, true)
         XCTAssertEqual(response.rooms![0].roomName, "Wilkins Building (Main Building) Portico")
         XCTAssertEqual(response.rooms![0].roomID, "Z4")
@@ -115,7 +117,8 @@ class BookingTests: XCTestCase {
     // MARK: Request Tests
 
     func testGetBookings() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/bookings?contact=&date=&description=&end_datetime=&page_token=&results_per_page=1000&roomid=&roomname=&siteid=&start_datetime=&token=12345", expectedHTTPMethod: "GET", jsonFile: "Bookings", statusCode: 200)
+        let sessionURL = "https://uclapi.com/roombookings/bookings?contact=&date=&description=&end_datetime=&page_token=&results_per_page=1000&roomid=&roomname=&siteid=&start_datetime=&token=12345"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .Bookings, statusCode: 200)
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).bookings(session) { response in
             switch response {
@@ -129,7 +132,8 @@ class BookingTests: XCTestCase {
     }
 
     func testFailToGetBookings() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/bookings?contact=&date=&description=&end_datetime=&page_token=&results_per_page=1000&roomid=&roomname=&siteid=&start_datetime=&token=12345", expectedHTTPMethod: "GET", jsonFile: "Bookings", statusCode: 400)
+        let sessionURL = "https://uclapi.com/roombookings/bookings?contact=&date=&description=&end_datetime=&page_token=&results_per_page=1000&roomid=&roomname=&siteid=&start_datetime=&token=12345"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .Bookings, statusCode: 400)
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).bookings(session) { response in
             switch response {
@@ -144,7 +148,8 @@ class BookingTests: XCTestCase {
     }
 
     func testGetBookingsWithParams() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/bookings?contact=Mark%20Herbster&date=20160202&description=Lecture&end_datetime=2016-10-20T19%3A00%3A00%2B00%3A00&page_token=&results_per_page=1000&roomid=433&roomname=Cruciform%20Building%20B.3.05&siteid=086&start_datetime=2016-10-20T18%3A00%3A00%2B00%3A00&token=12345", expectedHTTPMethod: "GET", jsonFile: "Bookings", statusCode: 200)
+        let sessionURL = "https://uclapi.com/roombookings/bookings?contact=Mark%20Herbster&date=20160202&description=Lecture&end_datetime=2016-10-20T19%3A00%3A00%2B00%3A00&page_token=&results_per_page=1000&roomid=433&roomname=Cruciform%20Building%20B.3.05&siteid=086&start_datetime=2016-10-20T18%3A00%3A00%2B00%3A00&token=12345"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .Bookings, statusCode: 200)
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).bookings(session, roomName: "Cruciform Building B.3.05", roomID: "433", startDateTime: "2016-10-20T18:00:00+00:00", endDateTime: "2016-10-20T19:00:00+00:00", date: "20160202", siteID: "086", description: "Lecture", contact: "Mark Herbster", resultsPerPage: "1000") { response in
             switch response {
@@ -158,7 +163,8 @@ class BookingTests: XCTestCase {
     }
 
     func testGetPaginatedBookings() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/bookings?contact=&date=&description=&end_datetime=&page_token=6hb14hXjRV&results_per_page=1000&roomid=&roomname=&siteid=&start_datetime=&token=12345", expectedHTTPMethod: "GET", jsonFile: "Bookings", statusCode: 200)
+        let sessionURL = "https://uclapi.com/roombookings/bookings?contact=&date=&description=&end_datetime=&page_token=6hb14hXjRV&results_per_page=1000&roomid=&roomname=&siteid=&start_datetime=&token=12345"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .Bookings, statusCode: 200)
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).bookings(session, pageToken: "6hb14hXjRV") { response in
             switch response {
@@ -175,7 +181,7 @@ class BookingTests: XCTestCase {
     // MARK: Model Tests
 
     func testBookingsParsing() {
-        let response = Helper.codableFromFile("Bookings", type: BookingsResponse.self)
+        let response = Helper.codableFromResource(.Bookings, type: BookingsResponse.self)
         XCTAssertEqual(response.OK, true)
         XCTAssertEqual(response.bookings![0].slotID, 998503)
         XCTAssertEqual(response.bookings![0].endTime, Time.iso8601Date("2016-09-02T18:00:00+00:00"))
@@ -214,7 +220,8 @@ class EquipmentTests: XCTestCase {
     // MARK: Request Tests
 
     func testGetEquipment() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/equipment?roomid=433&siteid=086&token=12345", expectedHTTPMethod: "GET", jsonFile: "Equipment", statusCode: 200)
+        let sessionURL = "https://uclapi.com/roombookings/equipment?roomid=433&siteid=086&token=12345"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .Equipment, statusCode: 200)
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).equipment(session, roomID: "433", siteID: "086") { response in
             switch response {
@@ -228,7 +235,8 @@ class EquipmentTests: XCTestCase {
     }
 
     func testFailToGetEquipment() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/equipment?roomid=&siteid=&token=12345", expectedHTTPMethod: "GET", jsonFile: "Equipment", statusCode: 400)
+        let sessionURL = "https://uclapi.com/roombookings/equipment?roomid=&siteid=&token=12345"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .Equipment, statusCode: 400)
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).equipment(session, roomID: "", siteID: "") { response in
             switch response {
@@ -246,7 +254,7 @@ class EquipmentTests: XCTestCase {
     // MARK: Model Tests
 
     func testEquipmentParsing() {
-        let response = Helper.codableFromFile("Equipment", type: EquipmentResponse.self)
+        let response = Helper.codableFromResource(.Equipment, type: EquipmentResponse.self)
         XCTAssertEqual(response.OK, true)
         XCTAssertEqual(response.equipment![0].type, Type.FixedFeature)
         XCTAssertEqual(response.equipment![0].equipmentDescription, "Managed PC")
@@ -278,7 +286,8 @@ class FreeRoomsTests: XCTestCase {
     // MARK: Request Tests
 
     func testGetFreeRooms() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/freerooms?end_datetime=2011-03-06T04%3A36%3A45%2B00%3A00&start_datetime=2011-03-06T03%3A36%3A45%2B00%3A00&token=12345", expectedHTTPMethod: "GET", jsonFile: "FreeRooms", statusCode: 200)
+        let sessionURL = "https://uclapi.com/roombookings/freerooms?end_datetime=2011-03-06T04%3A36%3A45%2B00%3A00&start_datetime=2011-03-06T03%3A36%3A45%2B00%3A00&token=12345"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .FreeRooms, statusCode: 200)
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).freeRooms(session, startDateTime: "2011-03-06T03:36:45+00:00", endDateTime: "2011-03-06T04:36:45+00:00") { response in
             switch response {
@@ -292,7 +301,8 @@ class FreeRoomsTests: XCTestCase {
     }
 
     func testFailToGetFreeRooms() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/freerooms?end_datetime=&start_datetime=&token=12345", expectedHTTPMethod: "GET", jsonFile: "FreeRooms", statusCode: 400)
+        let sessionURL = "https://uclapi.com/roombookings/freerooms?end_datetime=&start_datetime=&token=12345"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .FreeRooms, statusCode: 400)
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).freeRooms(session, startDateTime: "", endDateTime: "") { response in
             switch response {
@@ -310,7 +320,7 @@ class FreeRoomsTests: XCTestCase {
     // MARK: Model Tests
 
     func testFreeRoomsParsing() {
-        let response = Helper.codableFromFile("FreeRooms", type: FreeRoomsResponse.self)
+        let response = Helper.codableFromResource(.FreeRooms, type: FreeRoomsResponse.self)
         XCTAssertEqual(response.OK, true)
         XCTAssertEqual(response.freeRooms![0].roomName, "Wilkins Building (Main Building) Portico")
         XCTAssertEqual(response.freeRooms![0].roomID, "Z4")

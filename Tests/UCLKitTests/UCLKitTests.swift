@@ -36,7 +36,8 @@ class UCLKitTests: XCTestCase {
     }
 
     func testFailedAuth() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=InvalidToken", expectedHTTPMethod: "GET", jsonFile: "InvalidToken", statusCode: 400)
+    let sessionURL = "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=InvalidToken"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .InvalidToken, statusCode: 400)
         let config = TokenConfiguration("InvalidToken")
         _ = UCLKit(config).rooms(session) { response in
             switch response {
@@ -53,7 +54,8 @@ class UCLKitTests: XCTestCase {
     }
 
     func testMissingAuth() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=", expectedHTTPMethod: "GET", jsonFile: "NoToken", statusCode: 400)
+    let sessionURL = "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token="
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .NoToken, statusCode: 400)
         let config = TokenConfiguration("")
         _ = UCLKit(config).rooms(session) { response in
             switch response {

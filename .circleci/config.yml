@@ -72,6 +72,15 @@ jobs:
           name: Compile code with optimisations
           command: swift build -c release
 
+  Swift:
+    macos:
+      xcode: "9.3.0"
+    steps:
+      - checkout
+      - run:
+          name: Build and run tests with Swift Package Manager
+          command: swift test
+
   deploy:
     macos:
       xcode: "9.3.0"
@@ -104,9 +113,8 @@ workflows:
       - tvOS:
           requires:
             - dependencies
-      - Linux:
-          requires:
-            - dependencies
+      - Linux
+      - Swift
       - deploy:
           requires:
             - macOS
