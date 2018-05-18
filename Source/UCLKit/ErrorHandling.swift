@@ -15,12 +15,19 @@ public extension UCLKit {
      */
     public func parseError(_ error: Error) -> String {
         var message = ""
-        if let error = error as? NSError {
-            if let errorResponse = error.userInfo[UCLKitErrorKey] as? [String: String],
+        #if os(Linux)
+            if let error = error as? NSError {
+                if let errorResponse = error.userInfo[UCLKitErrorKey] as? [String: String],
+                    let errorString = errorResponse["error"] {
+                    message = errorString
+                }
+            }
+        #else
+            if let errorResponse = (error as NSError).userInfo[UCLKitErrorKey] as? [String: String],
                 let errorString = errorResponse["error"] {
                 message = errorString
             }
-        }
+        #endif
         return message
     }
 }

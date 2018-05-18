@@ -63,7 +63,7 @@ jobs:
           name: Build and run macOS tests
           command: make macos
 
-  Linux:
+  Swift (Linux):
     docker:
       - image: swift:4.1
     steps:
@@ -72,7 +72,7 @@ jobs:
           name: Build and run Linux tests 
           command: swift test
 
-  Swift:
+  Swift (Darwin):
     macos:
       xcode: "9.3.0"
     steps:
