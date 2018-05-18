@@ -113,15 +113,16 @@ workflows:
       - tvOS:
           requires:
             - dependencies
-      - Linux
-      - Swift
+      - Swift (Darwin)
+      - Swift (Linux)
       - deploy:
           requires:
             - macOS
             - iOS
             - watchOS
             - tvOS
-            - Linux
+            - Swift (Darwin)
+            - Swift (Linux)
           filters:
             tags:
               only: /.*/
