@@ -13,11 +13,28 @@ import Foundation
 @testable import UCLKit
 
 class HelperToolsTests: XCTestCase {
+    static var allTests = [
+        ("testRoomsDictionaryParsing", testRoomsDictionaryParsing),
+        ("testBookingDictionaryParsing", testBookingDictionaryParsing),
+        ("testEquipmentDictionaryParsing", testEquipmentDictionaryParsing),
+        ("testSearchDictionaryParsing", testSearchDictionaryParsing),
+        ("testErrorParsing", testErrorParsing),
+        ("testLinuxTestSuiteIncludesAllTests", testLinuxTestSuiteIncludesAllTests)
+    ]
+
+    func testLinuxTestSuiteIncludesAllTests() {
+        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+            let thisClass = type(of: self)
+            let linuxCount = thisClass.allTests.count
+            let darwinCount = thisClass.defaultTestSuite.tests.count
+            XCTAssertEqual(linuxCount, darwinCount, "\(darwinCount - linuxCount) tests are missing from allTests")
+        #endif
+    }
 
     // MARK: Parsing Tests
 
     func testRoomsDictionaryParsing() {
-        let response = Helper.codableFromFile("Rooms", type: RoomsResponse.self).toDictionary()
+        let response = Helper.codableFromResource(.Rooms, type: RoomsResponse.self).toDictionary()
         if let rooms = response["rooms"] as? [Any], let room = rooms[0] as? [String: Any] {
             XCTAssertEqual(response["OK"] as? String, "true")
             XCTAssertEqual(room["roomID"] as? String, "Z4")
@@ -43,7 +60,7 @@ class HelperToolsTests: XCTestCase {
     }
 
     func testBookingDictionaryParsing() {
-        let response = Helper.codableFromFile("Bookings", type: BookingsResponse.self).toDictionary()
+        let response = Helper.codableFromResource(.Bookings, type: BookingsResponse.self).toDictionary()
         if let bookings = response["bookings"] as? [Any], let booking = bookings[0] as? [String: Any] {
             XCTAssertEqual(response["OK"] as? String, "true")
             XCTAssertEqual(booking["slotID"] as? String, "998503")
@@ -65,7 +82,7 @@ class HelperToolsTests: XCTestCase {
     }
 
     func testEquipmentDictionaryParsing() {
-        let response = Helper.codableFromFile("Equipment", type: EquipmentResponse.self).toDictionary()
+        let response = Helper.codableFromResource(.Equipment, type: EquipmentResponse.self).toDictionary()
         if let equipmentList = response["equipment"] as? [Any] {
             XCTAssertEqual(response["OK"] as? String, "true")
             if let equipment = equipmentList[0] as? [String: Any] {
@@ -88,7 +105,7 @@ class HelperToolsTests: XCTestCase {
     }
 
     func testSearchDictionaryParsing() {
-        let response = Helper.codableFromFile("People", type: PeopleResponse.self).toDictionary()
+        let response = Helper.codableFromResource(.People, type: PeopleResponse.self).toDictionary()
         if let people = response["people"] as? [Any], let person = people[0] as? [String: Any] {
             XCTAssertEqual(response["OK"] as? String, "true")
             XCTAssertEqual(person["name"] as? String, "Jane Doe")
@@ -101,13 +118,14 @@ class HelperToolsTests: XCTestCase {
     }
 
     func testErrorParsing() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=invalidToken", expectedHTTPMethod: "GET", jsonFile: "InvalidToken", statusCode: 400)
+        let sessionURL = "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=invalidToken"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .InvalidToken, statusCode: 400)
         let config = TokenConfiguration("invalidToken")
         _ = UCLKit(config).rooms(session) { response in
             switch response {
             case .success(let rooms):
                 XCTAssert(false, "❌ Should retrieve an error, instead got –> (\(rooms))")
-            case .failure(let error as NSError):
+            case .failure(let error):
                 XCTAssertEqual(UCLKit(config).parseError(error), "Token is invalid.")
             }
         }

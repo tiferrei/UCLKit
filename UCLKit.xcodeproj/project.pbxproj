@@ -7,92 +7,80 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7608B392209CF30D008593AE /* FreeRooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 7608B391209CF30D008593AE /* FreeRooms.json */; };
-		7608B393209CF30D008593AE /* FreeRooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 7608B391209CF30D008593AE /* FreeRooms.json */; };
-		7608B394209CF30D008593AE /* FreeRooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 7608B391209CF30D008593AE /* FreeRooms.json */; };
 		760F249F1EDF433400494E47 /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783D61E677E6B0087093E /* UCLKit.framework */; };
 		760F24A01EDF433D00494E47 /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783E51E677EA40087093E /* UCLKit.framework */; };
+		7671912420AC3BC9000C7816 /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7671911B20AC3BC8000C7816 /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7671912520AC3BC9000C7816 /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7671911B20AC3BC8000C7816 /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7671912620AC3BC9000C7816 /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7671911B20AC3BC8000C7816 /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7671912720AC3BC9000C7816 /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7671911B20AC3BC8000C7816 /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7671912820AC3BC9000C7816 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911C20AC3BC8000C7816 /* Time.swift */; };
+		7671912920AC3BC9000C7816 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911C20AC3BC8000C7816 /* Time.swift */; };
+		7671912A20AC3BC9000C7816 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911C20AC3BC8000C7816 /* Time.swift */; };
+		7671912B20AC3BC9000C7816 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911C20AC3BC8000C7816 /* Time.swift */; };
+		7671912C20AC3BC9000C7816 /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911D20AC3BC8000C7816 /* RoomBookings.swift */; };
+		7671912D20AC3BC9000C7816 /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911D20AC3BC8000C7816 /* RoomBookings.swift */; };
+		7671912E20AC3BC9000C7816 /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911D20AC3BC8000C7816 /* RoomBookings.swift */; };
+		7671912F20AC3BC9000C7816 /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911D20AC3BC8000C7816 /* RoomBookings.swift */; };
+		7671913020AC3BC9000C7816 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911E20AC3BC8000C7816 /* ErrorHandling.swift */; };
+		7671913120AC3BC9000C7816 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911E20AC3BC8000C7816 /* ErrorHandling.swift */; };
+		7671913220AC3BC9000C7816 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911E20AC3BC8000C7816 /* ErrorHandling.swift */; };
+		7671913320AC3BC9000C7816 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911E20AC3BC8000C7816 /* ErrorHandling.swift */; };
+		7671913420AC3BC9000C7816 /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911F20AC3BC8000C7816 /* UCLKit.swift */; };
+		7671913520AC3BC9000C7816 /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911F20AC3BC8000C7816 /* UCLKit.swift */; };
+		7671913620AC3BC9000C7816 /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911F20AC3BC8000C7816 /* UCLKit.swift */; };
+		7671913720AC3BC9000C7816 /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671911F20AC3BC8000C7816 /* UCLKit.swift */; };
+		7671913820AC3BC9000C7816 /* DecodableToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912020AC3BC8000C7816 /* DecodableToDictionary.swift */; };
+		7671913920AC3BC9000C7816 /* DecodableToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912020AC3BC8000C7816 /* DecodableToDictionary.swift */; };
+		7671913A20AC3BC9000C7816 /* DecodableToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912020AC3BC8000C7816 /* DecodableToDictionary.swift */; };
+		7671913B20AC3BC9000C7816 /* DecodableToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912020AC3BC8000C7816 /* DecodableToDictionary.swift */; };
+		7671914020AC3BC9000C7816 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912220AC3BC8000C7816 /* Search.swift */; };
+		7671914120AC3BC9000C7816 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912220AC3BC8000C7816 /* Search.swift */; };
+		7671914220AC3BC9000C7816 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912220AC3BC8000C7816 /* Search.swift */; };
+		7671914320AC3BC9000C7816 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912220AC3BC8000C7816 /* Search.swift */; };
+		7671914420AC3BC9000C7816 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912320AC3BC8000C7816 /* Configuration.swift */; };
+		7671914520AC3BC9000C7816 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912320AC3BC8000C7816 /* Configuration.swift */; };
+		7671914620AC3BC9000C7816 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912320AC3BC8000C7816 /* Configuration.swift */; };
+		7671914720AC3BC9000C7816 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671912320AC3BC8000C7816 /* Configuration.swift */; };
+		7671915920AC3BD4000C7816 /* RoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914A20AC3BD4000C7816 /* RoomTests.swift */; };
+		7671915A20AC3BD4000C7816 /* RoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914A20AC3BD4000C7816 /* RoomTests.swift */; };
+		7671915B20AC3BD4000C7816 /* RoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914A20AC3BD4000C7816 /* RoomTests.swift */; };
+		7671915C20AC3BD4000C7816 /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914B20AC3BD4000C7816 /* UCLKitTests.swift */; };
+		7671915D20AC3BD4000C7816 /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914B20AC3BD4000C7816 /* UCLKitTests.swift */; };
+		7671915E20AC3BD4000C7816 /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914B20AC3BD4000C7816 /* UCLKitTests.swift */; };
+		7671915F20AC3BD4000C7816 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914C20AC3BD4000C7816 /* SearchTests.swift */; };
+		7671916020AC3BD4000C7816 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914C20AC3BD4000C7816 /* SearchTests.swift */; };
+		7671916120AC3BD4000C7816 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914C20AC3BD4000C7816 /* SearchTests.swift */; };
+		7671916220AC3BD4000C7816 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914D20AC3BD4000C7816 /* TestHelper.swift */; };
+		7671916320AC3BD4000C7816 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914D20AC3BD4000C7816 /* TestHelper.swift */; };
+		7671916420AC3BD4000C7816 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671914D20AC3BD4000C7816 /* TestHelper.swift */; };
+		7671917D20AC3BD4000C7816 /* HelperToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671915720AC3BD4000C7816 /* HelperToolsTests.swift */; };
+		7671917E20AC3BD4000C7816 /* HelperToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671915720AC3BD4000C7816 /* HelperToolsTests.swift */; };
+		7671917F20AC3BD4000C7816 /* HelperToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671915720AC3BD4000C7816 /* HelperToolsTests.swift */; };
+		7671918020AC3BD4000C7816 /* TestURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671915820AC3BD4000C7816 /* TestURLSession.swift */; };
+		7671918120AC3BD4000C7816 /* TestURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671915820AC3BD4000C7816 /* TestURLSession.swift */; };
+		7671918220AC3BD4000C7816 /* TestURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7671915820AC3BD4000C7816 /* TestURLSession.swift */; };
+		7671918420AC7CFC000C7816 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; };
 		7676355D1EBE2E54008A67A5 /* UCLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C783971E66E58F0087093E /* UCLKit.framework */; };
 		767635601EBE2FEC008A67A5 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; };
 		7680A0201E8FEB1D00B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7680A0221E8FEB4500B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7680A0241E8FEB5700B965D5 /* RequestKit.framework in Carthage Embed */ = {isa = PBXBuildFile; fileRef = 76B933E41E6D938F005A3D31 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		769A83D320372CE6003B96B5 /* RequestKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; };
-		76B0E764203A1678007EAB35 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933DD1E6D938F005A3D31 /* RequestKit.framework */; };
-		76B0E765203A167F007EAB35 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; };
-		76B0E766203A1682007EAB35 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933E41E6D938F005A3D31 /* RequestKit.framework */; };
-		76B0E767203A1685007EAB35 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B933E81E6D938F005A3D31 /* RequestKit.framework */; };
-		76D8470C209A374100F60856 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D846FE209A374100F60856 /* RoomBookingTests.swift */; };
-		76D8470D209A374100F60856 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D846FE209A374100F60856 /* RoomBookingTests.swift */; };
-		76D8470E209A374100F60856 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D846FE209A374100F60856 /* RoomBookingTests.swift */; };
-		76D8470F209A374100F60856 /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D846FF209A374100F60856 /* UCLKitTests.swift */; };
-		76D84710209A374100F60856 /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D846FF209A374100F60856 /* UCLKitTests.swift */; };
-		76D84711209A374100F60856 /* UCLKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D846FF209A374100F60856 /* UCLKitTests.swift */; };
-		76D84712209A374100F60856 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D84700209A374100F60856 /* SearchTests.swift */; };
-		76D84713209A374100F60856 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D84700209A374100F60856 /* SearchTests.swift */; };
-		76D84714209A374100F60856 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D84700209A374100F60856 /* SearchTests.swift */; };
-		76D84715209A374100F60856 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D84701209A374100F60856 /* TestHelper.swift */; };
-		76D84716209A374100F60856 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D84701209A374100F60856 /* TestHelper.swift */; };
-		76D84717209A374100F60856 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D84701209A374100F60856 /* TestHelper.swift */; };
-		76D84718209A374100F60856 /* NoToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84703209A374100F60856 /* NoToken.json */; };
-		76D84719209A374100F60856 /* NoToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84703209A374100F60856 /* NoToken.json */; };
-		76D8471A209A374100F60856 /* NoToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84703209A374100F60856 /* NoToken.json */; };
-		76D8471B209A374100F60856 /* Bookings.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84704209A374100F60856 /* Bookings.json */; };
-		76D8471C209A374100F60856 /* Bookings.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84704209A374100F60856 /* Bookings.json */; };
-		76D8471D209A374100F60856 /* Bookings.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84704209A374100F60856 /* Bookings.json */; };
-		76D8471E209A374100F60856 /* Rooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84705209A374100F60856 /* Rooms.json */; };
-		76D8471F209A374100F60856 /* Rooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84705209A374100F60856 /* Rooms.json */; };
-		76D84720209A374100F60856 /* Rooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84705209A374100F60856 /* Rooms.json */; };
-		76D84721209A374100F60856 /* InvalidToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84706209A374100F60856 /* InvalidToken.json */; };
-		76D84722209A374100F60856 /* InvalidToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84706209A374100F60856 /* InvalidToken.json */; };
-		76D84723209A374100F60856 /* InvalidToken.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84706209A374100F60856 /* InvalidToken.json */; };
-		76D84724209A374100F60856 /* People.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84707209A374100F60856 /* People.json */; };
-		76D84725209A374100F60856 /* People.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84707209A374100F60856 /* People.json */; };
-		76D84726209A374100F60856 /* People.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84707209A374100F60856 /* People.json */; };
-		76D84727209A374100F60856 /* Equipment.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84708209A374100F60856 /* Equipment.json */; };
-		76D84728209A374100F60856 /* Equipment.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84708209A374100F60856 /* Equipment.json */; };
-		76D84729209A374100F60856 /* Equipment.json in Resources */ = {isa = PBXBuildFile; fileRef = 76D84708209A374100F60856 /* Equipment.json */; };
-		76D8472D209A374100F60856 /* HelperToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8470A209A374100F60856 /* HelperToolsTests.swift */; };
-		76D8472E209A374100F60856 /* HelperToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8470A209A374100F60856 /* HelperToolsTests.swift */; };
-		76D8472F209A374100F60856 /* HelperToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8470A209A374100F60856 /* HelperToolsTests.swift */; };
-		76D84730209A374100F60856 /* TestURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8470B209A374100F60856 /* TestURLSession.swift */; };
-		76D84731209A374100F60856 /* TestURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8470B209A374100F60856 /* TestURLSession.swift */; };
-		76D84732209A374100F60856 /* TestURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8470B209A374100F60856 /* TestURLSession.swift */; };
+		76C172DB20ADCCD5000C5703 /* ResourcesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172DA20ADCCD5000C5703 /* ResourcesManager.swift */; };
+		76C172DC20ADCCD5000C5703 /* ResourcesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172DA20ADCCD5000C5703 /* ResourcesManager.swift */; };
+		76C172DD20ADCCD5000C5703 /* ResourcesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172DA20ADCCD5000C5703 /* ResourcesManager.swift */; };
+		76C172DF20ADD9B8000C5703 /* BookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172DE20ADD9B8000C5703 /* BookingTests.swift */; };
+		76C172E020ADD9B8000C5703 /* BookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172DE20ADD9B8000C5703 /* BookingTests.swift */; };
+		76C172E120ADD9B8000C5703 /* BookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172DE20ADD9B8000C5703 /* BookingTests.swift */; };
+		76C172E320ADD9E9000C5703 /* EquipmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172E220ADD9E9000C5703 /* EquipmentTests.swift */; };
+		76C172E420ADD9E9000C5703 /* EquipmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172E220ADD9E9000C5703 /* EquipmentTests.swift */; };
+		76C172E520ADD9E9000C5703 /* EquipmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172E220ADD9E9000C5703 /* EquipmentTests.swift */; };
+		76C172E720ADDA26000C5703 /* FreeRoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172E620ADDA26000C5703 /* FreeRoomsTests.swift */; };
+		76C172E820ADDA26000C5703 /* FreeRoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172E620ADDA26000C5703 /* FreeRoomsTests.swift */; };
+		76C172E920ADDA26000C5703 /* FreeRoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C172E620ADDA26000C5703 /* FreeRoomsTests.swift */; };
 		76D84733209A38E700F60856 /* RequestKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 76B933E01E6D938F005A3D31 /* RequestKit.framework */; };
 		76D84734209A38F700F60856 /* RequestKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 76B933E81E6D938F005A3D31 /* RequestKit.framework */; };
 		76D84735209A38FD00F60856 /* RequestKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 76B933E41E6D938F005A3D31 /* RequestKit.framework */; };
-		76D84740209A405F00F60856 /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76D84737209A405F00F60856 /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		76D84741209A405F00F60856 /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76D84737209A405F00F60856 /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		76D84742209A405F00F60856 /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76D84737209A405F00F60856 /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		76D84743209A405F00F60856 /* UCLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76D84737209A405F00F60856 /* UCLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		76D84744209A405F00F60856 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D84738209A405F00F60856 /* Time.swift */; };
-		76D84745209A405F00F60856 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D84738209A405F00F60856 /* Time.swift */; };
-		76D84746209A405F00F60856 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D84738209A405F00F60856 /* Time.swift */; };
-		76D84747209A405F00F60856 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D84738209A405F00F60856 /* Time.swift */; };
-		76D84748209A405F00F60856 /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D84739209A405F00F60856 /* RoomBookings.swift */; };
-		76D84749209A405F00F60856 /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D84739209A405F00F60856 /* RoomBookings.swift */; };
-		76D8474A209A405F00F60856 /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D84739209A405F00F60856 /* RoomBookings.swift */; };
-		76D8474B209A405F00F60856 /* RoomBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D84739209A405F00F60856 /* RoomBookings.swift */; };
-		76D8474C209A405F00F60856 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473A209A405F00F60856 /* ErrorHandling.swift */; };
-		76D8474D209A405F00F60856 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473A209A405F00F60856 /* ErrorHandling.swift */; };
-		76D8474E209A405F00F60856 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473A209A405F00F60856 /* ErrorHandling.swift */; };
-		76D8474F209A405F00F60856 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473A209A405F00F60856 /* ErrorHandling.swift */; };
-		76D84750209A405F00F60856 /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473B209A405F00F60856 /* UCLKit.swift */; };
-		76D84751209A405F00F60856 /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473B209A405F00F60856 /* UCLKit.swift */; };
-		76D84752209A405F00F60856 /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473B209A405F00F60856 /* UCLKit.swift */; };
-		76D84753209A405F00F60856 /* UCLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473B209A405F00F60856 /* UCLKit.swift */; };
-		76D84754209A405F00F60856 /* DecodableToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473C209A405F00F60856 /* DecodableToDictionary.swift */; };
-		76D84755209A405F00F60856 /* DecodableToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473C209A405F00F60856 /* DecodableToDictionary.swift */; };
-		76D84756209A405F00F60856 /* DecodableToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473C209A405F00F60856 /* DecodableToDictionary.swift */; };
-		76D84757209A405F00F60856 /* DecodableToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473C209A405F00F60856 /* DecodableToDictionary.swift */; };
-		76D8475C209A405F00F60856 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473E209A405F00F60856 /* Search.swift */; };
-		76D8475D209A405F00F60856 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473E209A405F00F60856 /* Search.swift */; };
-		76D8475E209A405F00F60856 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473E209A405F00F60856 /* Search.swift */; };
-		76D8475F209A405F00F60856 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473E209A405F00F60856 /* Search.swift */; };
-		76D84760209A405F00F60856 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473F209A405F00F60856 /* Configuration.swift */; };
-		76D84761209A405F00F60856 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473F209A405F00F60856 /* Configuration.swift */; };
-		76D84762209A405F00F60856 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473F209A405F00F60856 /* Configuration.swift */; };
-		76D84763209A405F00F60856 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8473F209A405F00F60856 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,7 +144,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7608B391209CF30D008593AE /* FreeRooms.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FreeRooms.json; sourceTree = "<group>"; };
+		7671911B20AC3BC8000C7816 /* UCLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCLKit.h; sourceTree = "<group>"; };
+		7671911C20AC3BC8000C7816 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		7671911D20AC3BC8000C7816 /* RoomBookings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomBookings.swift; sourceTree = "<group>"; };
+		7671911E20AC3BC8000C7816 /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
+		7671911F20AC3BC8000C7816 /* UCLKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UCLKit.swift; sourceTree = "<group>"; };
+		7671912020AC3BC8000C7816 /* DecodableToDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableToDictionary.swift; sourceTree = "<group>"; };
+		7671912120AC3BC8000C7816 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7671912220AC3BC8000C7816 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		7671912320AC3BC8000C7816 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		7671914A20AC3BD4000C7816 /* RoomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTests.swift; sourceTree = "<group>"; };
+		7671914B20AC3BD4000C7816 /* UCLKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UCLKitTests.swift; sourceTree = "<group>"; };
+		7671914C20AC3BD4000C7816 /* SearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
+		7671914D20AC3BD4000C7816 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		7671915620AC3BD4000C7816 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7671915720AC3BD4000C7816 /* HelperToolsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperToolsTests.swift; sourceTree = "<group>"; };
+		7671915820AC3BD4000C7816 /* TestURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestURLSession.swift; sourceTree = "<group>"; };
+		7671918320AC3F37000C7816 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
 		7680A01D1E8FB9B300B965D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7680A03C1E90182500B965D5 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		76B933DD1E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
@@ -167,6 +171,10 @@
 		76B933E51E6D938F005A3D31 /* RequestKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RequestKit.framework.dSYM; sourceTree = "<group>"; };
 		76B933E81E6D938F005A3D31 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RequestKit.framework; sourceTree = "<group>"; };
 		76B933E91E6D938F005A3D31 /* RequestKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RequestKit.framework.dSYM; sourceTree = "<group>"; };
+		76C172DA20ADCCD5000C5703 /* ResourcesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesManager.swift; sourceTree = "<group>"; };
+		76C172DE20ADD9B8000C5703 /* BookingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTests.swift; sourceTree = "<group>"; };
+		76C172E220ADD9E9000C5703 /* EquipmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentTests.swift; sourceTree = "<group>"; };
+		76C172E620ADDA26000C5703 /* FreeRoomsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeRoomsTests.swift; sourceTree = "<group>"; };
 		76C783971E66E58F0087093E /* UCLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C783A01E66E58F0087093E /* UCLKit iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UCLKit iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C783C71E677DF10087093E /* UCLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,28 +182,6 @@
 		76C783E51E677EA40087093E /* UCLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UCLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C783F21E677ED40087093E /* UCLKit macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UCLKit macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C783FF1E677F400087093E /* UCLKit tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UCLKit tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		76D846FE209A374100F60856 /* RoomBookingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomBookingTests.swift; sourceTree = "<group>"; };
-		76D846FF209A374100F60856 /* UCLKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UCLKitTests.swift; sourceTree = "<group>"; };
-		76D84700209A374100F60856 /* SearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
-		76D84701209A374100F60856 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
-		76D84703209A374100F60856 /* NoToken.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NoToken.json; sourceTree = "<group>"; };
-		76D84704209A374100F60856 /* Bookings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Bookings.json; sourceTree = "<group>"; };
-		76D84705209A374100F60856 /* Rooms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Rooms.json; sourceTree = "<group>"; };
-		76D84706209A374100F60856 /* InvalidToken.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InvalidToken.json; sourceTree = "<group>"; };
-		76D84707209A374100F60856 /* People.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = People.json; sourceTree = "<group>"; };
-		76D84708209A374100F60856 /* Equipment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Equipment.json; sourceTree = "<group>"; };
-		76D84709209A374100F60856 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76D8470A209A374100F60856 /* HelperToolsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperToolsTests.swift; sourceTree = "<group>"; };
-		76D8470B209A374100F60856 /* TestURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestURLSession.swift; sourceTree = "<group>"; };
-		76D84737209A405F00F60856 /* UCLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCLKit.h; sourceTree = "<group>"; };
-		76D84738209A405F00F60856 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
-		76D84739209A405F00F60856 /* RoomBookings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomBookings.swift; sourceTree = "<group>"; };
-		76D8473A209A405F00F60856 /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
-		76D8473B209A405F00F60856 /* UCLKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UCLKit.swift; sourceTree = "<group>"; };
-		76D8473C209A405F00F60856 /* DecodableToDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableToDictionary.swift; sourceTree = "<group>"; };
-		76D8473D209A405F00F60856 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76D8473E209A405F00F60856 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
-		76D8473F209A405F00F60856 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,10 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76B0E767203A1685007EAB35 /* RequestKit.framework in Frameworks */,
-				76B0E764203A1678007EAB35 /* RequestKit.framework in Frameworks */,
-				76B0E765203A167F007EAB35 /* RequestKit.framework in Frameworks */,
-				76B0E766203A1682007EAB35 /* RequestKit.framework in Frameworks */,
+				7671918420AC7CFC000C7816 /* RequestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +242,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7671911920AC3BC8000C7816 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7671911A20AC3BC8000C7816 /* UCLKit */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		7671911A20AC3BC8000C7816 /* UCLKit */ = {
+			isa = PBXGroup;
+			children = (
+				7671911B20AC3BC8000C7816 /* UCLKit.h */,
+				7671911F20AC3BC8000C7816 /* UCLKit.swift */,
+				7671912320AC3BC8000C7816 /* Configuration.swift */,
+				7671911D20AC3BC8000C7816 /* RoomBookings.swift */,
+				7671912220AC3BC8000C7816 /* Search.swift */,
+				7671912020AC3BC8000C7816 /* DecodableToDictionary.swift */,
+				7671911C20AC3BC8000C7816 /* Time.swift */,
+				7671911E20AC3BC8000C7816 /* ErrorHandling.swift */,
+				7671912120AC3BC8000C7816 /* Info.plist */,
+			);
+			path = UCLKit;
+			sourceTree = "<group>";
+		};
+		7671914820AC3BD4000C7816 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7671918320AC3F37000C7816 /* LinuxMain.swift */,
+				7671914920AC3BD4000C7816 /* UCLKitTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		7671914920AC3BD4000C7816 /* UCLKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				76C172DA20ADCCD5000C5703 /* ResourcesManager.swift */,
+				7671914B20AC3BD4000C7816 /* UCLKitTests.swift */,
+				7671914A20AC3BD4000C7816 /* RoomTests.swift */,
+				76C172DE20ADD9B8000C5703 /* BookingTests.swift */,
+				76C172E220ADD9E9000C5703 /* EquipmentTests.swift */,
+				76C172E620ADDA26000C5703 /* FreeRoomsTests.swift */,
+				7671914C20AC3BD4000C7816 /* SearchTests.swift */,
+				7671915720AC3BD4000C7816 /* HelperToolsTests.swift */,
+				7671915820AC3BD4000C7816 /* TestURLSession.swift */,
+				7671914D20AC3BD4000C7816 /* TestHelper.swift */,
+				7671915620AC3BD4000C7816 /* Info.plist */,
+			);
+			path = UCLKitTests;
+			sourceTree = "<group>";
+		};
 		76B933DA1E6D938F005A3D31 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,10 +336,10 @@
 		76C7838D1E66E58F0087093E = {
 			isa = PBXGroup;
 			children = (
+				7671911920AC3BC8000C7816 /* Source */,
+				7671914820AC3BD4000C7816 /* Tests */,
 				76C783981E66E58F0087093E /* Products */,
 				76C783B51E670D1F0087093E /* Frameworks */,
-				76D84736209A405F00F60856 /* Source */,
-				76D846FD209A374100F60856 /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -336,51 +370,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		76D846FD209A374100F60856 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				76D84702209A374100F60856 /* Fixtures */,
-				76D846FF209A374100F60856 /* UCLKitTests.swift */,
-				76D846FE209A374100F60856 /* RoomBookingTests.swift */,
-				76D84700209A374100F60856 /* SearchTests.swift */,
-				76D8470B209A374100F60856 /* TestURLSession.swift */,
-				76D8470A209A374100F60856 /* HelperToolsTests.swift */,
-				76D84701209A374100F60856 /* TestHelper.swift */,
-				76D84709209A374100F60856 /* Info.plist */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		76D84702209A374100F60856 /* Fixtures */ = {
-			isa = PBXGroup;
-			children = (
-				76D84703209A374100F60856 /* NoToken.json */,
-				76D84704209A374100F60856 /* Bookings.json */,
-				76D84705209A374100F60856 /* Rooms.json */,
-				7608B391209CF30D008593AE /* FreeRooms.json */,
-				76D84706209A374100F60856 /* InvalidToken.json */,
-				76D84707209A374100F60856 /* People.json */,
-				76D84708209A374100F60856 /* Equipment.json */,
-			);
-			path = Fixtures;
-			sourceTree = "<group>";
-		};
-		76D84736209A405F00F60856 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				76D84737209A405F00F60856 /* UCLKit.h */,
-				76D8473B209A405F00F60856 /* UCLKit.swift */,
-				76D8473F209A405F00F60856 /* Configuration.swift */,
-				76D84739209A405F00F60856 /* RoomBookings.swift */,
-				76D8473E209A405F00F60856 /* Search.swift */,
-				76D8473A209A405F00F60856 /* ErrorHandling.swift */,
-				76D8473C209A405F00F60856 /* DecodableToDictionary.swift */,
-				76D84738209A405F00F60856 /* Time.swift */,
-				76D8473D209A405F00F60856 /* Info.plist */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -388,7 +377,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D84740209A405F00F60856 /* UCLKit.h in Headers */,
+				7671912420AC3BC9000C7816 /* UCLKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +385,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D84742209A405F00F60856 /* UCLKit.h in Headers */,
+				7671912620AC3BC9000C7816 /* UCLKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +393,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D84743209A405F00F60856 /* UCLKit.h in Headers */,
+				7671912720AC3BC9000C7816 /* UCLKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +401,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D84741209A405F00F60856 /* UCLKit.h in Headers */,
+				7671912520AC3BC9000C7816 /* UCLKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +434,6 @@
 			buildPhases = (
 				76C7839C1E66E58F0087093E /* Sources */,
 				76C7839D1E66E58F0087093E /* Frameworks */,
-				76C7839E1E66E58F0087093E /* Resources */,
 				7680A01F1E8FEB0100B965D5 /* Carthage Embed */,
 			);
 			buildRules = (
@@ -518,7 +506,6 @@
 			buildPhases = (
 				76C783EA1E677ED40087093E /* Sources */,
 				76C783EC1E677ED40087093E /* Frameworks */,
-				76C783EE1E677ED40087093E /* Resources */,
 				7680A0211E8FEB3700B965D5 /* Carthage Embed */,
 			);
 			buildRules = (
@@ -537,7 +524,6 @@
 			buildPhases = (
 				76C783F71E677F400087093E /* Sources */,
 				76C783F91E677F400087093E /* Frameworks */,
-				76C783FB1E677F400087093E /* Resources */,
 				7680A0231E8FEB4900B965D5 /* Carthage Embed */,
 			);
 			buildRules = (
@@ -604,20 +590,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76C7839E1E66E58F0087093E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				76D84727209A374100F60856 /* Equipment.json in Resources */,
-				76D8471E209A374100F60856 /* Rooms.json in Resources */,
-				76D84721209A374100F60856 /* InvalidToken.json in Resources */,
-				76D84724209A374100F60856 /* People.json in Resources */,
-				76D84718209A374100F60856 /* NoToken.json in Resources */,
-				76D8471B209A374100F60856 /* Bookings.json in Resources */,
-				7608B392209CF30D008593AE /* FreeRooms.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		76C783C31E677DF10087093E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -639,34 +611,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				76D84733209A38E700F60856 /* RequestKit.framework in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		76C783EE1E677ED40087093E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				76D84728209A374100F60856 /* Equipment.json in Resources */,
-				76D8471F209A374100F60856 /* Rooms.json in Resources */,
-				76D84722209A374100F60856 /* InvalidToken.json in Resources */,
-				76D84725209A374100F60856 /* People.json in Resources */,
-				76D84719209A374100F60856 /* NoToken.json in Resources */,
-				76D8471C209A374100F60856 /* Bookings.json in Resources */,
-				7608B393209CF30D008593AE /* FreeRooms.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		76C783FB1E677F400087093E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				76D84729209A374100F60856 /* Equipment.json in Resources */,
-				76D84720209A374100F60856 /* Rooms.json in Resources */,
-				76D84723209A374100F60856 /* InvalidToken.json in Resources */,
-				76D84726209A374100F60856 /* People.json in Resources */,
-				76D8471A209A374100F60856 /* NoToken.json in Resources */,
-				76D8471D209A374100F60856 /* Bookings.json in Resources */,
-				7608B394209CF30D008593AE /* FreeRooms.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,13 +652,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D8474C209A405F00F60856 /* ErrorHandling.swift in Sources */,
-				76D84748209A405F00F60856 /* RoomBookings.swift in Sources */,
-				76D84760209A405F00F60856 /* Configuration.swift in Sources */,
-				76D84744209A405F00F60856 /* Time.swift in Sources */,
-				76D8475C209A405F00F60856 /* Search.swift in Sources */,
-				76D84750209A405F00F60856 /* UCLKit.swift in Sources */,
-				76D84754209A405F00F60856 /* DecodableToDictionary.swift in Sources */,
+				7671913020AC3BC9000C7816 /* ErrorHandling.swift in Sources */,
+				7671912C20AC3BC9000C7816 /* RoomBookings.swift in Sources */,
+				7671914420AC3BC9000C7816 /* Configuration.swift in Sources */,
+				7671912820AC3BC9000C7816 /* Time.swift in Sources */,
+				7671914020AC3BC9000C7816 /* Search.swift in Sources */,
+				7671913420AC3BC9000C7816 /* UCLKit.swift in Sources */,
+				7671913820AC3BC9000C7816 /* DecodableToDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,12 +666,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D8472D209A374100F60856 /* HelperToolsTests.swift in Sources */,
-				76D84712209A374100F60856 /* SearchTests.swift in Sources */,
-				76D8470C209A374100F60856 /* RoomBookingTests.swift in Sources */,
-				76D8470F209A374100F60856 /* UCLKitTests.swift in Sources */,
-				76D84730209A374100F60856 /* TestURLSession.swift in Sources */,
-				76D84715209A374100F60856 /* TestHelper.swift in Sources */,
+				7671917D20AC3BD4000C7816 /* HelperToolsTests.swift in Sources */,
+				7671915F20AC3BD4000C7816 /* SearchTests.swift in Sources */,
+				7671915920AC3BD4000C7816 /* RoomTests.swift in Sources */,
+				76C172E720ADDA26000C5703 /* FreeRoomsTests.swift in Sources */,
+				76C172E320ADD9E9000C5703 /* EquipmentTests.swift in Sources */,
+				7671915C20AC3BD4000C7816 /* UCLKitTests.swift in Sources */,
+				76C172DF20ADD9B8000C5703 /* BookingTests.swift in Sources */,
+				76C172DB20ADCCD5000C5703 /* ResourcesManager.swift in Sources */,
+				7671918020AC3BD4000C7816 /* TestURLSession.swift in Sources */,
+				7671916220AC3BD4000C7816 /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,13 +683,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D8474E209A405F00F60856 /* ErrorHandling.swift in Sources */,
-				76D8474A209A405F00F60856 /* RoomBookings.swift in Sources */,
-				76D84762209A405F00F60856 /* Configuration.swift in Sources */,
-				76D84746209A405F00F60856 /* Time.swift in Sources */,
-				76D8475E209A405F00F60856 /* Search.swift in Sources */,
-				76D84752209A405F00F60856 /* UCLKit.swift in Sources */,
-				76D84756209A405F00F60856 /* DecodableToDictionary.swift in Sources */,
+				7671913220AC3BC9000C7816 /* ErrorHandling.swift in Sources */,
+				7671912E20AC3BC9000C7816 /* RoomBookings.swift in Sources */,
+				7671914620AC3BC9000C7816 /* Configuration.swift in Sources */,
+				7671912A20AC3BC9000C7816 /* Time.swift in Sources */,
+				7671914220AC3BC9000C7816 /* Search.swift in Sources */,
+				7671913620AC3BC9000C7816 /* UCLKit.swift in Sources */,
+				7671913A20AC3BC9000C7816 /* DecodableToDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,13 +697,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D8474F209A405F00F60856 /* ErrorHandling.swift in Sources */,
-				76D8474B209A405F00F60856 /* RoomBookings.swift in Sources */,
-				76D84763209A405F00F60856 /* Configuration.swift in Sources */,
-				76D84747209A405F00F60856 /* Time.swift in Sources */,
-				76D8475F209A405F00F60856 /* Search.swift in Sources */,
-				76D84753209A405F00F60856 /* UCLKit.swift in Sources */,
-				76D84757209A405F00F60856 /* DecodableToDictionary.swift in Sources */,
+				7671913320AC3BC9000C7816 /* ErrorHandling.swift in Sources */,
+				7671912F20AC3BC9000C7816 /* RoomBookings.swift in Sources */,
+				7671914720AC3BC9000C7816 /* Configuration.swift in Sources */,
+				7671912B20AC3BC9000C7816 /* Time.swift in Sources */,
+				7671914320AC3BC9000C7816 /* Search.swift in Sources */,
+				7671913720AC3BC9000C7816 /* UCLKit.swift in Sources */,
+				7671913B20AC3BC9000C7816 /* DecodableToDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,13 +711,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D8474D209A405F00F60856 /* ErrorHandling.swift in Sources */,
-				76D84749209A405F00F60856 /* RoomBookings.swift in Sources */,
-				76D84761209A405F00F60856 /* Configuration.swift in Sources */,
-				76D84745209A405F00F60856 /* Time.swift in Sources */,
-				76D8475D209A405F00F60856 /* Search.swift in Sources */,
-				76D84751209A405F00F60856 /* UCLKit.swift in Sources */,
-				76D84755209A405F00F60856 /* DecodableToDictionary.swift in Sources */,
+				7671913120AC3BC9000C7816 /* ErrorHandling.swift in Sources */,
+				7671912D20AC3BC9000C7816 /* RoomBookings.swift in Sources */,
+				7671914520AC3BC9000C7816 /* Configuration.swift in Sources */,
+				7671912920AC3BC9000C7816 /* Time.swift in Sources */,
+				7671914120AC3BC9000C7816 /* Search.swift in Sources */,
+				7671913520AC3BC9000C7816 /* UCLKit.swift in Sources */,
+				7671913920AC3BC9000C7816 /* DecodableToDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,12 +725,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D8472E209A374100F60856 /* HelperToolsTests.swift in Sources */,
-				76D84713209A374100F60856 /* SearchTests.swift in Sources */,
-				76D8470D209A374100F60856 /* RoomBookingTests.swift in Sources */,
-				76D84710209A374100F60856 /* UCLKitTests.swift in Sources */,
-				76D84731209A374100F60856 /* TestURLSession.swift in Sources */,
-				76D84716209A374100F60856 /* TestHelper.swift in Sources */,
+				7671917E20AC3BD4000C7816 /* HelperToolsTests.swift in Sources */,
+				7671916020AC3BD4000C7816 /* SearchTests.swift in Sources */,
+				7671915A20AC3BD4000C7816 /* RoomTests.swift in Sources */,
+				76C172E820ADDA26000C5703 /* FreeRoomsTests.swift in Sources */,
+				76C172E420ADD9E9000C5703 /* EquipmentTests.swift in Sources */,
+				7671915D20AC3BD4000C7816 /* UCLKitTests.swift in Sources */,
+				76C172E020ADD9B8000C5703 /* BookingTests.swift in Sources */,
+				76C172DC20ADCCD5000C5703 /* ResourcesManager.swift in Sources */,
+				7671918120AC3BD4000C7816 /* TestURLSession.swift in Sources */,
+				7671916320AC3BD4000C7816 /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,12 +742,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D8472F209A374100F60856 /* HelperToolsTests.swift in Sources */,
-				76D84714209A374100F60856 /* SearchTests.swift in Sources */,
-				76D8470E209A374100F60856 /* RoomBookingTests.swift in Sources */,
-				76D84711209A374100F60856 /* UCLKitTests.swift in Sources */,
-				76D84732209A374100F60856 /* TestURLSession.swift in Sources */,
-				76D84717209A374100F60856 /* TestHelper.swift in Sources */,
+				7671917F20AC3BD4000C7816 /* HelperToolsTests.swift in Sources */,
+				7671916120AC3BD4000C7816 /* SearchTests.swift in Sources */,
+				7671915B20AC3BD4000C7816 /* RoomTests.swift in Sources */,
+				76C172E920ADDA26000C5703 /* FreeRoomsTests.swift in Sources */,
+				76C172E520ADD9E9000C5703 /* EquipmentTests.swift in Sources */,
+				7671915E20AC3BD4000C7816 /* UCLKitTests.swift in Sources */,
+				76C172E120ADD9B8000C5703 /* BookingTests.swift in Sources */,
+				76C172DD20ADCCD5000C5703 /* ResourcesManager.swift in Sources */,
+				7671918220AC3BD4000C7816 /* TestURLSession.swift in Sources */,
+				7671916420AC3BD4000C7816 /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -963,7 +919,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Source/UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -998,7 +954,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Source/UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1021,7 +977,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Tests/UCLKitTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
@@ -1045,7 +1001,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Tests/UCLKitTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
@@ -1072,7 +1028,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Source/UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
@@ -1101,7 +1057,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Source/UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
@@ -1129,7 +1085,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Source/UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
@@ -1155,7 +1111,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Source/UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
@@ -1184,7 +1140,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Source/UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1216,7 +1172,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Source/UCLKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1242,7 +1198,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Tests/UCLKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1267,7 +1223,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Tests/UCLKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = NO;
@@ -1288,7 +1244,7 @@
 				CODE_SIGN_IDENTITY = "";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Tests/UCLKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.tvOSTests;
@@ -1309,7 +1265,7 @@
 				CODE_SIGN_IDENTITY = "";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Tests/UCLKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiferrei.UCLKit.tvOSTests;

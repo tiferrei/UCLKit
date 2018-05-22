@@ -12,7 +12,7 @@ import RequestKit
 // Mark: Model
 
 /// Wrapper for the Rooms response
-@objc public final class RoomsResponse: NSObject, Codable {
+public final class RoomsResponse: Codable {
     open var OK: Bool?
     open var error: String?
     open var rooms: [Room]?
@@ -25,7 +25,7 @@ import RequestKit
 }
 
 /// Wrapper for the Free Rooms response
-@objc public final class FreeRoomsResponse: NSObject, Codable {
+public final class FreeRoomsResponse: Codable {
     open var OK: Bool?
     open var error: String?
     open var freeRooms: [Room]?
@@ -38,15 +38,15 @@ import RequestKit
 }
 
 /// Payload from the Rooms response
-@objc public final class Room: NSObject, Codable {
-    @objc open var roomID: String?
-    @objc open var roomName: String?
-    @objc open var siteID: String?
-    @objc open var siteName: String?
+public final class Room: Codable {
+    open var roomID: String?
+    open var roomName: String?
+    open var siteID: String?
+    open var siteName: String?
     open var capacity: Int?
     open var classification: Classification?
     open var automated: Automation?
-    @objc open var location: Location?
+    open var location: Location?
 
     enum CodingKeys: String, CodingKey {
         case roomID = "roomid"
@@ -61,7 +61,7 @@ import RequestKit
 }
 
 /// Wrapper for the Bookings response
-@objc public final class BookingsResponse: NSObject, Codable {
+public final class BookingsResponse: Codable {
     open var OK: Bool?
     open var error: String?
     open var bookings: [Booking]?
@@ -80,17 +80,17 @@ import RequestKit
 }
 
 /// Payload for the Bookings response
-@objc public final class Booking: NSObject, Codable {
+public final class Booking: Codable {
     @objc open private(set) var slotID: Int = -1
-    @objc open var endTime: Date?
-    @objc open var bookingDescription: String?
-    @objc open var roomName: String?
-    @objc open var siteID: String?
-    @objc open var contact: String?
+    open var endTime: Date?
+    open var bookingDescription: String?
+    open var roomName: String?
+    open var siteID: String?
+    open var contact: String?
     open var weekNumber: Int?
-    @objc open var roomID: String?
-    @objc open var startTime: Date?
-    @objc open var phone: String?
+    open var roomID: String?
+    open var startTime: Date?
+    open var phone: String?
 
     enum CodingKeys: String, CodingKey {
         case slotID = "slotid"
@@ -107,7 +107,7 @@ import RequestKit
 }
 
 /// Wrapper for the Equipment response
-@objc public final class EquipmentResponse: NSObject, Codable {
+public final class EquipmentResponse: Codable {
     open var OK: Bool?
     open var error: String?
     open var equipment: [Equipment]?
@@ -120,7 +120,7 @@ import RequestKit
 }
 
 /// Payload for the Equipment response
-@objc public final class Equipment: NSObject, Codable {
+public final class Equipment: Codable {
     open var type: Type?
     open var equipmentDescription: String?
     open var units: Int?
@@ -135,7 +135,7 @@ import RequestKit
 // Mark: Helper Classes
 
 /// Address sub-payload from the Room payload
-@objc public final class Location: NSObject, Codable {
+public final class Location: Codable {
     open var address: [String]?
     open var coordinates: Coordinate?
 
@@ -146,7 +146,7 @@ import RequestKit
 }
 
 /// Coordinate sub-payload from the Location
-@objc public final class Coordinate: NSObject, Codable {
+public final class Coordinate: Codable {
     open var latitude: String?
     open var longitude: String?
 

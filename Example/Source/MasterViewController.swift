@@ -108,7 +108,7 @@ class MasterViewController: UITableViewController {
                 view.request[param.key] = param.value
             }
             view.data = responseData.toDictionary()
-        case .failure(let error as NSError):
+        case .failure(let error):
             view.request["HTTP STATUS"] = "\(error.code)"
             view.data["OK"] = "false"
             view.data["error"] = UCLKit(config).parseError(error)

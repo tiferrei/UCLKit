@@ -13,6 +13,21 @@ import Foundation
 private let baseURL = "https://uclapi.com/"
 
 class UCLKitTests: XCTestCase {
+    static var allTests = [
+        ("testConfiguration", testConfiguration),
+        ("testFailedAuth", testFailedAuth),
+        ("testMissingAuth", testMissingAuth),
+        ("testLinuxTestSuiteIncludesAllTests", testLinuxTestSuiteIncludesAllTests)
+    ]
+
+    func testLinuxTestSuiteIncludesAllTests() {
+        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+            let thisClass = type(of: self)
+            let linuxCount = thisClass.allTests.count
+            let darwinCount = thisClass.defaultTestSuite.tests.count
+            XCTAssertEqual(linuxCount, darwinCount, "\(darwinCount - linuxCount) tests are missing from allTests")
+        #endif
+    }
 
     func testConfiguration() {
         let subject = TokenConfiguration("12345")
@@ -21,7 +36,8 @@ class UCLKitTests: XCTestCase {
     }
 
     func testFailedAuth() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=InvalidToken", expectedHTTPMethod: "GET", jsonFile: "InvalidToken", statusCode: 400)
+    let sessionURL = "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=InvalidToken"
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .InvalidToken, statusCode: 400)
         let config = TokenConfiguration("InvalidToken")
         _ = UCLKit(config).rooms(session) { response in
             switch response {
@@ -38,7 +54,8 @@ class UCLKitTests: XCTestCase {
     }
 
     func testMissingAuth() {
-        let session = URLTestSession(expectedURL: "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token=", expectedHTTPMethod: "GET", jsonFile: "NoToken", statusCode: 400)
+    let sessionURL = "https://uclapi.com/roombookings/rooms?capacity=&classification=&roomid=&roomname=&siteid=&sitename=&token="
+        let session = URLTestSession(expectedURL: sessionURL, expectedHTTPMethod: "GET", resource: .NoToken, statusCode: 400)
         let config = TokenConfiguration("")
         _ = UCLKit(config).rooms(session) { response in
             switch response {

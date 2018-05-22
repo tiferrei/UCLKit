@@ -10,7 +10,7 @@ let package = Package(
         .package(url: "https://github.com/nerdishbynature/RequestKit.git", .branch("master"))
     ],
     targets: [
-        .target(name: "UCLKit", dependencies: ["RequestKit"], path: "Source"),
-        .testTarget(name: "UCLKit Tests", dependencies: ["UCLKit"], path: "Tests")
+        .target(name: "UCLKit", dependencies: ["RequestKit"]),
+        .testTarget(name: "UCLKitTests", dependencies: ["UCLKit"])
    ]
 )

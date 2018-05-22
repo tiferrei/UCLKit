@@ -1,2 +1,2 @@
 github "matthewpalmer/Locksmith" "4.0.0"
-github "nerdishbynature/RequestKit" "2.2.0"
+github "nerdishbynature/RequestKit" "1b7ac5e68f20f78975f2a3f934bd5094777704f3"
