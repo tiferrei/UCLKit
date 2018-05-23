@@ -36,8 +36,8 @@ class EquipmentTests: XCTestCase {
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).equipment(session, roomID: "433", siteID: "086") { response in
             switch response {
-            case .success(let response):
-                XCTAssertEqual(response.OK, true)
+            case .success(let data):
+                XCTAssertEqual(data.OK, true)
             case .failure(let error):
                 XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
             }
@@ -51,9 +51,9 @@ class EquipmentTests: XCTestCase {
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).equipment(session, roomID: "", siteID: "") { response in
             switch response {
-            case .success(let response):
-                XCTAssert(false, "❌ Should not retrieve a response (\(response))")
-                XCTAssertEqual(response.OK, true)
+            case .success(let data):
+                XCTAssert(false, "❌ Should not retrieve data -> (\(data))")
+                XCTAssertEqual(data.OK, true)
             case .failure(_):
                 XCTAssert(true)
             }
@@ -65,14 +65,14 @@ class EquipmentTests: XCTestCase {
     // MARK: Model Tests
 
     func testEquipmentParsing() {
-        let response = Helper.codableFromResource(.Equipment, type: EquipmentResponse.self)
-        XCTAssertEqual(response.OK, true)
-        XCTAssertEqual(response.equipment![0].type, Type.FixedFeature)
-        XCTAssertEqual(response.equipment![0].equipmentDescription, "Managed PC")
-        XCTAssertEqual(response.equipment![0].units, 1)
-        XCTAssertEqual(response.equipment![1].type, Type.FixedEquipment)
-        XCTAssertEqual(response.equipment![1].equipmentDescription, "Chairs with Tables")
-        XCTAssertEqual(response.equipment![1].units, 1)
+        let data = Helper.codableFromResource(.Equipment, type: EquipmentResponse.self)
+        XCTAssertEqual(data.OK, true)
+        XCTAssertEqual(data.equipment![0].type, Type.FixedFeature)
+        XCTAssertEqual(data.equipment![0].equipmentDescription, "Managed PC")
+        XCTAssertEqual(data.equipment![0].units, 1)
+        XCTAssertEqual(data.equipment![1].type, Type.FixedEquipment)
+        XCTAssertEqual(data.equipment![1].equipmentDescription, "Chairs with Tables")
+        XCTAssertEqual(data.equipment![1].units, 1)
     }
 
 }

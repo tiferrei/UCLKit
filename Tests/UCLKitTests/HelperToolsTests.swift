@@ -34,9 +34,9 @@ class HelperToolsTests: XCTestCase {
     // MARK: Parsing Tests
 
     func testRoomsDictionaryParsing() {
-        let response = Helper.codableFromResource(.Rooms, type: RoomsResponse.self).toDictionary()
-        if let rooms = response["rooms"] as? [Any], let room = rooms[0] as? [String: Any] {
-            XCTAssertEqual(response["OK"] as? String, "true")
+        let data = Helper.codableFromResource(.Rooms, type: RoomsResponse.self).toDictionary()
+        if let rooms = data["rooms"] as? [Any], let room = rooms[0] as? [String: Any] {
+            XCTAssertEqual(data["OK"] as? String, "true")
             XCTAssertEqual(room["roomID"] as? String, "Z4")
             XCTAssertEqual(room["siteID"] as? String, "005")
             XCTAssertEqual(room["siteName"] as? String, "Main Building")
@@ -60,9 +60,9 @@ class HelperToolsTests: XCTestCase {
     }
 
     func testBookingDictionaryParsing() {
-        let response = Helper.codableFromResource(.Bookings, type: BookingsResponse.self).toDictionary()
-        if let bookings = response["bookings"] as? [Any], let booking = bookings[0] as? [String: Any] {
-            XCTAssertEqual(response["OK"] as? String, "true")
+        let data = Helper.codableFromResource(.Bookings, type: BookingsResponse.self).toDictionary()
+        if let bookings = data["bookings"] as? [Any], let booking = bookings[0] as? [String: Any] {
+            XCTAssertEqual(data["OK"] as? String, "true")
             XCTAssertEqual(booking["slotID"] as? String, "998503")
             XCTAssertEqual(booking["endTime"] as? String, Time.iso8601Date("2016-09-02T18:00:00+00:00")!.description(with: Locale.current))
             XCTAssertEqual(booking["bookingDescription"] as? String, "split weeks to assist rooming 29.06")
@@ -73,18 +73,18 @@ class HelperToolsTests: XCTestCase {
             XCTAssertEqual(booking["roomID"] as? String, "433")
             XCTAssertEqual(booking["startTime"] as? String, Time.iso8601Date("2016-09-02T09:00:00+00:00")!.description(with: Locale.current))
             XCTAssertEqual(booking["phone"] as? String, "45699")
-                XCTAssertEqual(response["nextPageExists"] as? String, "true")
-                XCTAssertEqual(response["pageToken"] as? String, "6hb14hXjRV")
-                XCTAssertEqual(response["count"] as? String, "1197")
+                XCTAssertEqual(data["nextPageExists"] as? String, "true")
+                XCTAssertEqual(data["pageToken"] as? String, "6hb14hXjRV")
+                XCTAssertEqual(data["count"] as? String, "1197")
         } else {
             XCTAssert(false, "❌ Unable to cast essential data.")
         }
     }
 
     func testEquipmentDictionaryParsing() {
-        let response = Helper.codableFromResource(.Equipment, type: EquipmentResponse.self).toDictionary()
-        if let equipmentList = response["equipment"] as? [Any] {
-            XCTAssertEqual(response["OK"] as? String, "true")
+        let data = Helper.codableFromResource(.Equipment, type: EquipmentResponse.self).toDictionary()
+        if let equipmentList = data["equipment"] as? [Any] {
+            XCTAssertEqual(data["OK"] as? String, "true")
             if let equipment = equipmentList[0] as? [String: Any] {
                 XCTAssertEqual(equipment["type"] as? String, Type.FixedFeature.rawValue)
                 XCTAssertEqual(equipment["equipmentDescription"] as? String, "Managed PC")
@@ -105,9 +105,9 @@ class HelperToolsTests: XCTestCase {
     }
 
     func testSearchDictionaryParsing() {
-        let response = Helper.codableFromResource(.People, type: PeopleResponse.self).toDictionary()
-        if let people = response["people"] as? [Any], let person = people[0] as? [String: Any] {
-            XCTAssertEqual(response["OK"] as? String, "true")
+        let data = Helper.codableFromResource(.People, type: PeopleResponse.self).toDictionary()
+        if let people = data["people"] as? [Any], let person = people[0] as? [String: Any] {
+            XCTAssertEqual(data["OK"] as? String, "true")
             XCTAssertEqual(person["name"] as? String, "Jane Doe")
             XCTAssertEqual(person["status"] as? String, Status.Student.rawValue)
             XCTAssertEqual(person["department"] as? String, "Dept of Med Phys & Biomedical Eng")
@@ -123,8 +123,8 @@ class HelperToolsTests: XCTestCase {
         let config = TokenConfiguration("invalidToken")
         _ = UCLKit(config).rooms(session) { response in
             switch response {
-            case .success(let rooms):
-                XCTAssert(false, "❌ Should retrieve an error, instead got –> (\(rooms))")
+            case .success(let data):
+                XCTAssert(false, "❌ Should retrieve an error, instead got –> (\(data))")
             case .failure(let error):
                 XCTAssertEqual(UCLKit(config).parseError(error), "Token is invalid.")
             }

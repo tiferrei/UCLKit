@@ -37,8 +37,8 @@ class RoomTests: XCTestCase {
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).rooms(session) { response in
             switch response {
-            case .success(let response):
-                XCTAssertEqual(response.OK, true)
+            case .success(let data):
+                XCTAssertEqual(data.OK, true)
             case .failure(let error):
                 XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
             }
@@ -52,8 +52,8 @@ class RoomTests: XCTestCase {
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).rooms(session, roomID: "123", roomName: "NAME", siteID: "123", siteName: "NAME", classification: .Unknown, capacity: "123") { response in
             switch response {
-            case .success(let response):
-                XCTAssertEqual(response.OK, true)
+            case .success(let data):
+                XCTAssertEqual(data.OK, true)
             case .failure(let error):
                 XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
             }
@@ -67,8 +67,8 @@ class RoomTests: XCTestCase {
         let config = TokenConfiguration("InvalidToken")
         _ = UCLKit(config).rooms(session) { response in
             switch response {
-            case .success(let rooms):
-                XCTAssert(false, "❌ Should retrieve an error, instead got –> (\(rooms))")
+            case .success(let data):
+                XCTAssert(false, "❌ Should retrieve an error, instead got –> (\(data))")
             case .failure(let error):
                 XCTAssertEqual(UCLKit(config).parseError(error), "Token is invalid.")
             }
@@ -79,18 +79,18 @@ class RoomTests: XCTestCase {
     // MARK: Model Tests
 
     func testRoomsParsing() {
-        let response = Helper.codableFromResource(.Rooms, type: RoomsResponse.self)
-        XCTAssertEqual(response.OK, true)
-        XCTAssertEqual(response.rooms![0].roomName, "Wilkins Building (Main Building) Portico")
-        XCTAssertEqual(response.rooms![0].roomID, "Z4")
-        XCTAssertEqual(response.rooms![0].siteID, "005")
-        XCTAssertEqual(response.rooms![0].siteName, "Main Building")
-        XCTAssertEqual(response.rooms![0].capacity, 50)
-        XCTAssertEqual(response.rooms![0].classification, Classification.SocialSpace)
-        XCTAssertEqual(response.rooms![0].automated, Automation.NotAutomated)
-        XCTAssertEqual(response.rooms![0].location!.address!, ["Gower Street", "London", "WC1E 6BT", ""])
-        XCTAssertEqual(response.rooms![0].location!.coordinates!.latitude!, "51.524699")
-        XCTAssertEqual(response.rooms![0].location!.coordinates!.longitude!, "-0.13366")
+        let data = Helper.codableFromResource(.Rooms, type: RoomsResponse.self)
+        XCTAssertEqual(data.OK, true)
+        XCTAssertEqual(data.rooms![0].roomName, "Wilkins Building (Main Building) Portico")
+        XCTAssertEqual(data.rooms![0].roomID, "Z4")
+        XCTAssertEqual(data.rooms![0].siteID, "005")
+        XCTAssertEqual(data.rooms![0].siteName, "Main Building")
+        XCTAssertEqual(data.rooms![0].capacity, 50)
+        XCTAssertEqual(data.rooms![0].classification, Classification.SocialSpace)
+        XCTAssertEqual(data.rooms![0].automated, Automation.NotAutomated)
+        XCTAssertEqual(data.rooms![0].location!.address!, ["Gower Street", "London", "WC1E 6BT", ""])
+        XCTAssertEqual(data.rooms![0].location!.coordinates!.latitude!, "51.524699")
+        XCTAssertEqual(data.rooms![0].location!.coordinates!.longitude!, "-0.13366")
     }
 
 }

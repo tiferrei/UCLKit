@@ -32,10 +32,10 @@ After that, well, use it! :)
 ```swift
 UCLKit(config).rooms() { response in
   switch response {
-  case .success(let rooms):
-    print("The first room's name is \(rooms[0].name!)")
+  case .success(let data):
+    print("The first room's name is \(data.rooms[0].name)")
   case .failure(let error):
-    print("Oops: \(error)")
+    print("Oops: \(UCLKit(config).parseError(error))")
   }
 }
 ```

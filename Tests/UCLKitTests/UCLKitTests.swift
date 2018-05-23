@@ -41,8 +41,8 @@ class UCLKitTests: XCTestCase {
         let config = TokenConfiguration("InvalidToken")
         _ = UCLKit(config).rooms(session) { response in
             switch response {
-            case .success(let response):
-                XCTAssert(false, "❌ Should retrieve an error –> (\(response))")
+            case .success(let data):
+                XCTAssert(false, "❌ Should retrieve an error –> (\(data))")
             case .failure(let error as NSError):
                 XCTAssertEqual(error.code, 400)
                 XCTAssertEqual(error.domain, UCLKitErrorDomain)
@@ -59,8 +59,8 @@ class UCLKitTests: XCTestCase {
         let config = TokenConfiguration("")
         _ = UCLKit(config).rooms(session) { response in
             switch response {
-            case .success(let response):
-                XCTAssert(false, "❌ Should retrieve an error –> (\(response))")
+            case .success(let data):
+                XCTAssert(false, "❌ Should retrieve an error –> (\(data))")
             case .failure(let error as NSError):
                 XCTAssertEqual(error.code, 400)
                 XCTAssertEqual(error.domain, UCLKitErrorDomain)

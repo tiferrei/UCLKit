@@ -38,8 +38,8 @@ class BookingTests: XCTestCase {
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).bookings(session) { response in
             switch response {
-            case .success(let response):
-                XCTAssertEqual(response.OK, true)
+            case .success(let data):
+                XCTAssertEqual(data.OK, true)
             case .failure(let error):
                 XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
             }
@@ -53,9 +53,9 @@ class BookingTests: XCTestCase {
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).bookings(session) { response in
             switch response {
-            case .success(let response):
-                XCTAssert(false, "❌ Should not retrieve a response (\(response))")
-                XCTAssertEqual(response.OK, true)
+            case .success(let data):
+                XCTAssert(false, "❌ Should not retrieve data -> (\(data))")
+                XCTAssertEqual(data.OK, true)
             case .failure(_):
                 XCTAssert(true)
             }
@@ -69,8 +69,8 @@ class BookingTests: XCTestCase {
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).bookings(session, roomName: "Cruciform Building B.3.05", roomID: "433", startDateTime: "2016-10-20T18:00:00+00:00", endDateTime: "2016-10-20T19:00:00+00:00", date: "20160202", siteID: "086", description: "Lecture", contact: "Mark Herbster", resultsPerPage: "1000") { response in
             switch response {
-            case .success(let response):
-                XCTAssertEqual(response.OK, true)
+            case .success(let data):
+                XCTAssertEqual(data.OK, true)
             case .failure(let error):
                 XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
             }
@@ -84,9 +84,9 @@ class BookingTests: XCTestCase {
         let config = TokenConfiguration("12345")
         _ = UCLKit(config).bookings(session, pageToken: "6hb14hXjRV") { response in
             switch response {
-            case .success(let response):
-                XCTAssertEqual(response.OK, true)
-                XCTAssertEqual(response.pageToken, "6hb14hXjRV")
+            case .success(let data):
+                XCTAssertEqual(data.OK, true)
+                XCTAssertEqual(data.pageToken, "6hb14hXjRV")
             case .failure(let error):
                 XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
             }
@@ -97,21 +97,21 @@ class BookingTests: XCTestCase {
     // MARK: Model Tests
 
     func testBookingsParsing() {
-        let response = Helper.codableFromResource(.Bookings, type: BookingsResponse.self)
-        XCTAssertEqual(response.OK, true)
-        XCTAssertEqual(response.bookings![0].slotID, 998503)
-        XCTAssertEqual(response.bookings![0].endTime, Time.iso8601Date("2016-09-02T18:00:00+00:00"))
-        XCTAssertEqual(response.bookings![0].bookingDescription, "split weeks to assist rooming 29.06")
-        XCTAssertEqual(response.bookings![0].roomName, "Torrington (1-19) 433")
-        XCTAssertEqual(response.bookings![0].siteID, "086")
-        XCTAssertEqual(response.bookings![0].contact, "Ms Leah Markwick")
-        XCTAssertEqual(response.bookings![0].weekNumber, 1)
-        XCTAssertEqual(response.bookings![0].roomID, "433")
-        XCTAssertEqual(response.bookings![0].startTime, Time.iso8601Date("2016-09-02T09:00:00+00:00"))
-        XCTAssertEqual(response.bookings![0].phone, "45699")
-        XCTAssertEqual(response.nextPageExists, true)
-        XCTAssertEqual(response.pageToken, "6hb14hXjRV")
-        XCTAssertEqual(response.count, 1197)
+        let data = Helper.codableFromResource(.Bookings, type: BookingsResponse.self)
+        XCTAssertEqual(data.OK, true)
+        XCTAssertEqual(data.bookings![0].slotID, 998503)
+        XCTAssertEqual(data.bookings![0].endTime, Time.iso8601Date("2016-09-02T18:00:00+00:00"))
+        XCTAssertEqual(data.bookings![0].bookingDescription, "split weeks to assist rooming 29.06")
+        XCTAssertEqual(data.bookings![0].roomName, "Torrington (1-19) 433")
+        XCTAssertEqual(data.bookings![0].siteID, "086")
+        XCTAssertEqual(data.bookings![0].contact, "Ms Leah Markwick")
+        XCTAssertEqual(data.bookings![0].weekNumber, 1)
+        XCTAssertEqual(data.bookings![0].roomID, "433")
+        XCTAssertEqual(data.bookings![0].startTime, Time.iso8601Date("2016-09-02T09:00:00+00:00"))
+        XCTAssertEqual(data.bookings![0].phone, "45699")
+        XCTAssertEqual(data.nextPageExists, true)
+        XCTAssertEqual(data.pageToken, "6hb14hXjRV")
+        XCTAssertEqual(data.count, 1197)
     }
 
 }
