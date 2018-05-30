@@ -41,7 +41,7 @@ UCLKit(config).rooms() { response in
 ```
 
 If you need some more help with the framework you can open an issue above, I'll reply as soon as possible.
-
+As an example, please have a look at [CampusBuddy](https://github.com/tiferrei/CampusBuddy) and [APIBuddy](https://github.com/tiferrei/APIBuddy).
 ## Author
 
 Tiago Ferreira | <a href="https://twitter.com/tiferrei2000/">Twitter</a> | <a href="https://www.tiferrei.com/">Website</a>
