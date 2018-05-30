@@ -45,6 +45,7 @@ public final class Room: Codable {
     open var siteName: String?
     open var capacity: Int?
     open var classification: Classification?
+    open var classificationName: String?
     open var automated: Automation?
     open var location: Location?
 
@@ -55,6 +56,7 @@ public final class Room: Codable {
         case siteName = "sitename"
         case capacity
         case classification
+        case classificationName = "classification_name"
         case automated
         case location
     }
@@ -163,10 +165,10 @@ public enum Classification: String, Codable {
     case PublicCluster = "PC1"
     case SocialSpace = "SS"
     case TheatreHall = "TH"
-    case UndocumentedCFE = "CFE" // FIXME: Undocumented option CFE (UCLAPI #326)
-    case UndocumentedMR = "MR" // FIXME: Undocumented option MR (UCLAPI #326)
-    case UndocumentedER = "ER" // FIXME: Undocumented option ER (UCLAPI #326)
-    case UndocumentedCF = "CF" // FIXME: Undocumented option CF (UCLAPI #326)
+    case Cafe = "CFE"
+    case MeetingRoom = "MR"
+    case EquipmentRoom = "ER"
+    case CateringFacilities = "CF"
     case Unknown = ""
 }
 

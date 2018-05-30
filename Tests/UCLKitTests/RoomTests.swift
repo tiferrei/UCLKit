@@ -87,6 +87,7 @@ class RoomTests: XCTestCase {
         XCTAssertEqual(data.rooms![0].siteName, "Main Building")
         XCTAssertEqual(data.rooms![0].capacity, 50)
         XCTAssertEqual(data.rooms![0].classification, Classification.SocialSpace)
+        XCTAssertEqual(data.rooms![0].classificationName, "Social Space")
         XCTAssertEqual(data.rooms![0].automated, Automation.NotAutomated)
         XCTAssertEqual(data.rooms![0].location!.address!, ["Gower Street", "London", "WC1E 6BT", ""])
         XCTAssertEqual(data.rooms![0].location!.coordinates!.latitude!, "51.524699")

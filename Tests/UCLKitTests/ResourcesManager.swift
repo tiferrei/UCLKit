@@ -50,6 +50,7 @@ enum ResourcesManager: String {
                 "sitename": "Main Building",
                 "capacity": 50,
                 "classification": "SS",
+                "classification_name": "Social Space",
                 "automated": "N",
                 "location": {
                     "coordinates": {
@@ -79,6 +80,7 @@ enum ResourcesManager: String {
                 "sitename": "Main Building",
                 "capacity": 50,
                 "classification": "SS",
+                "classification_name": "Social Space",
                 "automated": "N",
                 "location": {
                     "coordinates": {
