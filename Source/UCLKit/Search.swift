@@ -13,9 +13,9 @@ import RequestKit
 
 /// Wrapper for the People response
 public final class PeopleResponse: Codable {
-    open var OK: Bool?
-    open var error: String?
-    open var people: [Person]?
+    public var OK: Bool?
+    public var error: String?
+    public var people: [Person]?
 
     enum CodingKeys: String, CodingKey {
         case OK = "ok"
@@ -26,10 +26,10 @@ public final class PeopleResponse: Codable {
 
 /// Payload from the People response
 public final class Person: Codable {
-    open var name: String?
-    open var status: Status?
-    open var department: String?
-    open var email: String?
+    public var name: String?
+    public var status: Status?
+    public var department: String?
+    public var email: String?
 
     enum CodingKeys: String, CodingKey {
         case name

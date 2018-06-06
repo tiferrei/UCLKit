@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.module_name     = "UCLKit"
   s.dependency "NBNRequestKit", "~> 2.2.2"
   s.requires_arc = true
-  s.source_files = "UCLKit/*.swift"
+  s.source_files = "Source/UCLKit/*.swift"
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.10'
   s.watchos.deployment_target = '2.1'

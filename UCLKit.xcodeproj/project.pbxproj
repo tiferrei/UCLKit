@@ -556,6 +556,12 @@
 						LastSwiftMigration = "";
 						ProvisioningStyle = Automatic;
 					};
+					76C783D81E677EA40087093E = {
+						LastSwiftMigration = 1000;
+					};
+					76C783E71E677ED40087093E = {
+						LastSwiftMigration = 1000;
+					};
 				};
 			};
 			buildConfigurationList = 76C783911E66E58F0087093E /* Build configuration list for PBXProject "UCLKit" */;
@@ -1148,6 +1154,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
@@ -1179,6 +1186,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 4.2;
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
@@ -1204,6 +1212,7 @@
 				SDKROOT = macosx;
 				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 4.2;
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
@@ -1229,6 +1238,7 @@
 				SDKROOT = macosx;
 				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 4.2;
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;

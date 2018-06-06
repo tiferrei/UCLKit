@@ -37,10 +37,6 @@ extension Decodable {
                     dict[key] = value.rawValue
                 } else if let value = child.value as? Classification {
                     dict[key] = value.rawValue
-                } else if let value = child.value as? Location {
-                    dict[key] = value.toDictionary()
-                } else if let value = child.value as? Coordinate {
-                    dict[key] = value.toDictionary()
                 } else if let value = child.value as? Decodable {
                     dict[key] = value.toDictionary()
                 } else if let value = child.value as? Array<String> {
