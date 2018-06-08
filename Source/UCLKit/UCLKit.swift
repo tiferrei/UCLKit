@@ -12,6 +12,12 @@ import RequestKit
 public let UCLKitErrorDomain = "com.tiferrei.UCLKit"
 public let UCLKitErrorKey = RequestKitErrorKey
 
+// Main UCLKit Response Wrapper
+protocol UCLResponse: Codable {
+    var OK: Bool? { get }
+    var error: String? { get }
+}
+
 /// Main UCLKit wrapping struct
 public struct UCLKit {
     public let configuration: Configuration
@@ -19,10 +25,4 @@ public struct UCLKit {
     public init(_ config: Configuration = TokenConfiguration()) {
         configuration = config
     }
-}
-
-// Main UCLKit Response Wrapper
-protocol UCLResponse : Codable {
-    var OK: Bool? { get }
-    var error: String? { get }
 }

@@ -77,11 +77,10 @@ class HelperToolsTests: XCTestCase {
             XCTAssertEqual(booking["contact"] as? String, "Ms Leah Markwick")
             XCTAssertEqual(booking["weeknumber"] as? Int, 1)
             XCTAssertEqual(booking["roomid"] as? String, "433")
-            
             XCTAssertEqual(booking["phone"] as? String, "45699")
-                XCTAssertEqual(data["next_page_exists"] as? Bool, true)
-                XCTAssertEqual(data["page_token"] as? String, "6hb14hXjRV")
-                XCTAssertEqual(data["count"] as? Int, 1197)
+            XCTAssertEqual(data["next_page_exists"] as? Bool, true)
+            XCTAssertEqual(data["page_token"] as? String, "6hb14hXjRV")
+            XCTAssertEqual(data["count"] as? Int, 1197)
         } else {
             XCTAssert(false, "❌ Unable to cast essential data.")
         }

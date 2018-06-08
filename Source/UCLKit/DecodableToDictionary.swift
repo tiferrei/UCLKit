@@ -8,9 +8,9 @@
 
 import Foundation
 
- extension Encodable {
+ extension UCLResponse {
     /**
-     - Parses a Codable object into a `[String: Any]` dictionary.
+     - Parses an UCLResponse conforming object into a `[String: Any]` dictionary.
      - ⚠️: This method will return the data using **UCL API's original keys**.
      - The reason for a `[String: Any]` is that this method is meant mainly to display raw UCL API data.
      - returns: A `[String: Any]` dictionary representing the object's data.
