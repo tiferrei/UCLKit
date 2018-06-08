@@ -548,18 +548,27 @@
 				TargetAttributes = {
 					76C783961E66E58F0087093E = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = "";
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 					76C7839F1E66E58F0087093E = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = "";
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
+					};
+					76C783BA1E677DF10087093E = {
+						LastSwiftMigration = 1000;
+					};
+					76C783C91E677E6B0087093E = {
+						LastSwiftMigration = 1000;
 					};
 					76C783D81E677EA40087093E = {
 						LastSwiftMigration = 1000;
 					};
 					76C783E71E677ED40087093E = {
+						LastSwiftMigration = 1000;
+					};
+					76C783F41E677F400087093E = {
 						LastSwiftMigration = 1000;
 					};
 				};
@@ -937,6 +946,7 @@
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VALID_ARCHS = "armv7s armv7 arm64";
 			};
 			name = Debug;
@@ -969,6 +979,7 @@
 				PRODUCT_NAME = UCLKit;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_VERSION = 4.2;
 				VALID_ARCHS = "armv7s armv7 arm64";
 			};
 			name = Release;
@@ -992,6 +1003,7 @@
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_VERSION = 4.2;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -1014,6 +1026,7 @@
 				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_VERSION = 4.2;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
@@ -1041,6 +1054,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALID_ARCHS = armv7k;
 				WATCHOS_DEPLOYMENT_TARGET = 2.1;
@@ -1069,6 +1083,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALID_ARCHS = armv7k;
 				WATCHOS_DEPLOYMENT_TARGET = 2.1;
@@ -1096,6 +1111,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -1121,6 +1137,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -1259,6 +1276,7 @@
 				SDKROOT = appletvos;
 				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = arm64;
 			};
@@ -1280,6 +1298,7 @@
 				SDKROOT = appletvos;
 				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = arm64;
 			};

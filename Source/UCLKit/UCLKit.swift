@@ -20,3 +20,9 @@ public struct UCLKit {
         configuration = config
     }
 }
+
+// Main UCLKit Response Wrapper
+protocol UCLResponse : Codable {
+    var OK: Bool? { get }
+    var error: String? { get }
+}

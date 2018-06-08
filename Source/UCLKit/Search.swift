@@ -12,7 +12,7 @@ import RequestKit
 // Mark: Model
 
 /// Wrapper for the People response
-public final class PeopleResponse: Codable {
+public final class PeopleResponse: UCLResponse {
     public var OK: Bool?
     public var error: String?
     public var people: [Person]?

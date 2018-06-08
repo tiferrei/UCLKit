@@ -12,7 +12,7 @@ import RequestKit
 // Mark: Model
 
 /// Wrapper for the Rooms response
-public final class RoomsResponse: Codable {
+public final class RoomsResponse: UCLResponse {
     public var OK: Bool?
     public var error: String?
     public var rooms: [Room]?
@@ -25,7 +25,7 @@ public final class RoomsResponse: Codable {
 }
 
 /// Wrapper for the Free Rooms response
-public final class FreeRoomsResponse: Codable {
+public final class FreeRoomsResponse: UCLResponse {
     public var OK: Bool?
     public var error: String?
     public var freeRooms: [Room]?
@@ -63,7 +63,7 @@ public final class Room: Codable {
 }
 
 /// Wrapper for the Bookings response
-public final class BookingsResponse: Codable {
+public final class BookingsResponse: UCLResponse {
     public var OK: Bool?
     public var error: String?
     public var bookings: [Booking]?
@@ -83,7 +83,7 @@ public final class BookingsResponse: Codable {
 
 /// Payload for the Bookings response
 public final class Booking: Codable {
-    @objc public private(set) var slotID: Int = -1
+    public var slotID: Int?
     public var endTime: Date?
     public var bookingDescription: String?
     public var roomName: String?
@@ -109,7 +109,7 @@ public final class Booking: Codable {
 }
 
 /// Wrapper for the Equipment response
-public final class EquipmentResponse: Codable {
+public final class EquipmentResponse: UCLResponse {
     public var OK: Bool?
     public var error: String?
     public var equipment: [Equipment]?
