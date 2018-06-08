@@ -8,52 +8,28 @@
 
 import Foundation
 
-extension Decodable {
+ extension UCLResponse {
     /**
-     Parses a Decodable object into a `[String: Any]` dictionary.
-     The reason for a `String: Any` is that this function is meant mainly to display raw UCL API data.
-     - returns: A dictionary of `String` keys and `String` values **or** a `[String: Any]` dictionary itself that represents an inner JSON node.
+     - Parses an UCLResponse conforming object into a `[String: Any]` dictionary.
+     - ⚠️: This method will return the data using **UCL API's original keys**.
+     - The reason for a `[String: Any]` is that this method is meant mainly to display raw UCL API data.
+     - returns: A `[String: Any]` dictionary representing the object's data.
      */
     public func toDictionary() -> [String: Any] {
-        var dict = [String: Any]()
-        let otherSelf = Mirror(reflecting: self)
-        for child in otherSelf.children {
-            if let key = child.label {
-                if let value = child.value as? String {
-                    dict[key] = value
-                } else if let value = child.value as? Bool {
-                    dict[key] = String(value)
-                } else if let value = child.value as? Int {
-                    dict[key] = String(value)
-                } else if let value = child.value as? Double {
-                    dict[key] = String(value)
-                } else if let value = child.value as? Date {
-                    dict[key] = value.description(with: Locale.current)
-                } else if let value = child.value as? Type {
-                    dict[key] = value.rawValue
-                } else if let value = child.value as? Status {
-                    dict[key] = value.rawValue
-                } else if let value = child.value as? Automation {
-                    dict[key] = value.rawValue
-                } else if let value = child.value as? Classification {
-                    dict[key] = value.rawValue
-                } else if let value = child.value as? Location {
-                    dict[key] = value.toDictionary()
-                } else if let value = child.value as? Coordinate {
-                    dict[key] = value.toDictionary()
-                } else if let value = child.value as? Decodable {
-                    dict[key] = value.toDictionary()
-                } else if let value = child.value as? Array<String> {
-                    dict[key] = value.filter { $0 != "" }.joined(separator: ", ")
-                } else if let value = child.value as? Array<Decodable> {
-                    var array = Array<[String: Any]>()
-                    for item in (value as Array<Decodable>) {
-                        array.append(item.toDictionary())
-                    }
-                    dict[key] = array
-                }
-            }
+        let encoder = JSONEncoder()
+        if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
+            encoder.dateEncodingStrategy = .iso8601
+        } else {
+            encoder.dateEncodingStrategy = .deferredToDate
         }
-        return dict
+        do {
+            let data = try encoder.encode(self)
+            if let dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                return dict
+            }
+        } catch {
+            return ["error": "UCLKit failed to encode object."]
+        }
+        return ["error": "UCLKit failed to encode object."]
     }
 }

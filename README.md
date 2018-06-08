@@ -16,7 +16,7 @@ UCLKit is a Swift wrapper for the [UCL API](uclapi.com). I have developed UCLKit
 
 ## Main Features
 
-* 100% native Swift 3 framework
+* 100% native Swift 4.2 framework
 * Fast and native networking
 * Smart error handling
 

@@ -12,10 +12,10 @@ import RequestKit
 // Mark: Model
 
 /// Wrapper for the Rooms response
-public final class RoomsResponse: Codable {
-    open var OK: Bool?
-    open var error: String?
-    open var rooms: [Room]?
+public final class RoomsResponse: UCLResponse {
+    public var OK: Bool?
+    public var error: String?
+    public var rooms: [Room]?
 
     enum CodingKeys: String, CodingKey {
         case OK = "ok"
@@ -25,10 +25,10 @@ public final class RoomsResponse: Codable {
 }
 
 /// Wrapper for the Free Rooms response
-public final class FreeRoomsResponse: Codable {
-    open var OK: Bool?
-    open var error: String?
-    open var freeRooms: [Room]?
+public final class FreeRoomsResponse: UCLResponse {
+    public var OK: Bool?
+    public var error: String?
+    public var freeRooms: [Room]?
 
     enum CodingKeys: String, CodingKey {
         case OK = "ok"
@@ -39,15 +39,15 @@ public final class FreeRoomsResponse: Codable {
 
 /// Payload from the Rooms response
 public final class Room: Codable {
-    open var roomID: String?
-    open var roomName: String?
-    open var siteID: String?
-    open var siteName: String?
-    open var capacity: Int?
-    open var classification: Classification?
-    open var classificationName: String?
-    open var automated: Automation?
-    open var location: Location?
+    public var roomID: String?
+    public var roomName: String?
+    public var siteID: String?
+    public var siteName: String?
+    public var capacity: Int?
+    public var classification: Classification?
+    public var classificationName: String?
+    public var automated: Automation?
+    public var location: Location?
 
     enum CodingKeys: String, CodingKey {
         case roomID = "roomid"
@@ -63,13 +63,13 @@ public final class Room: Codable {
 }
 
 /// Wrapper for the Bookings response
-public final class BookingsResponse: Codable {
-    open var OK: Bool?
-    open var error: String?
-    open var bookings: [Booking]?
-    open var nextPageExists: Bool?
-    open var pageToken: String?
-    open var count: Int?
+public final class BookingsResponse: UCLResponse {
+    public var OK: Bool?
+    public var error: String?
+    public var bookings: [Booking]?
+    public var nextPageExists: Bool?
+    public var pageToken: String?
+    public var count: Int?
     
     enum CodingKeys: String, CodingKey {
         case OK = "ok"
@@ -83,16 +83,16 @@ public final class BookingsResponse: Codable {
 
 /// Payload for the Bookings response
 public final class Booking: Codable {
-    @objc open private(set) var slotID: Int = -1
-    open var endTime: Date?
-    open var bookingDescription: String?
-    open var roomName: String?
-    open var siteID: String?
-    open var contact: String?
-    open var weekNumber: Int?
-    open var roomID: String?
-    open var startTime: Date?
-    open var phone: String?
+    public var slotID: Int?
+    public var endTime: Date?
+    public var bookingDescription: String?
+    public var roomName: String?
+    public var siteID: String?
+    public var contact: String?
+    public var weekNumber: Int?
+    public var roomID: String?
+    public var startTime: Date?
+    public var phone: String?
 
     enum CodingKeys: String, CodingKey {
         case slotID = "slotid"
@@ -109,10 +109,10 @@ public final class Booking: Codable {
 }
 
 /// Wrapper for the Equipment response
-public final class EquipmentResponse: Codable {
-    open var OK: Bool?
-    open var error: String?
-    open var equipment: [Equipment]?
+public final class EquipmentResponse: UCLResponse {
+    public var OK: Bool?
+    public var error: String?
+    public var equipment: [Equipment]?
     
     enum CodingKeys: String, CodingKey {
         case OK = "ok"
@@ -123,9 +123,9 @@ public final class EquipmentResponse: Codable {
 
 /// Payload for the Equipment response
 public final class Equipment: Codable {
-    open var type: Type?
-    open var equipmentDescription: String?
-    open var units: Int?
+    public var type: Type?
+    public var equipmentDescription: String?
+    public var units: Int?
     
     enum CodingKeys: String, CodingKey {
         case type
@@ -138,8 +138,8 @@ public final class Equipment: Codable {
 
 /// Address sub-payload from the Room payload
 public final class Location: Codable {
-    open var address: [String]?
-    open var coordinates: Coordinate?
+    public var address: [String]?
+    public var coordinates: Coordinate?
 
     enum CodingKeys: String, CodingKey {
         case address
@@ -149,8 +149,8 @@ public final class Location: Codable {
 
 /// Coordinate sub-payload from the Location
 public final class Coordinate: Codable {
-    open var latitude: String?
-    open var longitude: String?
+    public var latitude: String?
+    public var longitude: String?
 
     enum CodingKeys: String, CodingKey {
         case latitude = "lat"
