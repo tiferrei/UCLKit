@@ -13,7 +13,7 @@ public let UCLKitErrorDomain = "com.tiferrei.UCLKit"
 public let UCLKitErrorKey = RequestKitErrorKey
 
 // Main UCLKit Response Wrapper
-protocol UCLResponse: Codable {
+public protocol UCLResponse: Codable {
     var OK: Bool? { get }
     var error: String? { get }
 }
