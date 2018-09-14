@@ -29,8 +29,18 @@ public struct Time {
      - parameter string: The string representation of the date
      - returns: An `NSDate` with a successful parse, otherwise `nil`
      */
-    static func iso8601Date(_ string: String?) -> Date? {
+    public static func iso8601Date(_ string: String?) -> Date? {
         guard let string = string else { return nil }
         return Time.inclusiveISO8601DateFormatter.date(from: string)
+    }
+    
+    /**
+     Parses a Date into a RFC 3339 date string
+     - parameter date: The NSDate representation of the date
+     - returns: A `String` with a successful parse, otherwise `nil`
+     */
+    public static func iso8601String(_ date: Date?) -> String? {
+        guard let date = date else { return nil }
+        return Time.inclusiveISO8601DateFormatter.string(from: date)
     }
 }
