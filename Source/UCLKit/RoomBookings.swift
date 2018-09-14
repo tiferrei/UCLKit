@@ -169,6 +169,7 @@ public enum Classification: String, Codable {
     case MeetingRoom = "MR"
     case EquipmentRoom = "ER"
     case CateringFacilities = "CF"
+    case Laboratory = "LA"
     case Unknown = ""
 }
 
