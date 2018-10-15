@@ -43,4 +43,16 @@ public struct Time {
         guard let date = date else { return nil }
         return Time.inclusiveISO8601DateFormatter.string(from: date)
     }
+    
+    /**
+     Parses a Date into a YYYYMMDD string
+     - parameter date: The NSDate representation of the date
+     - returns: A `String` with a successful parse, otherwise `nil`
+     */
+    public static func conventionalDate(_ date: Date?) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        guard let date = date else { return nil }
+        return dateFormatter.string(from: date)
+    }
 }
