@@ -33,7 +33,7 @@ public struct Time {
         guard let string = string else { return nil }
         return Time.inclusiveISO8601DateFormatter.date(from: string)
     }
-    
+
     /**
      Parses a Date into a RFC 3339 date string
      - parameter date: The NSDate representation of the date
@@ -43,7 +43,7 @@ public struct Time {
         guard let date = date else { return nil }
         return Time.inclusiveISO8601DateFormatter.string(from: date)
     }
-    
+
     /**
      Parses a Date into a YYYYMMDD string
      - parameter date: The NSDate representation of the date
