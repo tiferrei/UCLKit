@@ -49,13 +49,13 @@ class HelperToolsTests: XCTestCase {
                     XCTAssertEqual(coordinates["lat"] as? String, "51.524699")
                     XCTAssertEqual(coordinates["lng"] as? String, "-0.13366")
                 } else {
-                    XCTAssert(false, "❌ Unable to cast Coordinate.")
+                    XCTAssert(false, "Unable to cast Coordinate.")
                 }
             } else {
-                XCTAssert(false, "❌ Unable to cast Location.")
+                XCTAssert(false, "Unable to cast Location.")
             }
         } else {
-            XCTAssert(false, "❌ Unable to cast essential data.")
+            XCTAssert(false, "Unable to cast essential data.")
         }
     }
 
@@ -82,7 +82,7 @@ class HelperToolsTests: XCTestCase {
             XCTAssertEqual(data["page_token"] as? String, "6hb14hXjRV")
             XCTAssertEqual(data["count"] as? Int, 1197)
         } else {
-            XCTAssert(false, "❌ Unable to cast essential data.")
+            XCTAssert(false, "Unable to cast essential data.")
         }
     }
 
@@ -95,17 +95,17 @@ class HelperToolsTests: XCTestCase {
                 XCTAssertEqual(equipment["description"] as? String, "Managed PC")
                 XCTAssertEqual(equipment["units"] as? Int, 1)
             } else {
-                XCTAssert(false, "❌ Unable to cast first equipment.")
+                XCTAssert(false, "Unable to cast first equipment.")
             }
             if let equipment = equipmentList[1] as? [String: Any] {
                 XCTAssertEqual(equipment["type"] as? String, Type.FixedEquipment.rawValue)
                 XCTAssertEqual(equipment["description"] as? String, "Chairs with Tables")
                 XCTAssertEqual(equipment["units"] as? Int, 1)
             } else {
-                XCTAssert(false, "❌ Unable to cast second equipment.")
+                XCTAssert(false, "Unable to cast second equipment.")
             }
         } else {
-            XCTAssert(false, "❌ Unable to cast essential data.")
+            XCTAssert(false, "Unable to cast essential data.")
         }
     }
 
@@ -118,7 +118,7 @@ class HelperToolsTests: XCTestCase {
             XCTAssertEqual(person["department"] as? String, "Dept of Med Phys & Biomedical Eng")
             XCTAssertEqual(person["email"] as? String, "jane.doe.17@ucl.ac.uk")
         } else {
-            XCTAssert(false, "❌ Unable to cast essential data.")
+            XCTAssert(false, "Unable to cast essential data.")
         }
     }
 
@@ -129,7 +129,7 @@ class HelperToolsTests: XCTestCase {
         _ = UCLKit(config).rooms(session) { response in
             switch response {
             case .success(let data):
-                XCTAssert(false, "❌ Should retrieve an error, instead got –> (\(data))")
+                XCTAssert(false, "Should retrieve an error, instead got –> (\(data))")
             case .failure(let error):
                 XCTAssertEqual(UCLKit(config).parseError(error), "Token is invalid.")
             }

@@ -41,7 +41,7 @@ class BookingTests: XCTestCase {
             case .success(let data):
                 XCTAssertEqual(data.OK, true)
             case .failure(let error):
-                XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
+                XCTAssert(false, "Should not retrieve an error –> (\(error))")
             }
         }
         XCTAssertTrue(session.wasCalled)
@@ -54,7 +54,7 @@ class BookingTests: XCTestCase {
         _ = UCLKit(config).bookings(session) { response in
             switch response {
             case .success(let data):
-                XCTAssert(false, "❌ Should not retrieve data -> (\(data))")
+                XCTAssert(false, "Should not retrieve data -> (\(data))")
                 XCTAssertEqual(data.OK, true)
             case .failure(_):
                 XCTAssert(true)
@@ -72,7 +72,7 @@ class BookingTests: XCTestCase {
             case .success(let data):
                 XCTAssertEqual(data.OK, true)
             case .failure(let error):
-                XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
+                XCTAssert(false, "Should not retrieve an error –> (\(error))")
             }
         }
         XCTAssertTrue(session.wasCalled)
@@ -88,7 +88,7 @@ class BookingTests: XCTestCase {
                 XCTAssertEqual(data.OK, true)
                 XCTAssertEqual(data.pageToken, "6hb14hXjRV")
             case .failure(let error):
-                XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
+                XCTAssert(false, "Should not retrieve an error –> (\(error))")
             }
         }
         XCTAssertTrue(session.wasCalled)

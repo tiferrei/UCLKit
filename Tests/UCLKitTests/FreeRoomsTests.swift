@@ -39,7 +39,7 @@ class FreeRoomsTests: XCTestCase {
             case .success(let data):
                 XCTAssertEqual(data.OK, true)
             case .failure(let error):
-                XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
+                XCTAssert(false, "Should not retrieve an error –> (\(error))")
             }
         }
         XCTAssertTrue(session.wasCalled)
@@ -52,7 +52,7 @@ class FreeRoomsTests: XCTestCase {
         _ = UCLKit(config).freeRooms(session, startDateTime: "", endDateTime: "") { response in
             switch response {
             case .success(let data):
-                XCTAssert(false, "❌ Should not retrieve data -> (\(data))")
+                XCTAssert(false, "Should not retrieve data -> (\(data))")
                 XCTAssertEqual(data.OK, true)
             case .failure(_):
                 XCTAssert(true)

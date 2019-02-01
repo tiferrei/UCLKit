@@ -40,7 +40,7 @@ class RoomTests: XCTestCase {
             case .success(let data):
                 XCTAssertEqual(data.OK, true)
             case .failure(let error):
-                XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
+                XCTAssert(false, "Should not retrieve an error –> (\(error))")
             }
         }
         XCTAssertTrue(session.wasCalled)
@@ -55,7 +55,7 @@ class RoomTests: XCTestCase {
             case .success(let data):
                 XCTAssertEqual(data.OK, true)
             case .failure(let error):
-                XCTAssert(false, "❌ Should not retrieve an error –> (\(error))")
+                XCTAssert(false, "Should not retrieve an error –> (\(error))")
             }
         }
         XCTAssertTrue(session.wasCalled)
@@ -68,7 +68,7 @@ class RoomTests: XCTestCase {
         _ = UCLKit(config).rooms(session) { response in
             switch response {
             case .success(let data):
-                XCTAssert(false, "❌ Should retrieve an error, instead got –> (\(data))")
+                XCTAssert(false, "Should retrieve an error, instead got –> (\(data))")
             case .failure(let error):
                 XCTAssertEqual(UCLKit(config).parseError(error), "Token is invalid.")
             }

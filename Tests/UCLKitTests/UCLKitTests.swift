@@ -42,12 +42,12 @@ class UCLKitTests: XCTestCase {
         _ = UCLKit(config).rooms(session) { response in
             switch response {
             case .success(let data):
-                XCTAssert(false, "❌ Should retrieve an error –> (\(data))")
+                XCTAssert(false, "Should retrieve an error –> (\(data))")
             case .failure(let error as NSError):
                 XCTAssertEqual(error.code, 400)
                 XCTAssertEqual(error.domain, UCLKitErrorDomain)
             default:
-                XCTAssert(false, "❌ Should retreive either fail or success")
+                XCTAssert(false, "Should retreive either fail or success")
             }
         }
         XCTAssertTrue(session.wasCalled)
@@ -60,12 +60,12 @@ class UCLKitTests: XCTestCase {
         _ = UCLKit(config).rooms(session) { response in
             switch response {
             case .success(let data):
-                XCTAssert(false, "❌ Should retrieve an error –> (\(data))")
+                XCTAssert(false, "Should retrieve an error –> (\(data))")
             case .failure(let error as NSError):
                 XCTAssertEqual(error.code, 400)
                 XCTAssertEqual(error.domain, UCLKitErrorDomain)
             default:
-                XCTAssert(false, "❌ Should retreive either fail or success")
+                XCTAssert(false, "Should retreive either fail or success")
             }
         }
         XCTAssertTrue(session.wasCalled)
