@@ -8,7 +8,7 @@ Welcome to UCLKit
 <img src="https://img.shields.io/badge/iOS-8%2B-blue.svg" alt="Platform: iOS 8+"/>
 <img src="https://img.shields.io/badge/watchOS-2.1%2B-blue.svg" alt="Platform: watchOS 2.1+"/>
 <img src="https://img.shields.io/badge/tvOS-9%2B-blue.svg" alt="Platform: tvOS 9+"/>
-<a href="https://www.codacy.com/app/tiferrei/UCLKit?utm_source=github.com&utm_medium=referral&utm_content=tiferrei/UCLKit&utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/9c15107ef03b416bb4e8be997683002b" alt="Codacy" /></a>
+<a href="https://codeclimate.com/github/tiferrei/UCLKit/maintainability"><img src="https://api.codeclimate.com/v1/badges/ff832f2f282b2da57fb8/maintainability" /></a>
 </p>
 <br>
 
