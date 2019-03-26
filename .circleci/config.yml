@@ -90,6 +90,9 @@ jobs:
           keys:
             - UCLKit-build-{{ .Environment.CIRCLE_SHA1 }}
       - run:
+          name: Install dependencies
+          command: make install
+      - run:
           name: Exporting Coverage & Framework
           command: make coverage && make deploy
       - store_artifacts:
