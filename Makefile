@@ -5,6 +5,7 @@ install:
 	carthage bootstrap --no-use-binaries
 	sudo gem install xcpretty
 	sudo gem install slather
+	mkdir .build || true
 	curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > .build/cc-test-reporter
 	chmod +x .build/cc-test-reporter
 
