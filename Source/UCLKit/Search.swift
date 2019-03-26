@@ -54,7 +54,7 @@ public extension UCLKit {
      - parameter query: Name of the person you are searching for.
      - parameter completion: Callback for the outcome of the fetch.
      */
-    public func people(_ session: RequestKitURLSession = URLSession.shared, query: String, completion: @escaping (_ response: Response<PeopleResponse>) -> Void) -> URLSessionDataTaskProtocol? {
+    func people(_ session: RequestKitURLSession = URLSession.shared, query: String, completion: @escaping (_ response: Response<PeopleResponse>) -> Void) -> URLSessionDataTaskProtocol? {
         let router = SearchRouter.searchPeople(configuration, query)
         return router.load(session, expectedResultType: PeopleResponse.self) { people, error in
             if let error = error {

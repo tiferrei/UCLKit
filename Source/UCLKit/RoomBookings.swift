@@ -201,7 +201,7 @@ public extension UCLKit {
      - parameter capacity: very room has a set capacity of how many people can fit inside it. When supplied, all rooms with the given capacity or greater will be returned.
      - parameter completion: Callback for the outcome of the fetch.
      */
-    public func rooms(_ session: RequestKitURLSession = URLSession.shared, roomID: String = "", roomName: String = "", siteID: String = "", siteName: String = "", classification: Classification = Classification.Unknown, capacity: String = "", completion: @escaping (_ response: Response<RoomsResponse>) -> Void) -> URLSessionDataTaskProtocol? {
+    func rooms(_ session: RequestKitURLSession = URLSession.shared, roomID: String = "", roomName: String = "", siteID: String = "", siteName: String = "", classification: Classification = Classification.Unknown, capacity: String = "", completion: @escaping (_ response: Response<RoomsResponse>) -> Void) -> URLSessionDataTaskProtocol? {
         let router = RoomBookingsRouter.readRooms(configuration, roomID, roomName, siteID, siteName, classification, capacity)
         return router.load(session, expectedResultType: RoomsResponse.self) { rooms, error in
             if let error = error {
@@ -228,7 +228,7 @@ public extension UCLKit {
      - parameter resultsPerPage: Number of bookings returned per page. Maximum allowed value is 1000. Defaults to 1000.
      - parameter completion: Callback for the outcome of the fetch.
      */
-    public func bookings(_ session: RequestKitURLSession = URLSession.shared, pageToken: String = "", roomName: String = "", roomID: String = "", startDateTime: String = "", endDateTime: String = "", date: String = "", siteID: String = "", description: String = "", contact: String = "", resultsPerPage: String = "1000", completion: @escaping (_ response: Response<BookingsResponse>) -> Void) -> URLSessionDataTaskProtocol? {
+    func bookings(_ session: RequestKitURLSession = URLSession.shared, pageToken: String = "", roomName: String = "", roomID: String = "", startDateTime: String = "", endDateTime: String = "", date: String = "", siteID: String = "", description: String = "", contact: String = "", resultsPerPage: String = "1000", completion: @escaping (_ response: Response<BookingsResponse>) -> Void) -> URLSessionDataTaskProtocol? {
         let router = RoomBookingsRouter.readBookings(configuration, pageToken, roomName, roomID, startDateTime, endDateTime, date, siteID, description, contact, resultsPerPage)
         return router.load(session, dateDecodingStrategy: .formatted(Time.inclusiveISO8601DateFormatter), expectedResultType: BookingsResponse.self) { bookings, error in
             if let error = error {
@@ -247,7 +247,7 @@ public extension UCLKit {
      - parameter siteID: Every room is inside a site (building). All sites have IDs.
      - parameter completion: Callback for the outcome of the fetch.
      */
-    public func equipment(_ session: RequestKitURLSession = URLSession.shared, roomID: String, siteID: String, completion: @escaping (_ response: Response<EquipmentResponse>) -> Void) -> URLSessionDataTaskProtocol? {
+    func equipment(_ session: RequestKitURLSession = URLSession.shared, roomID: String, siteID: String, completion: @escaping (_ response: Response<EquipmentResponse>) -> Void) -> URLSessionDataTaskProtocol? {
         let router = RoomBookingsRouter.readEquipment(configuration, roomID, siteID)
         return router.load(session, expectedResultType: EquipmentResponse.self) { equipment, error in
             if let error = error {
@@ -266,7 +266,7 @@ public extension UCLKit {
      - parameter endDateTime: End datetime of the time range. Returns bookings with endDate before the **String** supplied. Use **UCLKit.Time.parseDate()** to get an NSDate into the appropriate String format
      - parameter completion: Callback for the outcome of the fetch.
      */
-    public func freeRooms(_ session: RequestKitURLSession = URLSession.shared, startDateTime: String, endDateTime: String, completion: @escaping (_ response: Response<FreeRoomsResponse>) -> Void) -> URLSessionDataTaskProtocol? {
+    func freeRooms(_ session: RequestKitURLSession = URLSession.shared, startDateTime: String, endDateTime: String, completion: @escaping (_ response: Response<FreeRoomsResponse>) -> Void) -> URLSessionDataTaskProtocol? {
         let router = RoomBookingsRouter.readFreeRooms(configuration, startDateTime, endDateTime)
         return router.load(session, expectedResultType: FreeRoomsResponse.self) { freeRooms, error in
             if let error = error {

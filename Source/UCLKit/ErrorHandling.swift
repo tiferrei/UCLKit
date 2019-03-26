@@ -14,7 +14,7 @@ public extension UCLKit {
      Parses an UCL API error message from userInfo in NSError.
      - parameter error: The error returned by UCLKit.
      */
-    public func parseError(_ error: Error) -> String {
+    func parseError(_ error: Error) -> String {
         var message = ""
         #if os(Linux)
             if let error = error as? NSError {

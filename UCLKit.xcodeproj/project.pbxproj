@@ -543,7 +543,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Tiago Ferreira";
 				TargetAttributes = {
 					76C783961E66E58F0087093E = {
@@ -563,10 +563,10 @@
 						LastSwiftMigration = 1000;
 					};
 					76C783D81E677EA40087093E = {
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 					76C783E71E677ED40087093E = {
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 					76C783F41E677F400087093E = {
 						LastSwiftMigration = 1000;
@@ -575,10 +575,11 @@
 			};
 			buildConfigurationList = 76C783911E66E58F0087093E /* Build configuration list for PBXProject "UCLKit" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 76C7838D1E66E58F0087093E;
 			productRefGroup = 76C783981E66E58F0087093E /* Products */;
@@ -795,6 +796,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -860,6 +862,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1171,7 +1174,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
@@ -1203,7 +1206,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
@@ -1229,7 +1232,7 @@
 				SDKROOT = macosx;
 				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
@@ -1255,7 +1258,7 @@
 				SDKROOT = macosx;
 				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
